@@ -1,6 +1,6 @@
 #[derive(Clone, Copy, PartialEq, Eq, Hash)]
 #[repr(u8)]
-enum Piece {
+pub enum Piece {
     Cow,
     Person,
     House,
@@ -11,9 +11,9 @@ enum Piece {
 
 #[derive(Clone, Eq, Hash, PartialEq)]
 pub struct Board {
-    width: u8,
-    height: u8,
-    pieces: Vec<Piece>
+    pub width: u8,
+    pub height: u8,
+    pub pieces: Vec<Piece>
 }
 
 
@@ -38,8 +38,8 @@ impl Board {
         self.pieces[index] = piece;
     }
 
-    pub fn get_moves_from(&self, index : u8) -> Vec<u8> {
-        let mut moves = Vec::new();
+    pub fn get_moves_from(&self, index : u8) -> Vec<(u8, u8)> {
+        let mut moves : Vec<(u8, u8)> = Vec::new();
         let x = index % self.width;
         let y = index / self.width;
         let piece = self.get(x, y);
@@ -93,13 +93,13 @@ impl Board {
         moves
     }
 
-    pub fn get_possible_moves(&self) -> Vec<Board> {
-        let mut moves : Vec<Board> = Vec::new();
+    pub fn get_possible_moves(&self) -> Vec<(Board, u8, u8, u8)> {
+        let mut moves : Vec<(Board, u8, u8, u8)> = Vec::new();
         for i in 0..self.pieces.len() {
             let piece = self.pieces[i];
             if piece == Piece::Cow || piece == Piece::Person {
                 let destinations = self.get_moves_from(i as u8);
-                for destination in destinations {
+                for (destination, puller) in destinations {
                     let mut new_board = self.clone();
                     let piece = new_board.pieces[i];
                     let destination_piece = new_board.pieces[destination as usize];
@@ -107,7 +107,7 @@ impl Board {
                     if destination_piece == Piece::Blank {
                         new_board.set_index(destination as usize, piece);
                     }
-                    moves.push(new_board);
+                    moves.push((new_board, i as u8, destination, puller));
                 }
             }
         }
@@ -181,9 +181,71 @@ impl Board {
         }
         s
     }
+
+    fn rotate(&mut self) {
+        let mut new_pieces = vec![Piece::Blank; (self.width * self.height) as usize];
+        for y in 0..self.height {
+            for x in 0..self.width {
+                let piece = self.get(x, y);
+                new_pieces[(x * self.height + (self.height - y - 1)) as usize] = piece;
+            }
+        }
+        let temp = self.width;
+        self.width = self.height;
+        self.height = temp;
+        self.pieces = new_pieces;
+    }
+
+    fn flip_horizontal(&mut self) {
+        let mut new_pieces = vec![Piece::Blank; (self.width * self.height) as usize];
+        let width = self.width;
+        for y in 0..self.height {
+            for x in 0..self.width {
+                let piece = self.get(x, y);
+                new_pieces[(y * width + (width - x - 1)) as usize] = piece;
+            }
+        }
+        self.pieces = new_pieces;
+    }
+
+    fn switch_cow_person(&mut self) {
+        for i in 0..self.pieces.len() {
+            let piece = self.pieces[i];
+            match piece {
+                Piece::Cow => self.pieces[i] = Piece::Person,
+                Piece::Person => self.pieces[i] = Piece::Cow,
+                Piece::House => self.pieces[i] = Piece::Barn,
+                Piece::Barn => self.pieces[i] = Piece::House,
+                _ => {}
+            }
+        }
+    }
+
+    pub fn get_symmetric_variants(&self) -> Vec<Board> {
+        let mut variants = Vec::new();
+        let mut board = self.clone();
+        variants.push(board.clone());
+        for _ in 0..3 {
+            board.rotate();
+            variants.push(board.clone());
+        }
+        board.flip_horizontal();
+        variants.push(board.clone());
+        for _ in 0..3 {
+            board.rotate();
+            variants.push(board.clone());
+        }
+        let count = variants.len();
+        for i in 0..count {
+            let mut board = variants[i].clone();
+            board.switch_cow_person();
+            variants.push(board);
+        }
+        variants
+    }
 }
 
-fn check_move(piece : Piece, new_piece : Piece, moves : &mut Vec<u8>, space: u8, prev_space: u8,has_prev_space: bool) -> bool {
+fn check_move(piece : Piece, new_piece : Piece, moves : &mut Vec<(u8, u8)>, space: u8, prev_space: u8,has_prev_space: bool) -> bool {
     if new_piece == Piece::Empty {
         return true;
     }
@@ -191,13 +253,13 @@ fn check_move(piece : Piece, new_piece : Piece, moves : &mut Vec<u8>, space: u8,
         (new_piece == Piece::House && piece == Piece::Cow) ||
         (new_piece == Piece::Barn && piece == Piece::Person) {
         if has_prev_space {
-            moves.push(prev_space);
+            moves.push((prev_space, space));
         }
         return true;
     }
     if (new_piece == Piece::House && piece == Piece::Person) ||
         (new_piece == Piece::Barn && piece == Piece::Cow) {
-        moves.push(space);
+        moves.push((space, space));
         return true;
     }
     return false;
