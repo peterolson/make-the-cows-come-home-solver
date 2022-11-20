@@ -1,4 +1,4 @@
-#[derive(Clone, Copy, PartialEq)]
+#[derive(Clone, Copy, PartialEq, Eq, Hash)]
 #[repr(u8)]
 enum Piece {
     Cow,
@@ -9,11 +9,13 @@ enum Piece {
     Blank
 }
 
+#[derive(Clone, Eq, Hash, PartialEq)]
 pub struct Board {
     width: u8,
     height: u8,
     pieces: Vec<Piece>
 }
+
 
 impl Board {
     fn new(width: u8, height: u8) -> Board {
@@ -34,14 +36,6 @@ impl Board {
 
     fn set_index(&mut self, index: usize, piece: Piece) {
         self.pieces[index] = piece;
-    }
-
-    fn clone(&self) -> Board {
-        Board {
-            width: self.width,
-            height: self.height,
-            pieces: self.pieces.clone()
-        }
     }
 
     pub fn get_moves_from(&self, index : u8) -> Vec<u8> {
@@ -118,6 +112,24 @@ impl Board {
             }
         }
         moves
+    }
+
+    pub fn is_solved(&self) -> bool {
+        let mut person_count = 0;
+        let mut cow_count = 0;
+        let mut house_count = 0;
+        let mut barn_count = 0;
+        for i in 0..self.pieces.len() {
+            let piece = self.pieces[i];
+            match piece {
+                Piece::Person => person_count += 1,
+                Piece::Cow => cow_count += 1,
+                Piece::House => house_count += 1,
+                Piece::Barn => barn_count += 1,
+                _ => {}
+            }
+        }
+        person_count * house_count + cow_count * barn_count == 0
     }
 
     pub fn from_string(s: &str) -> Board {
