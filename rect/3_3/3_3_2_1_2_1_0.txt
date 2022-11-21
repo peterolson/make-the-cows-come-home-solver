@@ -1,966 +1,129 @@
-3|3|OBO_H_P_P	6	211	true	true	true
-3|3|OBOH__P_P	5	191	true	true	true
-3|3|OOPB___HP	6	151	true	true	true
-3|3|OOB__HP_P	5	146	true	true	true
-3|3|OBPH__P_O	6	135	true	true	true
-3|3|OOB_H_P_P	6	133	true	true	true
-3|3|OB___POPH	5	132	true	true	true
-3|3|OPH_B_O_P	6	130	true	true	true
-3|3|OB__OHP_P	5	115	true	true	true
-3|3|OBP__HOP_	7	111	true	true	true
-3|3|OB_P_HO_P	5	98	true	true	true
-3|3|OO___BPHP	6	94	true	true	true
-3|3|OOP__BPH_	7	91	true	true	true
-3|3|OBOP__H_P	4	90	true	true	true
-3|3|OOBH__P_P	5	87	true	true	true
-3|3|OB_P_OHP_	5	84	true	true	true
-3|3|OPB_H_P_O	5	84	true	true	true
-3|3|OB__PHP_O	6	80	true	true	true
-3|3|OOPB___PH	5	80	true	true	true
-3|3|BO_O_P_PH	4	80	true	true	true
-3|3|OOP__HPB_	6	75	true	true	true
-3|3|OOB__PP_H	4	72	true	true	true
-3|3|OB_P_OH_P	5	71	true	true	true
-3|3|OPH__PBO_	4	69	true	true	true
-3|3|OOB__HPP_	6	68	true	true	true
-3|3|OOP_B_P_H	5	67	true	true	true
-3|3|OO_B_P_PH	5	67	true	true	true
-3|3|OBP__HPO_	5	64	true	true	true
-3|3|OO_B_PPH_	6	62	true	true	true
-3|3|OO_B_P_HP	6	62	true	true	true
-3|3|OB__OPP_H	4	60	true	true	true
-3|3|OOPB_P_H_	7	59	true	true	true
-3|3|OO_P_BHP_	6	56	true	true	true
-3|3|OBP_PHO__	6	56	true	true	true
-3|3|OPH_BPO__	6	56	true	true	true
-3|3|OBO_P_PH_	4	56	true	true	true
-3|3|OBP_O_P_H	4	56	true	true	true
-3|3|OB___PPOH	4	56	true	true	true
-3|3|OO__BPP_H	5	54	true	true	true
-3|3|OO__B_PHP	5	54	true	true	true
-3|3|OBOPH___P	5	54	true	true	true
-3|3|OOB_P_PH_	4	54	true	true	true
-3|3|OB_P_HOP_	7	53	true	true	true
-3|3|OBOP__HP_	4	53	true	true	true
-3|3|OOBH___PP	6	52	true	true	true
-3|3|OB_P__HPO	5	52	true	true	true
-3|3|OB__PHOP_	7	51	true	true	true
-3|3|OOPB__PH_	6	50	true	true	true
-3|3|OO_B__PHP	5	50	true	true	true
-3|3|OBOHP___P	5	48	true	true	true
-3|3|OBOP_H_P_	5	46	true	true	true
-3|3|OOBP__HP_	4	46	true	true	true
-3|3|OBP_OHP__	5	45	true	true	true
-3|3|OOBP__H_P	4	44	true	true	true
-3|3|OO__PBPH_	6	43	true	true	true
-3|3|OBPP_HO__	6	41	true	true	true
-3|3|OPH__PB_O	4	40	true	true	true
-3|3|OOB_HPP__	5	38	true	true	true
-3|3|OOB_H_PP_	5	38	true	true	true
-3|3|OPB_HOP__	5	38	true	true	true
-3|3|OOB__P_PH	4	37	true	true	true
-3|3|OOB_P__HP	4	35	true	true	true
-3|3|OBP_O__PH	4	35	true	true	true
-3|3|OB_PO_H_P	4	35	true	true	true
-3|3|OB__OP_PH	4	35	true	true	true
-3|3|OOBH__PP_	5	34	true	true	true
-3|3|OOB_PHP__	5	34	true	true	true
-3|3|OOB__H_PP	5	34	true	true	true
-3|3|OB__PHPO_	5	33	true	true	true
-3|3|OOBPH___P	5	32	true	true	true
-3|3|OOB_H__PP	5	32	true	true	true
-3|3|OOP__H_BP	5	32	true	true	true
-3|3|BO_OPP_H_	5	32	true	true	true
-3|3|OOPP_H_B_	5	31	true	true	true
-3|3|OPBP_O_H_	5	31	true	true	true
-3|3|OBOPH__P_	4	30	true	true	true
-3|3|OBOP_H__P	4	30	true	true	true
-3|3|OBOHP_P__	4	30	true	true	true
-3|3|OBPP_H_O_	4	30	true	true	true
-3|3|OB_P_H_OP	4	30	true	true	true
-3|3|OP__HPBO_	4	30	true	true	true
-3|3|OP__HPB_O	4	30	true	true	true
-3|3|BO_OHP_P_	4	30	true	true	true
-3|3|OOBP_H_P_	5	29	true	true	true
-3|3|OOBH_P_P_	5	29	true	true	true
-3|3|OPH_OP_B_	5	29	true	true	true
-3|3|OPH_O__BP	5	29	true	true	true
-3|3|OOP_BH__P	5	28	true	true	true
-3|3|OOP_B__PH	5	28	true	true	true
-3|3|OP__PHBO_	5	28	true	true	true
-3|3|OO_BP__HP	5	27	true	true	true
-3|3|OO_PB_H_P	5	27	true	true	true
-3|3|OBOHP__P_	5	27	true	true	true
-3|3|OBP_OH_P_	5	27	true	true	true
-3|3|OPH_BP_O_	5	27	true	true	true
-3|3|OPH_B__OP	5	27	true	true	true
-3|3|OO_BPP_H_	6	26	true	true	true
-3|3|OB_HPO_P_	6	26	true	true	true
-3|3|OOBHP___P	5	25	true	true	true
-3|3|OPH_BP__O	6	24	true	true	true
-3|3|OOPBP__H_	6	22	true	true	true
-3|3|OOBP_HP__	5	22	true	true	true
-3|3|OB_P__HOP	4	22	true	true	true
-3|3|OB_POH_P_	5	20	true	true	true
-3|3|OB_HOP_P_	5	20	true	true	true
-3|3|OOBPH_P__	5	19	true	true	true
-3|3|OOBPH__P_	4	19	true	true	true
-3|3|OOBP_H__P	4	19	true	true	true
-3|3|OOBHP_P__	4	19	true	true	true
-3|3|OOBH_PP__	4	19	true	true	true
-3|3|OOB_PH__P	4	19	true	true	true
-3|3|OOB_HP_P_	4	19	true	true	true
-3|3|OBP_PH_O_	4	19	true	true	true
-3|3|OB_POH__P	4	19	true	true	true
-3|3|OPBPH___O	4	19	true	true	true
-3|3|OPB_HO_P_	4	19	true	true	true
-3|3|OPB_H__PO	4	19	true	true	true
-3|3|OB_PPHO__	6	18	true	true	true
-3|3|OOBHP__P_	5	17	true	true	true
-3|3|OOBH_P__P	5	17	true	true	true
-3|3|OOB_PH_P_	5	17	true	true	true
-3|3|OOB_HP__P	5	17	true	true	true
-3|3|OPB_HO__P	5	17	true	true	true
-3|3|OOP_PH_B_	5	14	true	true	true
-3|3|OB_PPH_O_	4	14	true	true	true
-3|3|OB_HPP_O_	4	14	true	true	true
-3|3|OPB_HP__O	4	12	true	true	true
-3|3|OPB_PO_H_	4	10	true	true	true
-3|3|OPB_P__HO	4	10	true	true	true
-3|3|OOB___PHP	4	127	false	true	false
-3|3|OBO___PHP	4	114	false	true	false
-3|3|OOB___HPP	4	100	false	true	false
-3|3|OBP___OPH	5	89	false	true	false
-3|3|OPH___BOP	4	83	false	true	false
-3|3|OOB___PPH	4	65	false	true	false
-3|3|OBP___POH	4	41	false	true	false
-3|3|OB_PO_HP_	4	40	false	true	false
-3|3|OBOPHP___	4	30	false	true	false
-3|3|OO_BP_PH_	5	27	false	true	false
-3|3|OO_PB_HP_	5	27	false	true	false
-3|3|OOBPHP___	4	19	false	true	false
-3|3|OBOPPH___	4	19	false	true	false
-3|3|OBPPOH___	4	19	false	true	false
-3|3|OPBPHO___	4	19	false	true	false
-3|3|OOBPPH___	4	12	false	true	false
-3|3|OOBHPP___	4	12	false	true	false
-3|3|OOBPP_H__	0	-1	false	false	false
-3|3|OOBPP__H_	0	-1	false	false	false
-3|3|OOBPP___H	0	-1	false	false	false
-3|3|OOBP_PH__	0	-1	false	false	false
-3|3|OOBP_P_H_	0	-1	false	false	false
-3|3|OOBP_P__H	0	-1	false	false	false
-3|3|OOBP__PH_	0	-1	false	false	false
-3|3|OOBP__P_H	0	-1	false	false	false
-3|3|OOBP___PH	0	-1	false	false	false
-3|3|OOBP___HP	0	-1	false	false	false
-3|3|OOB_PPH__	0	-1	false	false	false
-3|3|OOB_PP_H_	0	-1	false	false	false
-3|3|OOB_PP__H	0	-1	false	false	false
-3|3|OOB_P_P_H	0	-1	false	false	false
-3|3|OOB_P_HP_	0	-1	false	false	false
-3|3|OOB_P_H_P	0	-1	false	false	false
-3|3|OOB_P__PH	0	-1	false	false	false
-3|3|OOB__PPH_	0	-1	false	false	false
-3|3|OOB__PHP_	0	-1	false	false	false
-3|3|OOB__PH_P	0	-1	false	false	false
-3|3|OOB__P_HP	0	-1	false	false	false
-3|3|OOPBPH___	0	-1	false	false	false
-3|3|OOPBP_H__	0	-1	false	false	false
-3|3|OOPBP___H	0	-1	false	false	false
-3|3|OOPBHP___	0	-1	false	false	false
-3|3|OOPBH_P__	0	-1	false	false	false
-3|3|OOPBH__P_	0	-1	false	false	false
-3|3|OOPBH___P	0	-1	false	false	false
-3|3|OOPB_PH__	0	-1	false	false	false
-3|3|OOPB_HP__	0	-1	false	false	false
-3|3|OOPB_H_P_	0	-1	false	false	false
-3|3|OOPB_H__P	0	-1	false	false	false
-3|3|OOPB__P_H	0	-1	false	false	false
-3|3|OOPB__HP_	0	-1	false	false	false
-3|3|OOPB__H_P	0	-1	false	false	false
-3|3|OOPPBH___	0	-1	false	false	false
-3|3|OOPPB_H__	0	-1	false	false	false
-3|3|OOPPB__H_	0	-1	false	false	false
-3|3|OOPPB___H	0	-1	false	false	false
-3|3|OOPPHB___	0	-1	false	false	false
-3|3|OOPPH_B__	0	-1	false	false	false
-3|3|OOPPH__B_	0	-1	false	false	false
-3|3|OOPPH___B	0	-1	false	false	false
-3|3|OOPP_BH__	0	-1	false	false	false
-3|3|OOPP_B_H_	0	-1	false	false	false
-3|3|OOPP_B__H	0	-1	false	false	false
-3|3|OOPP_HB__	0	-1	false	false	false
-3|3|OOPP_H__B	0	-1	false	false	false
-3|3|OOPP__BH_	0	-1	false	false	false
-3|3|OOPP__B_H	0	-1	false	false	false
-3|3|OOPP__HB_	0	-1	false	false	false
-3|3|OOPP__H_B	0	-1	false	false	false
-3|3|OOPP___BH	0	-1	false	false	false
-3|3|OOPP___HB	0	-1	false	false	false
-3|3|OOPHBP___	0	-1	false	false	false
-3|3|OOPHB_P__	0	-1	false	false	false
-3|3|OOPHB__P_	0	-1	false	false	false
-3|3|OOPHB___P	0	-1	false	false	false
-3|3|OOPHPB___	0	-1	false	false	false
-3|3|OOPHP_B__	0	-1	false	false	false
-3|3|OOPHP__B_	0	-1	false	false	false
-3|3|OOPHP___B	0	-1	false	false	false
-3|3|OOPH_BP__	0	-1	false	false	false
-3|3|OOPH_B_P_	0	-1	false	false	false
-3|3|OOPH_B__P	0	-1	false	false	false
-3|3|OOPH_PB__	0	-1	false	false	false
-3|3|OOPH_P_B_	0	-1	false	false	false
-3|3|OOPH_P__B	0	-1	false	false	false
-3|3|OOPH__BP_	0	-1	false	false	false
-3|3|OOPH__B_P	0	-1	false	false	false
-3|3|OOPH__PB_	0	-1	false	false	false
-3|3|OOPH__P_B	0	-1	false	false	false
-3|3|OOPH___BP	0	-1	false	false	false
-3|3|OOPH___PB	0	-1	false	false	false
-3|3|OOP_BPH__	0	-1	false	false	false
-3|3|OOP_BP_H_	0	-1	false	false	false
-3|3|OOP_BHP__	0	-1	false	false	false
-3|3|OOP_BH_P_	0	-1	false	false	false
-3|3|OOP_B_PH_	0	-1	false	false	false
-3|3|OOP_B_HP_	0	-1	false	false	false
-3|3|OOP_B_H_P	0	-1	false	false	false
-3|3|OOP_B__HP	0	-1	false	false	false
-3|3|OOP_PBH__	0	-1	false	false	false
-3|3|OOP_PB_H_	0	-1	false	false	false
-3|3|OOP_PB__H	0	-1	false	false	false
-3|3|OOP_PHB__	0	-1	false	false	false
-3|3|OOP_PH__B	0	-1	false	false	false
-3|3|OOP_P_BH_	0	-1	false	false	false
-3|3|OOP_P_B_H	0	-1	false	false	false
-3|3|OOP_P_HB_	0	-1	false	false	false
-3|3|OOP_P_H_B	0	-1	false	false	false
-3|3|OOP_P__BH	0	-1	false	false	false
-3|3|OOP_P__HB	0	-1	false	false	false
-3|3|OOP_HBP__	0	-1	false	false	false
-3|3|OOP_HB_P_	0	-1	false	false	false
-3|3|OOP_HB__P	0	-1	false	false	false
-3|3|OOP_HPB__	0	-1	false	false	false
-3|3|OOP_HP_B_	0	-1	false	false	false
-3|3|OOP_HP__B	0	-1	false	false	false
-3|3|OOP_H_BP_	0	-1	false	false	false
-3|3|OOP_H_B_P	0	-1	false	false	false
-3|3|OOP_H_PB_	0	-1	false	false	false
-3|3|OOP_H_P_B	0	-1	false	false	false
-3|3|OOP_H__BP	0	-1	false	false	false
-3|3|OOP_H__PB	0	-1	false	false	false
-3|3|OOP__BP_H	0	-1	false	false	false
-3|3|OOP__BHP_	0	-1	false	false	false
-3|3|OOP__BH_P	0	-1	false	false	false
-3|3|OOP__B_PH	0	-1	false	false	false
-3|3|OOP__B_HP	0	-1	false	false	false
-3|3|OOP__PBH_	0	-1	false	false	false
-3|3|OOP__PHB_	0	-1	false	false	false
-3|3|OOP__PH_B	0	-1	false	false	false
-3|3|OOP__P_HB	0	-1	false	false	false
-3|3|OOP__HBP_	0	-1	false	false	false
-3|3|OOP__HB_P	0	-1	false	false	false
-3|3|OOP__HP_B	0	-1	false	false	false
-3|3|OOP__H_PB	0	-1	false	false	false
-3|3|OOP___BPH	0	-1	false	false	false
-3|3|OOP___BHP	0	-1	false	false	false
-3|3|OOP___PBH	0	-1	false	false	false
-3|3|OOP___PHB	0	-1	false	false	false
-3|3|OOP___HBP	0	-1	false	false	false
-3|3|OOP___HPB	0	-1	false	false	false
-3|3|OOHBPP___	0	-1	false	false	false
-3|3|OOHBP_P__	0	-1	false	false	false
-3|3|OOHBP__P_	0	-1	false	false	false
-3|3|OOHBP___P	0	-1	false	false	false
-3|3|OOHB_PP__	0	-1	false	false	false
-3|3|OOHB_P_P_	0	-1	false	false	false
-3|3|OOHB__PP_	0	-1	false	false	false
-3|3|OOHB__P_P	0	-1	false	false	false
-3|3|OOHB___PP	0	-1	false	false	false
-3|3|OOHPBP___	0	-1	false	false	false
-3|3|OOHPB__P_	0	-1	false	false	false
-3|3|OOHPB___P	0	-1	false	false	false
-3|3|OOHPPB___	0	-1	false	false	false
-3|3|OOHPP_B__	0	-1	false	false	false
-3|3|OOHPP__B_	0	-1	false	false	false
-3|3|OOHPP___B	0	-1	false	false	false
-3|3|OOHP_B_P_	0	-1	false	false	false
-3|3|OOHP_B__P	0	-1	false	false	false
-3|3|OOHP_PB__	0	-1	false	false	false
-3|3|OOHP_P_B_	0	-1	false	false	false
-3|3|OOHP_P__B	0	-1	false	false	false
-3|3|OOHP__BP_	0	-1	false	false	false
-3|3|OOHP__B_P	0	-1	false	false	false
-3|3|OOHP___BP	0	-1	false	false	false
-3|3|OOHP___PB	0	-1	false	false	false
-3|3|OOH_BPP__	0	-1	false	false	false
-3|3|OOH_BP_P_	0	-1	false	false	false
-3|3|OOH_B_PP_	0	-1	false	false	false
-3|3|OOH_B_P_P	0	-1	false	false	false
-3|3|OOH_B__PP	0	-1	false	false	false
-3|3|OOH_PBP__	0	-1	false	false	false
-3|3|OOH_PB_P_	0	-1	false	false	false
-3|3|OOH_PB__P	0	-1	false	false	false
-3|3|OOH_PPB__	0	-1	false	false	false
-3|3|OOH_PP_B_	0	-1	false	false	false
-3|3|OOH_PP__B	0	-1	false	false	false
-3|3|OOH_P_BP_	0	-1	false	false	false
-3|3|OOH_P_B_P	0	-1	false	false	false
-3|3|OOH_P_PB_	0	-1	false	false	false
-3|3|OOH_P_P_B	0	-1	false	false	false
-3|3|OOH_P__BP	0	-1	false	false	false
-3|3|OOH_P__PB	0	-1	false	false	false
-3|3|OOH__BPP_	0	-1	false	false	false
-3|3|OOH__BP_P	0	-1	false	false	false
-3|3|OOH__B_PP	0	-1	false	false	false
-3|3|OOH__PBP_	0	-1	false	false	false
-3|3|OOH__PPB_	0	-1	false	false	false
-3|3|OOH__PP_B	0	-1	false	false	false
-3|3|OOH__P_PB	0	-1	false	false	false
-3|3|OOH___BPP	0	-1	false	false	false
-3|3|OOH___PBP	0	-1	false	false	false
-3|3|OOH___PPB	0	-1	false	false	false
-3|3|OO_BPPH__	0	-1	false	false	false
-3|3|OO_BPP__H	0	-1	false	false	false
-3|3|OO_BPHP__	0	-1	false	false	false
-3|3|OO_BPH_P_	0	-1	false	false	false
-3|3|OO_BPH__P	0	-1	false	false	false
-3|3|OO_BP_P_H	0	-1	false	false	false
-3|3|OO_BP_HP_	0	-1	false	false	false
-3|3|OO_BP_H_P	0	-1	false	false	false
-3|3|OO_BP__PH	0	-1	false	false	false
-3|3|OO_BHPP__	0	-1	false	false	false
-3|3|OO_BHP_P_	0	-1	false	false	false
-3|3|OO_BHP__P	0	-1	false	false	false
-3|3|OO_BH_PP_	0	-1	false	false	false
-3|3|OO_BH_P_P	0	-1	false	false	false
-3|3|OO_BH__PP	0	-1	false	false	false
-3|3|OO_B_PP_H	0	-1	false	false	false
-3|3|OO_B_PHP_	0	-1	false	false	false
-3|3|OO_B_PH_P	0	-1	false	false	false
-3|3|OO_B_HPP_	0	-1	false	false	false
-3|3|OO_B_HP_P	0	-1	false	false	false
-3|3|OO_B_H_PP	0	-1	false	false	false
-3|3|OO_PBPH__	0	-1	false	false	false
-3|3|OO_PBP_H_	0	-1	false	false	false
-3|3|OO_PBP__H	0	-1	false	false	false
-3|3|OO_PBH_P_	0	-1	false	false	false
-3|3|OO_PBH__P	0	-1	false	false	false
-3|3|OO_PB__PH	0	-1	false	false	false
-3|3|OO_PB__HP	0	-1	false	false	false
-3|3|OO_PPBH__	0	-1	false	false	false
-3|3|OO_PPB_H_	0	-1	false	false	false
-3|3|OO_PPB__H	0	-1	false	false	false
-3|3|OO_PPHB__	0	-1	false	false	false
-3|3|OO_PPH_B_	0	-1	false	false	false
-3|3|OO_PPH__B	0	-1	false	false	false
-3|3|OO_PP_BH_	0	-1	false	false	false
-3|3|OO_PP_B_H	0	-1	false	false	false
-3|3|OO_PP_HB_	0	-1	false	false	false
-3|3|OO_PP_H_B	0	-1	false	false	false
-3|3|OO_PP__BH	0	-1	false	false	false
-3|3|OO_PP__HB	0	-1	false	false	false
-3|3|OO_PHB_P_	0	-1	false	false	false
-3|3|OO_PHB__P	0	-1	false	false	false
-3|3|OO_PHPB__	0	-1	false	false	false
-3|3|OO_PHP_B_	0	-1	false	false	false
-3|3|OO_PHP__B	0	-1	false	false	false
-3|3|OO_PH_BP_	0	-1	false	false	false
-3|3|OO_PH_B_P	0	-1	false	false	false
-3|3|OO_PH__BP	0	-1	false	false	false
-3|3|OO_PH__PB	0	-1	false	false	false
-3|3|OO_P_BH_P	0	-1	false	false	false
-3|3|OO_P_B_PH	0	-1	false	false	false
-3|3|OO_P_B_HP	0	-1	false	false	false
-3|3|OO_P_PBH_	0	-1	false	false	false
-3|3|OO_P_PB_H	0	-1	false	false	false
-3|3|OO_P_PHB_	0	-1	false	false	false
-3|3|OO_P_PH_B	0	-1	false	false	false
-3|3|OO_P_P_BH	0	-1	false	false	false
-3|3|OO_P_P_HB	0	-1	false	false	false
-3|3|OO_P_HBP_	0	-1	false	false	false
-3|3|OO_P_HB_P	0	-1	false	false	false
-3|3|OO_P_H_BP	0	-1	false	false	false
-3|3|OO_P_H_PB	0	-1	false	false	false
-3|3|OO_P__BPH	0	-1	false	false	false
-3|3|OO_P__BHP	0	-1	false	false	false
-3|3|OO_P__HBP	0	-1	false	false	false
-3|3|OO_P__HPB	0	-1	false	false	false
-3|3|OO_HBPP__	0	-1	false	false	false
-3|3|OO_HBP_P_	0	-1	false	false	false
-3|3|OO_HBP__P	0	-1	false	false	false
-3|3|OO_HB_P_P	0	-1	false	false	false
-3|3|OO_HB__PP	0	-1	false	false	false
-3|3|OO_HPBP__	0	-1	false	false	false
-3|3|OO_HPB_P_	0	-1	false	false	false
-3|3|OO_HPB__P	0	-1	false	false	false
-3|3|OO_HPPB__	0	-1	false	false	false
-3|3|OO_HPP_B_	0	-1	false	false	false
-3|3|OO_HPP__B	0	-1	false	false	false
-3|3|OO_HP_BP_	0	-1	false	false	false
-3|3|OO_HP_B_P	0	-1	false	false	false
-3|3|OO_HP_PB_	0	-1	false	false	false
-3|3|OO_HP_P_B	0	-1	false	false	false
-3|3|OO_HP__BP	0	-1	false	false	false
-3|3|OO_HP__PB	0	-1	false	false	false
-3|3|OO_H_BP_P	0	-1	false	false	false
-3|3|OO_H_B_PP	0	-1	false	false	false
-3|3|OO_H_PBP_	0	-1	false	false	false
-3|3|OO_H_PB_P	0	-1	false	false	false
-3|3|OO_H_PPB_	0	-1	false	false	false
-3|3|OO_H_PP_B	0	-1	false	false	false
-3|3|OO_H_P_BP	0	-1	false	false	false
-3|3|OO_H_P_PB	0	-1	false	false	false
-3|3|OO_H__PBP	0	-1	false	false	false
-3|3|OO__BPPH_	0	-1	false	false	false
-3|3|OO__BPHP_	0	-1	false	false	false
-3|3|OO__BPH_P	0	-1	false	false	false
-3|3|OO__BP_PH	0	-1	false	false	false
-3|3|OO__BHPP_	0	-1	false	false	false
-3|3|OO__BHP_P	0	-1	false	false	false
-3|3|OO__PBP_H	0	-1	false	false	false
-3|3|OO__PBHP_	0	-1	false	false	false
-3|3|OO__PBH_P	0	-1	false	false	false
-3|3|OO__PB_PH	0	-1	false	false	false
-3|3|OO__PB_HP	0	-1	false	false	false
-3|3|OO__PPBH_	0	-1	false	false	false
-3|3|OO__PPB_H	0	-1	false	false	false
-3|3|OO__PPHB_	0	-1	false	false	false
-3|3|OO__PPH_B	0	-1	false	false	false
-3|3|OO__PP_BH	0	-1	false	false	false
-3|3|OO__PP_HB	0	-1	false	false	false
-3|3|OO__PHBP_	0	-1	false	false	false
-3|3|OO__PHB_P	0	-1	false	false	false
-3|3|OO__PHPB_	0	-1	false	false	false
-3|3|OO__PHP_B	0	-1	false	false	false
-3|3|OO__PH_BP	0	-1	false	false	false
-3|3|OO__PH_PB	0	-1	false	false	false
-3|3|OO__P_BPH	0	-1	false	false	false
-3|3|OO__P_BHP	0	-1	false	false	false
-3|3|OO__P_PBH	0	-1	false	false	false
-3|3|OO__P_PHB	0	-1	false	false	false
-3|3|OO__P_HBP	0	-1	false	false	false
-3|3|OO__P_HPB	0	-1	false	false	false
-3|3|OO__HBP_P	0	-1	false	false	false
-3|3|OO__HPBP_	0	-1	false	false	false
-3|3|OO__HPPB_	0	-1	false	false	false
-3|3|OO__HPP_B	0	-1	false	false	false
-3|3|OO__HP_PB	0	-1	false	false	false
-3|3|OO__H_PBP	0	-1	false	false	false
-3|3|OO___PBPH	0	-1	false	false	false
-3|3|OO___PPBH	0	-1	false	false	false
-3|3|OO___PPHB	0	-1	false	false	false
-3|3|OO___PHPB	0	-1	false	false	false
-3|3|OO___HPBP	0	-1	false	false	false
-3|3|OBOPP_H__	0	-1	false	false	false
-3|3|OBOPP__H_	0	-1	false	false	false
-3|3|OBOPP___H	0	-1	false	false	false
-3|3|OBOP_PH__	0	-1	false	false	false
-3|3|OBOP_P_H_	0	-1	false	false	false
-3|3|OBOP___PH	0	-1	false	false	false
-3|3|OBOP___HP	0	-1	false	false	false
-3|3|OBO_P_P_H	0	-1	false	false	false
-3|3|OBO_P_HP_	0	-1	false	false	false
-3|3|OBPPO_H__	0	-1	false	false	false
-3|3|OBPPO__H_	0	-1	false	false	false
-3|3|OBPPO___H	0	-1	false	false	false
-3|3|OBPPHO___	0	-1	false	false	false
-3|3|OBPPH_O__	0	-1	false	false	false
-3|3|OBPPH__O_	0	-1	false	false	false
-3|3|OBPPH___O	0	-1	false	false	false
-3|3|OBPP_OH__	0	-1	false	false	false
-3|3|OBPP_O_H_	0	-1	false	false	false
-3|3|OBPP_O__H	0	-1	false	false	false
-3|3|OBPP_H__O	0	-1	false	false	false
-3|3|OBPP__OH_	0	-1	false	false	false
-3|3|OBPP__O_H	0	-1	false	false	false
-3|3|OBPP__HO_	0	-1	false	false	false
-3|3|OBPP__H_O	0	-1	false	false	false
-3|3|OBPP___OH	0	-1	false	false	false
-3|3|OBPP___HO	0	-1	false	false	false
-3|3|OBPHO_P__	0	-1	false	false	false
-3|3|OBPHO__P_	0	-1	false	false	false
-3|3|OBPHO___P	0	-1	false	false	false
-3|3|OBPHPO___	0	-1	false	false	false
-3|3|OBPHP_O__	0	-1	false	false	false
-3|3|OBPHP__O_	0	-1	false	false	false
-3|3|OBPHP___O	0	-1	false	false	false
-3|3|OBPH_OP__	0	-1	false	false	false
-3|3|OBPH_O_P_	0	-1	false	false	false
-3|3|OBPH_O__P	0	-1	false	false	false
-3|3|OBPH__OP_	0	-1	false	false	false
-3|3|OBPH__O_P	0	-1	false	false	false
-3|3|OBPH___OP	0	-1	false	false	false
-3|3|OBPH___PO	0	-1	false	false	false
-3|3|OBP_O_PH_	0	-1	false	false	false
-3|3|OBP_O_HP_	0	-1	false	false	false
-3|3|OBP_O_H_P	0	-1	false	false	false
-3|3|OBP_O__HP	0	-1	false	false	false
-3|3|OBP_POH__	0	-1	false	false	false
-3|3|OBP_PO_H_	0	-1	false	false	false
-3|3|OBP_PO__H	0	-1	false	false	false
-3|3|OBP_P_OH_	0	-1	false	false	false
-3|3|OBP_P_O_H	0	-1	false	false	false
-3|3|OBP_P_HO_	0	-1	false	false	false
-3|3|OBP_P_H_O	0	-1	false	false	false
-3|3|OBP_P__OH	0	-1	false	false	false
-3|3|OBP_P__HO	0	-1	false	false	false
-3|3|OBP_HOP__	0	-1	false	false	false
-3|3|OBP_HO_P_	0	-1	false	false	false
-3|3|OBP_HO__P	0	-1	false	false	false
-3|3|OBP_H_OP_	0	-1	false	false	false
-3|3|OBP_H_O_P	0	-1	false	false	false
-3|3|OBP_H_PO_	0	-1	false	false	false
-3|3|OBP_H_P_O	0	-1	false	false	false
-3|3|OBP_H__OP	0	-1	false	false	false
-3|3|OBP_H__PO	0	-1	false	false	false
-3|3|OBP__OPH_	0	-1	false	false	false
-3|3|OBP__OP_H	0	-1	false	false	false
-3|3|OBP__OHP_	0	-1	false	false	false
-3|3|OBP__OH_P	0	-1	false	false	false
-3|3|OBP__O_PH	0	-1	false	false	false
-3|3|OBP__O_HP	0	-1	false	false	false
-3|3|OBP___OHP	0	-1	false	false	false
-3|3|OBP___PHO	0	-1	false	false	false
-3|3|OBP___HOP	0	-1	false	false	false
-3|3|OBP___HPO	0	-1	false	false	false
-3|3|OBHPOP___	0	-1	false	false	false
-3|3|OBHPO__P_	0	-1	false	false	false
-3|3|OBHPO___P	0	-1	false	false	false
-3|3|OBHPPO___	0	-1	false	false	false
-3|3|OBHPP_O__	0	-1	false	false	false
-3|3|OBHPP__O_	0	-1	false	false	false
-3|3|OBHPP___O	0	-1	false	false	false
-3|3|OBHP_O_P_	0	-1	false	false	false
-3|3|OBHP_O__P	0	-1	false	false	false
-3|3|OBHP_PO__	0	-1	false	false	false
-3|3|OBHP_P_O_	0	-1	false	false	false
-3|3|OBHP_P__O	0	-1	false	false	false
-3|3|OBHP__OP_	0	-1	false	false	false
-3|3|OBHP__O_P	0	-1	false	false	false
-3|3|OBHP___OP	0	-1	false	false	false
-3|3|OBHP___PO	0	-1	false	false	false
-3|3|OBH_OPP__	0	-1	false	false	false
-3|3|OBH_OP_P_	0	-1	false	false	false
-3|3|OBH_O_P_P	0	-1	false	false	false
-3|3|OBH_POP__	0	-1	false	false	false
-3|3|OBH_PO_P_	0	-1	false	false	false
-3|3|OBH_PO__P	0	-1	false	false	false
-3|3|OBH_PPO__	0	-1	false	false	false
-3|3|OBH_PP_O_	0	-1	false	false	false
-3|3|OBH_PP__O	0	-1	false	false	false
-3|3|OBH_P_OP_	0	-1	false	false	false
-3|3|OBH_P_O_P	0	-1	false	false	false
-3|3|OBH_P_PO_	0	-1	false	false	false
-3|3|OBH_P_P_O	0	-1	false	false	false
-3|3|OBH_P__OP	0	-1	false	false	false
-3|3|OBH_P__PO	0	-1	false	false	false
-3|3|OBH__OP_P	0	-1	false	false	false
-3|3|OBH__POP_	0	-1	false	false	false
-3|3|OBH__PPO_	0	-1	false	false	false
-3|3|OBH__PP_O	0	-1	false	false	false
-3|3|OBH__P_PO	0	-1	false	false	false
-3|3|OBH___POP	0	-1	false	false	false
-3|3|OB_POPH__	0	-1	false	false	false
-3|3|OB_POP_H_	0	-1	false	false	false
-3|3|OB_POP__H	0	-1	false	false	false
-3|3|OB_PO__PH	0	-1	false	false	false
-3|3|OB_PO__HP	0	-1	false	false	false
-3|3|OB_PPOH__	0	-1	false	false	false
-3|3|OB_PPO_H_	0	-1	false	false	false
-3|3|OB_PPO__H	0	-1	false	false	false
-3|3|OB_PPH__O	0	-1	false	false	false
-3|3|OB_PP_OH_	0	-1	false	false	false
-3|3|OB_PP_O_H	0	-1	false	false	false
-3|3|OB_PP_HO_	0	-1	false	false	false
-3|3|OB_PP_H_O	0	-1	false	false	false
-3|3|OB_PP__OH	0	-1	false	false	false
-3|3|OB_PP__HO	0	-1	false	false	false
-3|3|OB_PHO_P_	0	-1	false	false	false
-3|3|OB_PHO__P	0	-1	false	false	false
-3|3|OB_PHPO__	0	-1	false	false	false
-3|3|OB_PHP_O_	0	-1	false	false	false
-3|3|OB_PHP__O	0	-1	false	false	false
-3|3|OB_PH_OP_	0	-1	false	false	false
-3|3|OB_PH_O_P	0	-1	false	false	false
-3|3|OB_PH__OP	0	-1	false	false	false
-3|3|OB_PH__PO	0	-1	false	false	false
-3|3|OB_P_O_PH	0	-1	false	false	false
-3|3|OB_P_O_HP	0	-1	false	false	false
-3|3|OB_P_POH_	0	-1	false	false	false
-3|3|OB_P_PO_H	0	-1	false	false	false
-3|3|OB_P_PHO_	0	-1	false	false	false
-3|3|OB_P_PH_O	0	-1	false	false	false
-3|3|OB_P_P_OH	0	-1	false	false	false
-3|3|OB_P_P_HO	0	-1	false	false	false
-3|3|OB_P_H_PO	0	-1	false	false	false
-3|3|OB_P__OPH	0	-1	false	false	false
-3|3|OB_HPO__P	0	-1	false	false	false
-3|3|OB_HPPO__	0	-1	false	false	false
-3|3|OB_HPP__O	0	-1	false	false	false
-3|3|OB_HP_OP_	0	-1	false	false	false
-3|3|OB_HP_O_P	0	-1	false	false	false
-3|3|OB_HP__OP	0	-1	false	false	false
-3|3|OB_HP__PO	0	-1	false	false	false
-3|3|OB_H_POP_	0	-1	false	false	false
-3|3|OB_H_P_PO	0	-1	false	false	false
-3|3|OB__OPPH_	0	-1	false	false	false
-3|3|OB__OPHP_	0	-1	false	false	false
-3|3|OB__POP_H	0	-1	false	false	false
-3|3|OB__POHP_	0	-1	false	false	false
-3|3|OB__POH_P	0	-1	false	false	false
-3|3|OB__PO_PH	0	-1	false	false	false
-3|3|OB__PPOH_	0	-1	false	false	false
-3|3|OB__PPO_H	0	-1	false	false	false
-3|3|OB__PPHO_	0	-1	false	false	false
-3|3|OB__PPH_O	0	-1	false	false	false
-3|3|OB__PP_OH	0	-1	false	false	false
-3|3|OB__PP_HO	0	-1	false	false	false
-3|3|OB__PH_PO	0	-1	false	false	false
-3|3|OB__P_OPH	0	-1	false	false	false
-3|3|OB__P_POH	0	-1	false	false	false
-3|3|OB__P_HOP	0	-1	false	false	false
-3|3|OB__P_HPO	0	-1	false	false	false
-3|3|OB__HOP_P	0	-1	false	false	false
-3|3|OB__HPOP_	0	-1	false	false	false
-3|3|OB__HPPO_	0	-1	false	false	false
-3|3|OB__HPP_O	0	-1	false	false	false
-3|3|OB__HP_PO	0	-1	false	false	false
-3|3|OB__H_POP	0	-1	false	false	false
-3|3|OB___PHPO	0	-1	false	false	false
-3|3|OPOPBH___	0	-1	false	false	false
-3|3|OPOPB_H__	0	-1	false	false	false
-3|3|OPOPB__H_	0	-1	false	false	false
-3|3|OPOPB___H	0	-1	false	false	false
-3|3|OPOPH_B__	0	-1	false	false	false
-3|3|OPOPH__B_	0	-1	false	false	false
-3|3|OPOPH___B	0	-1	false	false	false
-3|3|OPOP_HB__	0	-1	false	false	false
-3|3|OPOP_H_B_	0	-1	false	false	false
-3|3|OPOP_H__B	0	-1	false	false	false
-3|3|OPOP__BH_	0	-1	false	false	false
-3|3|OPOP__B_H	0	-1	false	false	false
-3|3|OPOP__HB_	0	-1	false	false	false
-3|3|OPOP__H_B	0	-1	false	false	false
-3|3|OPOP___BH	0	-1	false	false	false
-3|3|OPOP___HB	0	-1	false	false	false
-3|3|OPOHB__P_	0	-1	false	false	false
-3|3|OPOHB___P	0	-1	false	false	false
-3|3|OPOHP_B__	0	-1	false	false	false
-3|3|OPOHP__B_	0	-1	false	false	false
-3|3|OPOHP___B	0	-1	false	false	false
-3|3|OPOH__BP_	0	-1	false	false	false
-3|3|OPOH__B_P	0	-1	false	false	false
-3|3|OPOH___BP	0	-1	false	false	false
-3|3|OPOH___PB	0	-1	false	false	false
-3|3|OPO_B_P_H	0	-1	false	false	false
-3|3|OPO_B_HP_	0	-1	false	false	false
-3|3|OPO_P_BH_	0	-1	false	false	false
-3|3|OPO_P_B_H	0	-1	false	false	false
-3|3|OPO_P_HB_	0	-1	false	false	false
-3|3|OPO_H_BP_	0	-1	false	false	false
-3|3|OPO_H_B_P	0	-1	false	false	false
-3|3|OPO_H_PB_	0	-1	false	false	false
-3|3|OPO___BPH	0	-1	false	false	false
-3|3|OPO___PBH	0	-1	false	false	false
-3|3|OPBPOH___	0	-1	false	false	false
-3|3|OPBPO_H__	0	-1	false	false	false
-3|3|OPBPO__H_	0	-1	false	false	false
-3|3|OPBPO___H	0	-1	false	false	false
-3|3|OPBPH__O_	0	-1	false	false	false
-3|3|OPBP_OH__	0	-1	false	false	false
-3|3|OPBP_O__H	0	-1	false	false	false
-3|3|OPBP_H_O_	0	-1	false	false	false
-3|3|OPBP_H__O	0	-1	false	false	false
-3|3|OPBP__HO_	0	-1	false	false	false
-3|3|OPBP__H_O	0	-1	false	false	false
-3|3|OPBP___OH	0	-1	false	false	false
-3|3|OPBP___HO	0	-1	false	false	false
-3|3|OPBHOP___	0	-1	false	false	false
-3|3|OPBHO__P_	0	-1	false	false	false
-3|3|OPBHO___P	0	-1	false	false	false
-3|3|OPBHPO___	0	-1	false	false	false
-3|3|OPBHP_O__	0	-1	false	false	false
-3|3|OPBHP__O_	0	-1	false	false	false
-3|3|OPBHP___O	0	-1	false	false	false
-3|3|OPBH_O_P_	0	-1	false	false	false
-3|3|OPBH_O__P	0	-1	false	false	false
-3|3|OPBH_PO__	0	-1	false	false	false
-3|3|OPBH_P_O_	0	-1	false	false	false
-3|3|OPBH_P__O	0	-1	false	false	false
-3|3|OPBH__OP_	0	-1	false	false	false
-3|3|OPBH__O_P	0	-1	false	false	false
-3|3|OPBH___OP	0	-1	false	false	false
-3|3|OPBH___PO	0	-1	false	false	false
-3|3|OPB_OPH__	0	-1	false	false	false
-3|3|OPB_OP_H_	0	-1	false	false	false
-3|3|OPB_OP__H	0	-1	false	false	false
-3|3|OPB_OHP__	0	-1	false	false	false
-3|3|OPB_OH_P_	0	-1	false	false	false
-3|3|OPB_O_P_H	0	-1	false	false	false
-3|3|OPB_O_HP_	0	-1	false	false	false
-3|3|OPB_O_H_P	0	-1	false	false	false
-3|3|OPB_O__PH	0	-1	false	false	false
-3|3|OPB_POH__	0	-1	false	false	false
-3|3|OPB_PO__H	0	-1	false	false	false
-3|3|OPB_PHO__	0	-1	false	false	false
-3|3|OPB_PH_O_	0	-1	false	false	false
-3|3|OPB_PH__O	0	-1	false	false	false
-3|3|OPB_P_OH_	0	-1	false	false	false
-3|3|OPB_P_O_H	0	-1	false	false	false
-3|3|OPB_P_HO_	0	-1	false	false	false
-3|3|OPB_P_H_O	0	-1	false	false	false
-3|3|OPB_P__OH	0	-1	false	false	false
-3|3|OPB_HPO__	0	-1	false	false	false
-3|3|OPB_HP_O_	0	-1	false	false	false
-3|3|OPB_H_OP_	0	-1	false	false	false
-3|3|OPB_H_O_P	0	-1	false	false	false
-3|3|OPB_H_PO_	0	-1	false	false	false
-3|3|OPB_H__OP	0	-1	false	false	false
-3|3|OPB__OP_H	0	-1	false	false	false
-3|3|OPB__OHP_	0	-1	false	false	false
-3|3|OPB__OH_P	0	-1	false	false	false
-3|3|OPB__O_PH	0	-1	false	false	false
-3|3|OPB__POH_	0	-1	false	false	false
-3|3|OPB__PO_H	0	-1	false	false	false
-3|3|OPB__PHO_	0	-1	false	false	false
-3|3|OPB__PH_O	0	-1	false	false	false
-3|3|OPB__P_OH	0	-1	false	false	false
-3|3|OPB__HOP_	0	-1	false	false	false
-3|3|OPB__HPO_	0	-1	false	false	false
-3|3|OPB__HP_O	0	-1	false	false	false
-3|3|OPB__H_PO	0	-1	false	false	false
-3|3|OPB___OPH	0	-1	false	false	false
-3|3|OPB___POH	0	-1	false	false	false
-3|3|OPB___HOP	0	-1	false	false	false
-3|3|OPB___HPO	0	-1	false	false	false
-3|3|OPHPOB___	0	-1	false	false	false
-3|3|OPHPO__B_	0	-1	false	false	false
-3|3|OPHPO___B	0	-1	false	false	false
-3|3|OPHPBO___	0	-1	false	false	false
-3|3|OPHPB__O_	0	-1	false	false	false
-3|3|OPHPB___O	0	-1	false	false	false
-3|3|OPHP_O_B_	0	-1	false	false	false
-3|3|OPHP_O__B	0	-1	false	false	false
-3|3|OPHP_B_O_	0	-1	false	false	false
-3|3|OPHP___OB	0	-1	false	false	false
-3|3|OPH_OBP__	0	-1	false	false	false
-3|3|OPH_OB_P_	0	-1	false	false	false
-3|3|OPH_OB__P	0	-1	false	false	false
-3|3|OPH_OPB__	0	-1	false	false	false
-3|3|OPH_OP__B	0	-1	false	false	false
-3|3|OPH_O_BP_	0	-1	false	false	false
-3|3|OPH_O_B_P	0	-1	false	false	false
-3|3|OPH_O_PB_	0	-1	false	false	false
-3|3|OPH_O_P_B	0	-1	false	false	false
-3|3|OPH_O__PB	0	-1	false	false	false
-3|3|OPH_BOP__	0	-1	false	false	false
-3|3|OPH_BO_P_	0	-1	false	false	false
-3|3|OPH_B_OP_	0	-1	false	false	false
-3|3|OPH_B_PO_	0	-1	false	false	false
-3|3|OPH_B_P_O	0	-1	false	false	false
-3|3|OPH_B__PO	0	-1	false	false	false
-3|3|OPH_POB__	0	-1	false	false	false
-3|3|OPH_PO_B_	0	-1	false	false	false
-3|3|OPH_PO__B	0	-1	false	false	false
-3|3|OPH_PBO__	0	-1	false	false	false
-3|3|OPH_PB_O_	0	-1	false	false	false
-3|3|OPH_P_O_B	0	-1	false	false	false
-3|3|OPH_P_BO_	0	-1	false	false	false
-3|3|OPH_P_B_O	0	-1	false	false	false
-3|3|OPH_P__OB	0	-1	false	false	false
-3|3|OPH__OBP_	0	-1	false	false	false
-3|3|OPH__OPB_	0	-1	false	false	false
-3|3|OPH__OP_B	0	-1	false	false	false
-3|3|OPH__O_PB	0	-1	false	false	false
-3|3|OPH__BOP_	0	-1	false	false	false
-3|3|OPH__BO_P	0	-1	false	false	false
-3|3|OPH__BPO_	0	-1	false	false	false
-3|3|OPH__B_OP	0	-1	false	false	false
-3|3|OPH__PO_B	0	-1	false	false	false
-3|3|OPH__P_OB	0	-1	false	false	false
-3|3|OPH___POB	0	-1	false	false	false
-3|3|OP_POB_H_	0	-1	false	false	false
-3|3|OP_POB__H	0	-1	false	false	false
-3|3|OP_POH__B	0	-1	false	false	false
-3|3|OP_PBO_H_	0	-1	false	false	false
-3|3|OP_PBO__H	0	-1	false	false	false
-3|3|OP_PBH__O	0	-1	false	false	false
-3|3|OP_PHO_B_	0	-1	false	false	false
-3|3|OP_PHO__B	0	-1	false	false	false
-3|3|OP_P_O_BH	0	-1	false	false	false
-3|3|OP_P_O_HB	0	-1	false	false	false
-3|3|OP_HOB_P_	0	-1	false	false	false
-3|3|OP_HOB__P	0	-1	false	false	false
-3|3|OP_HOPB__	0	-1	false	false	false
-3|3|OP_HOP_B_	0	-1	false	false	false
-3|3|OP_HOP__B	0	-1	false	false	false
-3|3|OP_HO_BP_	0	-1	false	false	false
-3|3|OP_HO_B_P	0	-1	false	false	false
-3|3|OP_HO__BP	0	-1	false	false	false
-3|3|OP_HO__PB	0	-1	false	false	false
-3|3|OP_HBO_P_	0	-1	false	false	false
-3|3|OP_HBO__P	0	-1	false	false	false
-3|3|OP_HBPO__	0	-1	false	false	false
-3|3|OP_HBP_O_	0	-1	false	false	false
-3|3|OP_HBP__O	0	-1	false	false	false
-3|3|OP_HB_OP_	0	-1	false	false	false
-3|3|OP_HB_O_P	0	-1	false	false	false
-3|3|OP_HB__OP	0	-1	false	false	false
-3|3|OP_HB__PO	0	-1	false	false	false
-3|3|OP_HPOB__	0	-1	false	false	false
-3|3|OP_HPO_B_	0	-1	false	false	false
-3|3|OP_HPO__B	0	-1	false	false	false
-3|3|OP_HPBO__	0	-1	false	false	false
-3|3|OP_HPB_O_	0	-1	false	false	false
-3|3|OP_HP_O_B	0	-1	false	false	false
-3|3|OP_HP_BO_	0	-1	false	false	false
-3|3|OP_HP_B_O	0	-1	false	false	false
-3|3|OP_HP__OB	0	-1	false	false	false
-3|3|OP_H_OBP_	0	-1	false	false	false
-3|3|OP_H_OB_P	0	-1	false	false	false
-3|3|OP_H_O_BP	0	-1	false	false	false
-3|3|OP_H_O_PB	0	-1	false	false	false
-3|3|OP_H_BOP_	0	-1	false	false	false
-3|3|OP_H_BO_P	0	-1	false	false	false
-3|3|OP_H_B_OP	0	-1	false	false	false
-3|3|OP_H_PO_B	0	-1	false	false	false
-3|3|OP_H_PBO_	0	-1	false	false	false
-3|3|OP_H_PB_O	0	-1	false	false	false
-3|3|OP_H_P_OB	0	-1	false	false	false
-3|3|OP__OBP_H	0	-1	false	false	false
-3|3|OP__OBHP_	0	-1	false	false	false
-3|3|OP__OBH_P	0	-1	false	false	false
-3|3|OP__OB_PH	0	-1	false	false	false
-3|3|OP__OPBH_	0	-1	false	false	false
-3|3|OP__OPB_H	0	-1	false	false	false
-3|3|OP__OPHB_	0	-1	false	false	false
-3|3|OP__OPH_B	0	-1	false	false	false
-3|3|OP__OP_BH	0	-1	false	false	false
-3|3|OP__OP_HB	0	-1	false	false	false
-3|3|OP__OHBP_	0	-1	false	false	false
-3|3|OP__OHPB_	0	-1	false	false	false
-3|3|OP__OHP_B	0	-1	false	false	false
-3|3|OP__OH_PB	0	-1	false	false	false
-3|3|OP__O_BPH	0	-1	false	false	false
-3|3|OP__O_PBH	0	-1	false	false	false
-3|3|OP__O_HBP	0	-1	false	false	false
-3|3|OP__O_HPB	0	-1	false	false	false
-3|3|OP__BOP_H	0	-1	false	false	false
-3|3|OP__BOHP_	0	-1	false	false	false
-3|3|OP__BOH_P	0	-1	false	false	false
-3|3|OP__BO_PH	0	-1	false	false	false
-3|3|OP__BPOH_	0	-1	false	false	false
-3|3|OP__BPO_H	0	-1	false	false	false
-3|3|OP__BPHO_	0	-1	false	false	false
-3|3|OP__BPH_O	0	-1	false	false	false
-3|3|OP__BP_OH	0	-1	false	false	false
-3|3|OP__BHOP_	0	-1	false	false	false
-3|3|OP__BHPO_	0	-1	false	false	false
-3|3|OP__BHP_O	0	-1	false	false	false
-3|3|OP__POBH_	0	-1	false	false	false
-3|3|OP__POB_H	0	-1	false	false	false
-3|3|OP__POHB_	0	-1	false	false	false
-3|3|OP__POH_B	0	-1	false	false	false
-3|3|OP__PO_BH	0	-1	false	false	false
-3|3|OP__PO_HB	0	-1	false	false	false
-3|3|OP__PBOH_	0	-1	false	false	false
-3|3|OP__PBO_H	0	-1	false	false	false
-3|3|OP__PBHO_	0	-1	false	false	false
-3|3|OP__PB_OH	0	-1	false	false	false
-3|3|OP__PHO_B	0	-1	false	false	false
-3|3|OP__PHB_O	0	-1	false	false	false
-3|3|OP__PH_OB	0	-1	false	false	false
-3|3|OP__P_OHB	0	-1	false	false	false
-3|3|OP__P_BOH	0	-1	false	false	false
-3|3|OP__P_BHO	0	-1	false	false	false
-3|3|OP__P_HOB	0	-1	false	false	false
-3|3|OP__HOBP_	0	-1	false	false	false
-3|3|OP__HOPB_	0	-1	false	false	false
-3|3|OP__HOP_B	0	-1	false	false	false
-3|3|OP__HO_PB	0	-1	false	false	false
-3|3|OP__HBOP_	0	-1	false	false	false
-3|3|OP__HBO_P	0	-1	false	false	false
-3|3|OP__HPO_B	0	-1	false	false	false
-3|3|OP__HP_OB	0	-1	false	false	false
-3|3|OP___OBPH	0	-1	false	false	false
-3|3|OP___OPBH	0	-1	false	false	false
-3|3|OP___OHPB	0	-1	false	false	false
-3|3|OP___POHB	0	-1	false	false	false
-3|3|OP___PBOH	0	-1	false	false	false
-3|3|OP___PHOB	0	-1	false	false	false
-3|3|OHO_B_P_P	0	-1	false	false	false
-3|3|OHO_P_BP_	0	-1	false	false	false
-3|3|OHO_P_B_P	0	-1	false	false	false
-3|3|OHO_P_PB_	0	-1	false	false	false
-3|3|OHO___PBP	0	-1	false	false	false
-3|3|OHB_OPP__	0	-1	false	false	false
-3|3|OHB_OP_P_	0	-1	false	false	false
-3|3|OHB_O_P_P	0	-1	false	false	false
-3|3|OHB_POP__	0	-1	false	false	false
-3|3|OHB_PO_P_	0	-1	false	false	false
-3|3|OHB_PPO__	0	-1	false	false	false
-3|3|OHB_PP_O_	0	-1	false	false	false
-3|3|OHB_P_O_P	0	-1	false	false	false
-3|3|OHB_P_P_O	0	-1	false	false	false
-3|3|OH__OBP_P	0	-1	false	false	false
-3|3|OH__OPBP_	0	-1	false	false	false
-3|3|OH__OPPB_	0	-1	false	false	false
-3|3|OH__OPP_B	0	-1	false	false	false
-3|3|OH__OP_PB	0	-1	false	false	false
-3|3|OH__POBP_	0	-1	false	false	false
-3|3|OH__POP_B	0	-1	false	false	false
-3|3|OH__PO_PB	0	-1	false	false	false
-3|3|OH__PPO_B	0	-1	false	false	false
-3|3|OH__PPBO_	0	-1	false	false	false
-3|3|OH__PP_OB	0	-1	false	false	false
-3|3|O_O_P_BPH	0	-1	false	false	false
-3|3|O_B_OPP_H	0	-1	false	false	false
-3|3|O_B_OPHP_	0	-1	false	false	false
-3|3|O_B_OP_PH	0	-1	false	false	false
-3|3|O_B_POHP_	0	-1	false	false	false
-3|3|O_B_PO_PH	0	-1	false	false	false
-3|3|O_B_PPHO_	0	-1	false	false	false
-3|3|O_B_PP_OH	0	-1	false	false	false
-3|3|O_P_O_HPB	0	-1	false	false	false
-3|3|O_H_OP_PB	0	-1	false	false	false
-3|3|O_H_PO_PB	0	-1	false	false	false
-3|3|O_H_PP_OB	0	-1	false	false	false
-3|3|BOHOPP___	0	-1	false	false	false
-3|3|BOHOP__P_	0	-1	false	false	false
-3|3|BOHO_P_P_	0	-1	false	false	false
-3|3|BOHPOP___	0	-1	false	false	false
-3|3|BOHPO__P_	0	-1	false	false	false
-3|3|BOHPPO___	0	-1	false	false	false
-3|3|BOHPP__O_	0	-1	false	false	false
-3|3|BOHP_O_P_	0	-1	false	false	false
-3|3|BOHP_P_O_	0	-1	false	false	false
-3|3|BOH_OP_P_	0	-1	false	false	false
-3|3|BOH_PO_P_	0	-1	false	false	false
-3|3|BOH_PP_O_	0	-1	false	false	false
-3|3|BO_OPP__H	0	-1	false	false	false
-3|3|BO_POP_H_	0	-1	false	false	false
-3|3|BO_POP__H	0	-1	false	false	false
-3|3|BO_POH_P_	0	-1	false	false	false
-3|3|BO_PO__PH	0	-1	false	false	false
-3|3|BO_PPO_H_	0	-1	false	false	false
-3|3|BO_PPO__H	0	-1	false	false	false
-3|3|BO_PPH_O_	0	-1	false	false	false
-3|3|BO_PP__OH	0	-1	false	false	false
-3|3|BO_PHO_P_	0	-1	false	false	false
-3|3|BO_PHP_O_	0	-1	false	false	false
-3|3|BO_P_O_PH	0	-1	false	false	false
-3|3|BO_P_P_OH	0	-1	false	false	false
-3|3|BO_HOP_P_	0	-1	false	false	false
-3|3|BO_HPO_P_	0	-1	false	false	false
-3|3|BO_HPP_O_	0	-1	false	false	false
-3|3|BO__OPHP_	0	-1	false	false	false
-3|3|BO__PPHO_	0	-1	false	false	false
-3|3|BP_POO_H_	0	-1	false	false	false
-3|3|BP_POO__H	0	-1	false	false	false
-3|3|BP_PHO_O_	0	-1	false	false	false
-3|3|BP_P_O_OH	0	-1	false	false	false
-3|3|BP_HOO_P_	0	-1	false	false	false
-3|3|BP_HOP_O_	0	-1	false	false	false
-3|3|BP_HPO_O_	0	-1	false	false	false
-3|3|BP__OPHO_	0	-1	false	false	false
+3|3|OBO_H_P_P	6	211
+3|3|OBOH__P_P	5	191
+3|3|OOPB___HP	6	151
+3|3|OOB__HP_P	5	146
+3|3|OBPH__P_O	6	135
+3|3|OOB_H_P_P	6	133
+3|3|OB___POPH	5	132
+3|3|OPH_B_O_P	6	130
+3|3|OB__OHP_P	5	115
+3|3|OBP__HOP_	7	111
+3|3|OB_P_HO_P	5	98
+3|3|OO___BPHP	6	94
+3|3|OOP__BPH_	7	91
+3|3|OBOP__H_P	4	90
+3|3|OOBH__P_P	5	87
+3|3|OB_P_OHP_	5	84
+3|3|OPB_H_P_O	5	84
+3|3|OB__PHP_O	6	80
+3|3|OOPB___PH	5	80
+3|3|BO_O_P_PH	4	80
+3|3|OOP__HPB_	6	75
+3|3|OOB__PP_H	4	72
+3|3|OB_P_OH_P	5	71
+3|3|OPH__PBO_	4	69
+3|3|OOB__HPP_	6	68
+3|3|OOP_B_P_H	5	67
+3|3|OO_B_P_PH	5	67
+3|3|OBP__HPO_	5	64
+3|3|OO_B_PPH_	6	62
+3|3|OO_B_P_HP	6	62
+3|3|OB__OPP_H	4	60
+3|3|OOPB_P_H_	7	59
+3|3|OO_P_BHP_	6	56
+3|3|OBP_PHO__	6	56
+3|3|OPH_BPO__	6	56
+3|3|OBO_P_PH_	4	56
+3|3|OBP_O_P_H	4	56
+3|3|OB___PPOH	4	56
+3|3|OO__BPP_H	5	54
+3|3|OO__B_PHP	5	54
+3|3|OBOPH___P	5	54
+3|3|OOB_P_PH_	4	54
+3|3|OB_P_HOP_	7	53
+3|3|OBOP__HP_	4	53
+3|3|OOBH___PP	6	52
+3|3|OB_P__HPO	5	52
+3|3|OB__PHOP_	7	51
+3|3|OOPB__PH_	6	50
+3|3|OO_B__PHP	5	50
+3|3|OBOHP___P	5	48
+3|3|OBOP_H_P_	5	46
+3|3|OOBP__HP_	4	46
+3|3|OBP_OHP__	5	45
+3|3|OOBP__H_P	4	44
+3|3|OO__PBPH_	6	43
+3|3|OBPP_HO__	6	41
+3|3|OPH__PB_O	4	40
+3|3|OOB_HPP__	5	38
+3|3|OOB_H_PP_	5	38
+3|3|OPB_HOP__	5	38
+3|3|OOB__P_PH	4	37
+3|3|OOB_P__HP	4	35
+3|3|OBP_O__PH	4	35
+3|3|OB_PO_H_P	4	35
+3|3|OB__OP_PH	4	35
+3|3|OOBH__PP_	5	34
+3|3|OOB_PHP__	5	34
+3|3|OOB__H_PP	5	34
+3|3|OB__PHPO_	5	33
+3|3|OOBPH___P	5	32
+3|3|OOB_H__PP	5	32
+3|3|OOP__H_BP	5	32
+3|3|BO_OPP_H_	5	32
+3|3|OOPP_H_B_	5	31
+3|3|OPBP_O_H_	5	31
+3|3|OBOPH__P_	4	30
+3|3|OBOP_H__P	4	30
+3|3|OBOHP_P__	4	30
+3|3|OBPP_H_O_	4	30
+3|3|OB_P_H_OP	4	30
+3|3|OP__HPBO_	4	30
+3|3|OP__HPB_O	4	30
+3|3|BO_OHP_P_	4	30
+3|3|OOBP_H_P_	5	29
+3|3|OOBH_P_P_	5	29
+3|3|OPH_OP_B_	5	29
+3|3|OPH_O__BP	5	29
+3|3|OOP_BH__P	5	28
+3|3|OOP_B__PH	5	28
+3|3|OP__PHBO_	5	28
+3|3|OO_BP__HP	5	27
+3|3|OO_PB_H_P	5	27
+3|3|OBOHP__P_	5	27
+3|3|OBP_OH_P_	5	27
+3|3|OPH_BP_O_	5	27
+3|3|OPH_B__OP	5	27
+3|3|OO_BPP_H_	6	26
+3|3|OB_HPO_P_	6	26
+3|3|OOBHP___P	5	25
+3|3|OPH_BP__O	6	24
+3|3|OOPBP__H_	6	22
+3|3|OOBP_HP__	5	22
+3|3|OB_P__HOP	4	22
+3|3|OB_POH_P_	5	20
+3|3|OB_HOP_P_	5	20
+3|3|OOBPH_P__	5	19
+3|3|OOBPH__P_	4	19
+3|3|OOBP_H__P	4	19
+3|3|OOBHP_P__	4	19
+3|3|OOBH_PP__	4	19
+3|3|OOB_PH__P	4	19
+3|3|OOB_HP_P_	4	19
+3|3|OBP_PH_O_	4	19
+3|3|OB_POH__P	4	19
+3|3|OPBPH___O	4	19
+3|3|OPB_HO_P_	4	19
+3|3|OPB_H__PO	4	19
+3|3|OB_PPHO__	6	18
+3|3|OOBHP__P_	5	17
+3|3|OOBH_P__P	5	17
+3|3|OOB_PH_P_	5	17
+3|3|OOB_HP__P	5	17
+3|3|OPB_HO__P	5	17
+3|3|OOP_PH_B_	5	14
+3|3|OB_PPH_O_	4	14
+3|3|OB_HPP_O_	4	14
+3|3|OPB_HP__O	4	12
+3|3|OPB_PO_H_	4	10
+3|3|OPB_P__HO	4	10

@@ -1,954 +1,108 @@
-3|3|OOOB_POPH	8	739	true	true	true
-3|3|OBOPO_HPO	7	615	true	true	true
-3|3|OOOB_POHP	9	593	true	true	true
-3|3|OOPB_OOHP	8	543	true	true	true
-3|3|OOOPB_HPO	9	473	true	true	true
-3|3|OOPB_OOPH	7	471	true	true	true
-3|3|OOP_BHOOP	8	455	true	true	true
-3|3|OOBP_OHPO	6	453	true	true	true
-3|3|OOOO_BPHP	8	435	true	true	true
-3|3|OOOB_PPHO	11	421	true	true	true
-3|3|OOPBO_OHP	8	421	true	true	true
-3|3|OBOHO_PPO	8	421	true	true	true
-3|3|OOPB_POHO	10	405	true	true	true
-3|3|OOOOB_PHP	8	400	true	true	true
-3|3|OOOBP_OHP	8	379	true	true	true
-3|3|OOPP_HOBO	7	379	true	true	true
-3|3|OBOP_HOPO	10	371	true	true	true
-3|3|OOOBO_PHP	8	364	true	true	true
-3|3|OOP_BOOPH	8	342	true	true	true
-3|3|OOOO_BPPH	8	330	true	true	true
-3|3|OBOHO_POP	7	330	true	true	true
-3|3|OOPB_OPHO	9	325	true	true	true
-3|3|OOOPB_HOP	8	325	true	true	true
-3|3|OBOPOHO_P	7	325	true	true	true
-3|3|OOP_PHOBO	7	321	true	true	true
-3|3|OOPO_BPHO	9	315	true	true	true
-3|3|OOBP_OPHO	7	315	true	true	true
-3|3|OOP_OHOBP	7	313	true	true	true
-3|3|OOPBO_OPH	7	302	true	true	true
-3|3|OBOHP_OPO	10	294	true	true	true
-3|3|OBP_OHOPO	10	291	true	true	true
-3|3|OOP_BPOOH	8	291	true	true	true
-3|3|OOPBP_OHO	9	290	true	true	true
-3|3|OOOBO_HPP	8	283	true	true	true
-3|3|OOOBP_PHO	10	282	true	true	true
-3|3|OOPBO_PHO	9	277	true	true	true
-3|3|OO_BOPOPH	7	276	true	true	true
-3|3|OOBHPOP_O	6	268	true	true	true
-3|3|OOOOB_HPP	8	265	true	true	true
-3|3|OBOPO_HOP	6	263	true	true	true
-3|3|OOP_OBPHO	9	258	true	true	true
-3|3|OBOHO_OPP	9	257	true	true	true
-3|3|OOOBOP_PH	8	254	true	true	true
-3|3|OOOBOP_HP	9	247	true	true	true
-3|3|OOOO_BHPP	8	247	true	true	true
-3|3|OOOP_HOBP	9	246	true	true	true
-3|3|OOOOB_PPH	8	243	true	true	true
-3|3|OOOOBPP_H	8	242	true	true	true
-3|3|OOPH_POBO	8	242	true	true	true
-3|3|OBOPPHO_O	9	234	true	true	true
-3|3|OBPPOHO_O	9	234	true	true	true
-3|3|OOBPHOP_O	7	232	true	true	true
-3|3|OOP_BOPOH	7	232	true	true	true
-3|3|OOP_OPOBH	7	229	true	true	true
-3|3|OO_POBHPO	8	227	true	true	true
-3|3|OOP_OHPBO	8	226	true	true	true
-3|3|OBOPOHP_O	8	224	true	true	true
-3|3|OOPBOO_HP	8	222	true	true	true
-3|3|OOOHP_PBO	9	201	true	true	true
-3|3|OOPHP_OBO	8	197	true	true	true
-3|3|OOOBO_PPH	8	194	true	true	true
-3|3|OOPHO_PBO	8	194	true	true	true
-3|3|OOPOBH_OP	7	185	true	true	true
-3|3|OOOOPBPH_	8	183	true	true	true
-3|3|OOH_OPOBP	7	179	true	true	true
-3|3|OOOOBP_PH	8	178	true	true	true
-3|3|OO_BOPOHP	8	177	true	true	true
-3|3|OOOBPPOH_	10	176	true	true	true
-3|3|OOOBOPPH_	10	173	true	true	true
-3|3|OOPOBOP_H	7	172	true	true	true
-3|3|OOOBPP_HO	11	171	true	true	true
-3|3|OOPBOP_HO	10	164	true	true	true
-3|3|OO_POBPHO	9	160	true	true	true
-3|3|OOPPOHOB_	7	159	true	true	true
-3|3|OO_PBOHPO	8	158	true	true	true
-3|3|OOPBOPOH_	9	157	true	true	true
-3|3|OB_POHOPO	10	150	true	true	true
-3|3|OBOPOHOP_	9	147	true	true	true
-3|3|OB_HOOPOP	9	147	true	true	true
-3|3|OOPBOO_PH	7	147	true	true	true
-3|3|OOOOPB_HP	9	140	true	true	true
-3|3|OO_BOOPHP	7	137	true	true	true
-3|3|OO_BPOOHP	7	137	true	true	true
-3|3|OOPBPO_HO	9	132	true	true	true
-3|3|OOPOOH_BP	8	130	true	true	true
-3|3|OOPOPH_BO	8	130	true	true	true
-3|3|OOPOBO_PH	7	130	true	true	true
-3|3|OOPOBP_OH	7	130	true	true	true
-3|3|OOPOOBPH_	9	127	true	true	true
-3|3|OOPBPOOH_	8	124	true	true	true
-3|3|OOPBOOPH_	8	121	true	true	true
-3|3|OB_POOHOP	7	119	true	true	true
-3|3|OOHOBP_OP	7	114	true	true	true
-3|3|OO_PBOHOP	7	114	true	true	true
-3|3|OO_POHOBP	8	108	true	true	true
-3|3|OO_PPHOBO	8	108	true	true	true
-3|3|OOOPPHOB_	9	100	true	true	true
-3|3|OOPHOP_BO	8	97	true	true	true
-3|3|OBOPOH_OP	6	97	true	true	true
-3|3|OO_BOOPPH	7	93	true	true	true
-3|3|OO_BOOHPP	7	93	true	true	true
-3|3|OOBPPO_HO	7	92	true	true	true
-3|3|OBOPOHPO_	7	92	true	true	true
-3|3|OOPOOP_BH	8	91	true	true	true
-3|3|OOPPOH_BO	7	91	true	true	true
-3|3|OOBPHO_PO	6	82	true	true	true
-3|3|POHOBO_OP	6	82	true	true	true
-3|3|OOHOOP_BP	8	75	true	true	true
-3|3|OOOOBPPH_	0	-1	false	false	false
-3|3|OOOOBPHP_	0	-1	false	false	false
-3|3|OOOOBPH_P	0	-1	false	false	false
-3|3|OOOOBP_HP	0	-1	false	false	false
-3|3|OOOOBHPP_	0	-1	false	false	false
-3|3|OOOOBHP_P	0	-1	false	false	false
-3|3|OOOOBH_PP	0	-1	false	false	false
-3|3|OOOOPBP_H	0	-1	false	false	false
-3|3|OOOOPBHP_	0	-1	false	false	false
-3|3|OOOOPBH_P	0	-1	false	false	false
-3|3|OOOOPB_PH	0	-1	false	false	false
-3|3|OOOOPPBH_	0	-1	false	false	false
-3|3|OOOOPPB_H	0	-1	false	false	false
-3|3|OOOOPPHB_	0	-1	false	false	false
-3|3|OOOOPPH_B	0	-1	false	false	false
-3|3|OOOOPP_BH	0	-1	false	false	false
-3|3|OOOOPP_HB	0	-1	false	false	false
-3|3|OOOOPHBP_	0	-1	false	false	false
-3|3|OOOOPHB_P	0	-1	false	false	false
-3|3|OOOOPHPB_	0	-1	false	false	false
-3|3|OOOOPHP_B	0	-1	false	false	false
-3|3|OOOOPH_BP	0	-1	false	false	false
-3|3|OOOOPH_PB	0	-1	false	false	false
-3|3|OOOOP_BPH	0	-1	false	false	false
-3|3|OOOOP_BHP	0	-1	false	false	false
-3|3|OOOOP_PBH	0	-1	false	false	false
-3|3|OOOOP_PHB	0	-1	false	false	false
-3|3|OOOOP_HBP	0	-1	false	false	false
-3|3|OOOOP_HPB	0	-1	false	false	false
-3|3|OOOOHBPP_	0	-1	false	false	false
-3|3|OOOOHBP_P	0	-1	false	false	false
-3|3|OOOOHB_PP	0	-1	false	false	false
-3|3|OOOOHPBP_	0	-1	false	false	false
-3|3|OOOOHPB_P	0	-1	false	false	false
-3|3|OOOOHPPB_	0	-1	false	false	false
-3|3|OOOOHPP_B	0	-1	false	false	false
-3|3|OOOOHP_BP	0	-1	false	false	false
-3|3|OOOOHP_PB	0	-1	false	false	false
-3|3|OOOOH_BPP	0	-1	false	false	false
-3|3|OOOOH_PBP	0	-1	false	false	false
-3|3|OOOOH_PPB	0	-1	false	false	false
-3|3|OOOO_PBPH	0	-1	false	false	false
-3|3|OOOO_PBHP	0	-1	false	false	false
-3|3|OOOO_PPBH	0	-1	false	false	false
-3|3|OOOO_PPHB	0	-1	false	false	false
-3|3|OOOO_PHBP	0	-1	false	false	false
-3|3|OOOO_PHPB	0	-1	false	false	false
-3|3|OOOO_HBPP	0	-1	false	false	false
-3|3|OOOO_HPBP	0	-1	false	false	false
-3|3|OOOO_HPPB	0	-1	false	false	false
-3|3|OOOBOPP_H	0	-1	false	false	false
-3|3|OOOBOPHP_	0	-1	false	false	false
-3|3|OOOBOPH_P	0	-1	false	false	false
-3|3|OOOBOHPP_	0	-1	false	false	false
-3|3|OOOBOHP_P	0	-1	false	false	false
-3|3|OOOBOH_PP	0	-1	false	false	false
-3|3|OOOBPPO_H	0	-1	false	false	false
-3|3|OOOBPPHO_	0	-1	false	false	false
-3|3|OOOBPPH_O	0	-1	false	false	false
-3|3|OOOBPP_OH	0	-1	false	false	false
-3|3|OOOBPHOP_	0	-1	false	false	false
-3|3|OOOBPHO_P	0	-1	false	false	false
-3|3|OOOBPHPO_	0	-1	false	false	false
-3|3|OOOBPHP_O	0	-1	false	false	false
-3|3|OOOBPH_OP	0	-1	false	false	false
-3|3|OOOBPH_PO	0	-1	false	false	false
-3|3|OOOBP_OPH	0	-1	false	false	false
-3|3|OOOBP_POH	0	-1	false	false	false
-3|3|OOOBP_HOP	0	-1	false	false	false
-3|3|OOOBP_HPO	0	-1	false	false	false
-3|3|OOOBHPOP_	0	-1	false	false	false
-3|3|OOOBHPO_P	0	-1	false	false	false
-3|3|OOOBHPPO_	0	-1	false	false	false
-3|3|OOOBHPP_O	0	-1	false	false	false
-3|3|OOOBHP_OP	0	-1	false	false	false
-3|3|OOOBHP_PO	0	-1	false	false	false
-3|3|OOOBH_OPP	0	-1	false	false	false
-3|3|OOOBH_POP	0	-1	false	false	false
-3|3|OOOBH_PPO	0	-1	false	false	false
-3|3|OOOB_PPOH	0	-1	false	false	false
-3|3|OOOB_PHOP	0	-1	false	false	false
-3|3|OOOB_PHPO	0	-1	false	false	false
-3|3|OOOB_HOPP	0	-1	false	false	false
-3|3|OOOB_HPOP	0	-1	false	false	false
-3|3|OOOB_HPPO	0	-1	false	false	false
-3|3|OOOPOPBH_	0	-1	false	false	false
-3|3|OOOPOPB_H	0	-1	false	false	false
-3|3|OOOPOPHB_	0	-1	false	false	false
-3|3|OOOPOHBP_	0	-1	false	false	false
-3|3|OOOPOHB_P	0	-1	false	false	false
-3|3|OOOPOHPB_	0	-1	false	false	false
-3|3|OOOPOHP_B	0	-1	false	false	false
-3|3|OOOPOH_BP	0	-1	false	false	false
-3|3|OOOPOH_PB	0	-1	false	false	false
-3|3|OOOPO_BPH	0	-1	false	false	false
-3|3|OOOPO_BHP	0	-1	false	false	false
-3|3|OOOPO_PBH	0	-1	false	false	false
-3|3|OOOPO_PHB	0	-1	false	false	false
-3|3|OOOPO_HBP	0	-1	false	false	false
-3|3|OOOPO_HPB	0	-1	false	false	false
-3|3|OOOPBPOH_	0	-1	false	false	false
-3|3|OOOPBPO_H	0	-1	false	false	false
-3|3|OOOPBPHO_	0	-1	false	false	false
-3|3|OOOPBHOP_	0	-1	false	false	false
-3|3|OOOPBHO_P	0	-1	false	false	false
-3|3|OOOPBHPO_	0	-1	false	false	false
-3|3|OOOPBHP_O	0	-1	false	false	false
-3|3|OOOPBH_OP	0	-1	false	false	false
-3|3|OOOPBH_PO	0	-1	false	false	false
-3|3|OOOPB_OPH	0	-1	false	false	false
-3|3|OOOPB_OHP	0	-1	false	false	false
-3|3|OOOPB_POH	0	-1	false	false	false
-3|3|OOOPB_PHO	0	-1	false	false	false
-3|3|OOOPPHO_B	0	-1	false	false	false
-3|3|OOOPPHBO_	0	-1	false	false	false
-3|3|OOOPPHB_O	0	-1	false	false	false
-3|3|OOOPPH_OB	0	-1	false	false	false
-3|3|OOOPPH_BO	0	-1	false	false	false
-3|3|OOOPP_OBH	0	-1	false	false	false
-3|3|OOOPP_OHB	0	-1	false	false	false
-3|3|OOOPP_BOH	0	-1	false	false	false
-3|3|OOOPP_BHO	0	-1	false	false	false
-3|3|OOOPP_HOB	0	-1	false	false	false
-3|3|OOOPP_HBO	0	-1	false	false	false
-3|3|OOOPHPOB_	0	-1	false	false	false
-3|3|OOOPHPO_B	0	-1	false	false	false
-3|3|OOOPHPBO_	0	-1	false	false	false
-3|3|OOOPH_OBP	0	-1	false	false	false
-3|3|OOOPH_OPB	0	-1	false	false	false
-3|3|OOOPH_BOP	0	-1	false	false	false
-3|3|OOOPH_BPO	0	-1	false	false	false
-3|3|OOOPH_POB	0	-1	false	false	false
-3|3|OOOPH_PBO	0	-1	false	false	false
-3|3|OOOP_POBH	0	-1	false	false	false
-3|3|OOOP_POHB	0	-1	false	false	false
-3|3|OOOP_PBOH	0	-1	false	false	false
-3|3|OOOP_HOPB	0	-1	false	false	false
-3|3|OOOP_HBOP	0	-1	false	false	false
-3|3|OOOP_HBPO	0	-1	false	false	false
-3|3|OOOP_HPOB	0	-1	false	false	false
-3|3|OOOP_HPBO	0	-1	false	false	false
-3|3|OOOHO_BPP	0	-1	false	false	false
-3|3|OOOHO_PBP	0	-1	false	false	false
-3|3|OOOHO_PPB	0	-1	false	false	false
-3|3|OOOHB_OPP	0	-1	false	false	false
-3|3|OOOHB_POP	0	-1	false	false	false
-3|3|OOOHB_PPO	0	-1	false	false	false
-3|3|OOOHP_OBP	0	-1	false	false	false
-3|3|OOOHP_OPB	0	-1	false	false	false
-3|3|OOOHP_BOP	0	-1	false	false	false
-3|3|OOOHP_BPO	0	-1	false	false	false
-3|3|OOOHP_POB	0	-1	false	false	false
-3|3|OOBOOPPH_	0	-1	false	false	false
-3|3|OOBOOPP_H	0	-1	false	false	false
-3|3|OOBOOPHP_	0	-1	false	false	false
-3|3|OOBOOPH_P	0	-1	false	false	false
-3|3|OOBOOP_PH	0	-1	false	false	false
-3|3|OOBOOP_HP	0	-1	false	false	false
-3|3|OOBOOHPP_	0	-1	false	false	false
-3|3|OOBOOHP_P	0	-1	false	false	false
-3|3|OOBOOH_PP	0	-1	false	false	false
-3|3|OOBOO_PPH	0	-1	false	false	false
-3|3|OOBOO_PHP	0	-1	false	false	false
-3|3|OOBOO_HPP	0	-1	false	false	false
-3|3|OOBOPOPH_	0	-1	false	false	false
-3|3|OOBOPOP_H	0	-1	false	false	false
-3|3|OOBOPOHP_	0	-1	false	false	false
-3|3|OOBOPOH_P	0	-1	false	false	false
-3|3|OOBOPO_PH	0	-1	false	false	false
-3|3|OOBOPO_HP	0	-1	false	false	false
-3|3|OOBOPPHO_	0	-1	false	false	false
-3|3|OOBOPPH_O	0	-1	false	false	false
-3|3|OOBOPP_OH	0	-1	false	false	false
-3|3|OOBOPP_HO	0	-1	false	false	false
-3|3|OOBOPHPO_	0	-1	false	false	false
-3|3|OOBOPHP_O	0	-1	false	false	false
-3|3|OOBOPH_OP	0	-1	false	false	false
-3|3|OOBOPH_PO	0	-1	false	false	false
-3|3|OOBOP_POH	0	-1	false	false	false
-3|3|OOBOP_PHO	0	-1	false	false	false
-3|3|OOBOP_HOP	0	-1	false	false	false
-3|3|OOBOP_HPO	0	-1	false	false	false
-3|3|OOBOHOPP_	0	-1	false	false	false
-3|3|OOBOHOP_P	0	-1	false	false	false
-3|3|OOBOHO_PP	0	-1	false	false	false
-3|3|OOBOHPPO_	0	-1	false	false	false
-3|3|OOBOHPP_O	0	-1	false	false	false
-3|3|OOBOHP_OP	0	-1	false	false	false
-3|3|OOBOHP_PO	0	-1	false	false	false
-3|3|OOBOH_POP	0	-1	false	false	false
-3|3|OOBOH_PPO	0	-1	false	false	false
-3|3|OOBO_OPPH	0	-1	false	false	false
-3|3|OOBO_OPHP	0	-1	false	false	false
-3|3|OOBO_OHPP	0	-1	false	false	false
-3|3|OOBO_PPOH	0	-1	false	false	false
-3|3|OOBO_PPHO	0	-1	false	false	false
-3|3|OOBO_PHOP	0	-1	false	false	false
-3|3|OOBO_PHPO	0	-1	false	false	false
-3|3|OOBO_HPOP	0	-1	false	false	false
-3|3|OOBO_HPPO	0	-1	false	false	false
-3|3|OOBPOOPH_	0	-1	false	false	false
-3|3|OOBPOOP_H	0	-1	false	false	false
-3|3|OOBPOOHP_	0	-1	false	false	false
-3|3|OOBPOOH_P	0	-1	false	false	false
-3|3|OOBPOO_PH	0	-1	false	false	false
-3|3|OOBPOO_HP	0	-1	false	false	false
-3|3|OOBPOPOH_	0	-1	false	false	false
-3|3|OOBPOPO_H	0	-1	false	false	false
-3|3|OOBPOPHO_	0	-1	false	false	false
-3|3|OOBPOPH_O	0	-1	false	false	false
-3|3|OOBPOP_OH	0	-1	false	false	false
-3|3|OOBPOP_HO	0	-1	false	false	false
-3|3|OOBPOHOP_	0	-1	false	false	false
-3|3|OOBPOHO_P	0	-1	false	false	false
-3|3|OOBPOHPO_	0	-1	false	false	false
-3|3|OOBPOHP_O	0	-1	false	false	false
-3|3|OOBPOH_OP	0	-1	false	false	false
-3|3|OOBPOH_PO	0	-1	false	false	false
-3|3|OOBPO_OPH	0	-1	false	false	false
-3|3|OOBPO_OHP	0	-1	false	false	false
-3|3|OOBPO_POH	0	-1	false	false	false
-3|3|OOBPO_PHO	0	-1	false	false	false
-3|3|OOBPO_HOP	0	-1	false	false	false
-3|3|OOBPO_HPO	0	-1	false	false	false
-3|3|OOBPPOOH_	0	-1	false	false	false
-3|3|OOBPPOO_H	0	-1	false	false	false
-3|3|OOBPPOHO_	0	-1	false	false	false
-3|3|OOBPPOH_O	0	-1	false	false	false
-3|3|OOBPPO_OH	0	-1	false	false	false
-3|3|OOBPPHOO_	0	-1	false	false	false
-3|3|OOBPPHO_O	0	-1	false	false	false
-3|3|OOBPPH_OO	0	-1	false	false	false
-3|3|OOBPP_OOH	0	-1	false	false	false
-3|3|OOBPP_OHO	0	-1	false	false	false
-3|3|OOBPP_HOO	0	-1	false	false	false
-3|3|OOBPHOOP_	0	-1	false	false	false
-3|3|OOBPHOO_P	0	-1	false	false	false
-3|3|OOBPHOPO_	0	-1	false	false	false
-3|3|OOBPHO_OP	0	-1	false	false	false
-3|3|OOBPHPOO_	0	-1	false	false	false
-3|3|OOBPHPO_O	0	-1	false	false	false
-3|3|OOBPHP_OO	0	-1	false	false	false
-3|3|OOBPH_OOP	0	-1	false	false	false
-3|3|OOBPH_OPO	0	-1	false	false	false
-3|3|OOBPH_POO	0	-1	false	false	false
-3|3|OOBP_OOPH	0	-1	false	false	false
-3|3|OOBP_OOHP	0	-1	false	false	false
-3|3|OOBP_OPOH	0	-1	false	false	false
-3|3|OOBP_OHOP	0	-1	false	false	false
-3|3|OOBP_POOH	0	-1	false	false	false
-3|3|OOBP_POHO	0	-1	false	false	false
-3|3|OOBP_PHOO	0	-1	false	false	false
-3|3|OOBP_HOOP	0	-1	false	false	false
-3|3|OOBP_HOPO	0	-1	false	false	false
-3|3|OOBP_HPOO	0	-1	false	false	false
-3|3|OOBHOOPP_	0	-1	false	false	false
-3|3|OOBHOOP_P	0	-1	false	false	false
-3|3|OOBHOO_PP	0	-1	false	false	false
-3|3|OOBHOPOP_	0	-1	false	false	false
-3|3|OOBHOPO_P	0	-1	false	false	false
-3|3|OOBHOPPO_	0	-1	false	false	false
-3|3|OOBHOPP_O	0	-1	false	false	false
-3|3|OOBHOP_OP	0	-1	false	false	false
-3|3|OOBHOP_PO	0	-1	false	false	false
-3|3|OOBHO_OPP	0	-1	false	false	false
-3|3|OOBHO_POP	0	-1	false	false	false
-3|3|OOBHO_PPO	0	-1	false	false	false
-3|3|OOBHPOOP_	0	-1	false	false	false
-3|3|OOBHPOO_P	0	-1	false	false	false
-3|3|OOBHPOPO_	0	-1	false	false	false
-3|3|OOBHPO_OP	0	-1	false	false	false
-3|3|OOBHPPOO_	0	-1	false	false	false
-3|3|OOBHPPO_O	0	-1	false	false	false
-3|3|OOBHPP_OO	0	-1	false	false	false
-3|3|OOBHP_OOP	0	-1	false	false	false
-3|3|OOBHP_OPO	0	-1	false	false	false
-3|3|OOBHP_POO	0	-1	false	false	false
-3|3|OOBH_OOPP	0	-1	false	false	false
-3|3|OOBH_OPOP	0	-1	false	false	false
-3|3|OOBH_POOP	0	-1	false	false	false
-3|3|OOBH_POPO	0	-1	false	false	false
-3|3|OOBH_PPOO	0	-1	false	false	false
-3|3|OOB_OOPPH	0	-1	false	false	false
-3|3|OOB_OOPHP	0	-1	false	false	false
-3|3|OOB_OOHPP	0	-1	false	false	false
-3|3|OOB_OPOPH	0	-1	false	false	false
-3|3|OOB_OPOHP	0	-1	false	false	false
-3|3|OOB_OPPOH	0	-1	false	false	false
-3|3|OOB_OPPHO	0	-1	false	false	false
-3|3|OOB_OPHOP	0	-1	false	false	false
-3|3|OOB_OPHPO	0	-1	false	false	false
-3|3|OOB_OHOPP	0	-1	false	false	false
-3|3|OOB_OHPOP	0	-1	false	false	false
-3|3|OOB_OHPPO	0	-1	false	false	false
-3|3|OOB_POOPH	0	-1	false	false	false
-3|3|OOB_POOHP	0	-1	false	false	false
-3|3|OOB_POPOH	0	-1	false	false	false
-3|3|OOB_POHOP	0	-1	false	false	false
-3|3|OOB_PPOOH	0	-1	false	false	false
-3|3|OOB_PPOHO	0	-1	false	false	false
-3|3|OOB_PPHOO	0	-1	false	false	false
-3|3|OOB_PHOOP	0	-1	false	false	false
-3|3|OOB_PHOPO	0	-1	false	false	false
-3|3|OOB_PHPOO	0	-1	false	false	false
-3|3|OOB_HOOPP	0	-1	false	false	false
-3|3|OOB_HOPOP	0	-1	false	false	false
-3|3|OOB_HPOOP	0	-1	false	false	false
-3|3|OOB_HPOPO	0	-1	false	false	false
-3|3|OOB_HPPOO	0	-1	false	false	false
-3|3|OOPOOBP_H	0	-1	false	false	false
-3|3|OOPOOBHP_	0	-1	false	false	false
-3|3|OOPOOBH_P	0	-1	false	false	false
-3|3|OOPOOB_PH	0	-1	false	false	false
-3|3|OOPOOB_HP	0	-1	false	false	false
-3|3|OOPOOPHB_	0	-1	false	false	false
-3|3|OOPOOPH_B	0	-1	false	false	false
-3|3|OOPOOP_HB	0	-1	false	false	false
-3|3|OOPOOHP_B	0	-1	false	false	false
-3|3|OOPOOH_PB	0	-1	false	false	false
-3|3|OOPOO_HBP	0	-1	false	false	false
-3|3|OOPOO_HPB	0	-1	false	false	false
-3|3|OOPOBOPH_	0	-1	false	false	false
-3|3|OOPOBOHP_	0	-1	false	false	false
-3|3|OOPOBOH_P	0	-1	false	false	false
-3|3|OOPOBO_HP	0	-1	false	false	false
-3|3|OOPOBPHO_	0	-1	false	false	false
-3|3|OOPOBPH_O	0	-1	false	false	false
-3|3|OOPOBP_HO	0	-1	false	false	false
-3|3|OOPOBHP_O	0	-1	false	false	false
-3|3|OOPOBH_PO	0	-1	false	false	false
-3|3|OOPOB_HOP	0	-1	false	false	false
-3|3|OOPOB_HPO	0	-1	false	false	false
-3|3|OOPOPOHB_	0	-1	false	false	false
-3|3|OOPOPOH_B	0	-1	false	false	false
-3|3|OOPOPO_BH	0	-1	false	false	false
-3|3|OOPOPO_HB	0	-1	false	false	false
-3|3|OOPOPBHO_	0	-1	false	false	false
-3|3|OOPOPBH_O	0	-1	false	false	false
-3|3|OOPOPB_OH	0	-1	false	false	false
-3|3|OOPOPB_HO	0	-1	false	false	false
-3|3|OOPOPH_OB	0	-1	false	false	false
-3|3|OOPOP_HOB	0	-1	false	false	false
-3|3|OOPOP_HBO	0	-1	false	false	false
-3|3|OOPOHOPB_	0	-1	false	false	false
-3|3|OOPOHOP_B	0	-1	false	false	false
-3|3|OOPOHO_BP	0	-1	false	false	false
-3|3|OOPOHO_PB	0	-1	false	false	false
-3|3|OOPOHBP_O	0	-1	false	false	false
-3|3|OOPOHB_OP	0	-1	false	false	false
-3|3|OOPOHB_PO	0	-1	false	false	false
-3|3|OOPOHP_OB	0	-1	false	false	false
-3|3|OOPOHP_BO	0	-1	false	false	false
-3|3|OOPO_OPBH	0	-1	false	false	false
-3|3|OOPO_OPHB	0	-1	false	false	false
-3|3|OOPO_OHBP	0	-1	false	false	false
-3|3|OOPO_OHPB	0	-1	false	false	false
-3|3|OOPO_BHOP	0	-1	false	false	false
-3|3|OOPO_BHPO	0	-1	false	false	false
-3|3|OOPO_PHOB	0	-1	false	false	false
-3|3|OOPO_PHBO	0	-1	false	false	false
-3|3|OOPBOOP_H	0	-1	false	false	false
-3|3|OOPBOOHP_	0	-1	false	false	false
-3|3|OOPBOOH_P	0	-1	false	false	false
-3|3|OOPBOPO_H	0	-1	false	false	false
-3|3|OOPBOPHO_	0	-1	false	false	false
-3|3|OOPBOPH_O	0	-1	false	false	false
-3|3|OOPBOP_OH	0	-1	false	false	false
-3|3|OOPBOHOP_	0	-1	false	false	false
-3|3|OOPBOHO_P	0	-1	false	false	false
-3|3|OOPBOHPO_	0	-1	false	false	false
-3|3|OOPBOHP_O	0	-1	false	false	false
-3|3|OOPBOH_OP	0	-1	false	false	false
-3|3|OOPBOH_PO	0	-1	false	false	false
-3|3|OOPBO_POH	0	-1	false	false	false
-3|3|OOPBO_HOP	0	-1	false	false	false
-3|3|OOPBO_HPO	0	-1	false	false	false
-3|3|OOPBPOO_H	0	-1	false	false	false
-3|3|OOPBPOHO_	0	-1	false	false	false
-3|3|OOPBPOH_O	0	-1	false	false	false
-3|3|OOPBPO_OH	0	-1	false	false	false
-3|3|OOPBPHOO_	0	-1	false	false	false
-3|3|OOPBPHO_O	0	-1	false	false	false
-3|3|OOPBPH_OO	0	-1	false	false	false
-3|3|OOPBP_OOH	0	-1	false	false	false
-3|3|OOPBP_HOO	0	-1	false	false	false
-3|3|OOPBHOOP_	0	-1	false	false	false
-3|3|OOPBHOO_P	0	-1	false	false	false
-3|3|OOPBHOPO_	0	-1	false	false	false
-3|3|OOPBHOP_O	0	-1	false	false	false
-3|3|OOPBHO_OP	0	-1	false	false	false
-3|3|OOPBHO_PO	0	-1	false	false	false
-3|3|OOPBHPOO_	0	-1	false	false	false
-3|3|OOPBHPO_O	0	-1	false	false	false
-3|3|OOPBHP_OO	0	-1	false	false	false
-3|3|OOPBH_OOP	0	-1	false	false	false
-3|3|OOPBH_OPO	0	-1	false	false	false
-3|3|OOPBH_POO	0	-1	false	false	false
-3|3|OOPB_OPOH	0	-1	false	false	false
-3|3|OOPB_OHOP	0	-1	false	false	false
-3|3|OOPB_OHPO	0	-1	false	false	false
-3|3|OOPB_POOH	0	-1	false	false	false
-3|3|OOPB_PHOO	0	-1	false	false	false
-3|3|OOPB_HOOP	0	-1	false	false	false
-3|3|OOPB_HOPO	0	-1	false	false	false
-3|3|OOPB_HPOO	0	-1	false	false	false
-3|3|OOPPOOBH_	0	-1	false	false	false
-3|3|OOPPOOB_H	0	-1	false	false	false
-3|3|OOPPOOHB_	0	-1	false	false	false
-3|3|OOPPOOH_B	0	-1	false	false	false
-3|3|OOPPOO_BH	0	-1	false	false	false
-3|3|OOPPOO_HB	0	-1	false	false	false
-3|3|OOPPOBOH_	0	-1	false	false	false
-3|3|OOPPOBO_H	0	-1	false	false	false
-3|3|OOPPOBHO_	0	-1	false	false	false
-3|3|OOPPOBH_O	0	-1	false	false	false
-3|3|OOPPOB_OH	0	-1	false	false	false
-3|3|OOPPOB_HO	0	-1	false	false	false
-3|3|OOPPOHO_B	0	-1	false	false	false
-3|3|OOPPOHBO_	0	-1	false	false	false
-3|3|OOPPOHB_O	0	-1	false	false	false
-3|3|OOPPOH_OB	0	-1	false	false	false
-3|3|OOPPO_OBH	0	-1	false	false	false
-3|3|OOPPO_OHB	0	-1	false	false	false
-3|3|OOPPO_BOH	0	-1	false	false	false
-3|3|OOPPO_BHO	0	-1	false	false	false
-3|3|OOPPO_HOB	0	-1	false	false	false
-3|3|OOPPO_HBO	0	-1	false	false	false
-3|3|OOPPBOOH_	0	-1	false	false	false
-3|3|OOPPBOO_H	0	-1	false	false	false
-3|3|OOPPBOHO_	0	-1	false	false	false
-3|3|OOPPBOH_O	0	-1	false	false	false
-3|3|OOPPBO_OH	0	-1	false	false	false
-3|3|OOPPBO_HO	0	-1	false	false	false
-3|3|OOPPBHOO_	0	-1	false	false	false
-3|3|OOPPBHO_O	0	-1	false	false	false
-3|3|OOPPBH_OO	0	-1	false	false	false
-3|3|OOPPB_OOH	0	-1	false	false	false
-3|3|OOPPB_OHO	0	-1	false	false	false
-3|3|OOPPB_HOO	0	-1	false	false	false
-3|3|OOPPHOOB_	0	-1	false	false	false
-3|3|OOPPHOO_B	0	-1	false	false	false
-3|3|OOPPHOBO_	0	-1	false	false	false
-3|3|OOPPHOB_O	0	-1	false	false	false
-3|3|OOPPHO_OB	0	-1	false	false	false
-3|3|OOPPHBOO_	0	-1	false	false	false
-3|3|OOPPHBO_O	0	-1	false	false	false
-3|3|OOPPHB_OO	0	-1	false	false	false
-3|3|OOPPH_OBO	0	-1	false	false	false
-3|3|OOPP_OOBH	0	-1	false	false	false
-3|3|OOPP_OOHB	0	-1	false	false	false
-3|3|OOPP_OBOH	0	-1	false	false	false
-3|3|OOPP_OBHO	0	-1	false	false	false
-3|3|OOPP_OHOB	0	-1	false	false	false
-3|3|OOPP_BOOH	0	-1	false	false	false
-3|3|OOPP_BOHO	0	-1	false	false	false
-3|3|OOPP_BHOO	0	-1	false	false	false
-3|3|OOPHOOBP_	0	-1	false	false	false
-3|3|OOPHOOB_P	0	-1	false	false	false
-3|3|OOPHOOPB_	0	-1	false	false	false
-3|3|OOPHOOP_B	0	-1	false	false	false
-3|3|OOPHOO_BP	0	-1	false	false	false
-3|3|OOPHOO_PB	0	-1	false	false	false
-3|3|OOPHOBOP_	0	-1	false	false	false
-3|3|OOPHOBO_P	0	-1	false	false	false
-3|3|OOPHOBPO_	0	-1	false	false	false
-3|3|OOPHOBP_O	0	-1	false	false	false
-3|3|OOPHOB_OP	0	-1	false	false	false
-3|3|OOPHOB_PO	0	-1	false	false	false
-3|3|OOPHOPOB_	0	-1	false	false	false
-3|3|OOPHOPO_B	0	-1	false	false	false
-3|3|OOPHOPBO_	0	-1	false	false	false
-3|3|OOPHOPB_O	0	-1	false	false	false
-3|3|OOPHOP_OB	0	-1	false	false	false
-3|3|OOPHO_OBP	0	-1	false	false	false
-3|3|OOPHO_OPB	0	-1	false	false	false
-3|3|OOPHO_BOP	0	-1	false	false	false
-3|3|OOPHO_BPO	0	-1	false	false	false
-3|3|OOPHO_POB	0	-1	false	false	false
-3|3|OOPHBOOP_	0	-1	false	false	false
-3|3|OOPHBOO_P	0	-1	false	false	false
-3|3|OOPHBOPO_	0	-1	false	false	false
-3|3|OOPHBOP_O	0	-1	false	false	false
-3|3|OOPHBO_OP	0	-1	false	false	false
-3|3|OOPHBPOO_	0	-1	false	false	false
-3|3|OOPHBPO_O	0	-1	false	false	false
-3|3|OOPHBP_OO	0	-1	false	false	false
-3|3|OOPHB_OOP	0	-1	false	false	false
-3|3|OOPHB_OPO	0	-1	false	false	false
-3|3|OOPHB_POO	0	-1	false	false	false
-3|3|OOPHPOOB_	0	-1	false	false	false
-3|3|OOPHPOO_B	0	-1	false	false	false
-3|3|OOPHPOBO_	0	-1	false	false	false
-3|3|OOPHPOB_O	0	-1	false	false	false
-3|3|OOPHPO_OB	0	-1	false	false	false
-3|3|OOPHPBOO_	0	-1	false	false	false
-3|3|OOPHPBO_O	0	-1	false	false	false
-3|3|OOPHPB_OO	0	-1	false	false	false
-3|3|OOPH_OOBP	0	-1	false	false	false
-3|3|OOPH_OOPB	0	-1	false	false	false
-3|3|OOPH_OBOP	0	-1	false	false	false
-3|3|OOPH_OPOB	0	-1	false	false	false
-3|3|OOPH_BOOP	0	-1	false	false	false
-3|3|OOPH_BOPO	0	-1	false	false	false
-3|3|OOP_OOBPH	0	-1	false	false	false
-3|3|OOP_OOBHP	0	-1	false	false	false
-3|3|OOP_OOPBH	0	-1	false	false	false
-3|3|OOP_OOPHB	0	-1	false	false	false
-3|3|OOP_OOHBP	0	-1	false	false	false
-3|3|OOP_OOHPB	0	-1	false	false	false
-3|3|OOP_OBOPH	0	-1	false	false	false
-3|3|OOP_OBOHP	0	-1	false	false	false
-3|3|OOP_OBPOH	0	-1	false	false	false
-3|3|OOP_OBHOP	0	-1	false	false	false
-3|3|OOP_OBHPO	0	-1	false	false	false
-3|3|OOP_OPOHB	0	-1	false	false	false
-3|3|OOP_OPBOH	0	-1	false	false	false
-3|3|OOP_OPBHO	0	-1	false	false	false
-3|3|OOP_OPHOB	0	-1	false	false	false
-3|3|OOP_OPHBO	0	-1	false	false	false
-3|3|OOP_OHOPB	0	-1	false	false	false
-3|3|OOP_OHBOP	0	-1	false	false	false
-3|3|OOP_OHBPO	0	-1	false	false	false
-3|3|OOP_OHPOB	0	-1	false	false	false
-3|3|OOP_BOOHP	0	-1	false	false	false
-3|3|OOP_BOHOP	0	-1	false	false	false
-3|3|OOP_BPOHO	0	-1	false	false	false
-3|3|OOP_BPHOO	0	-1	false	false	false
-3|3|OOP_BHOPO	0	-1	false	false	false
-3|3|OOP_POOBH	0	-1	false	false	false
-3|3|OOP_POOHB	0	-1	false	false	false
-3|3|OOP_POBOH	0	-1	false	false	false
-3|3|OOP_POHOB	0	-1	false	false	false
-3|3|OOP_PBOOH	0	-1	false	false	false
-3|3|OOP_PBOHO	0	-1	false	false	false
-3|3|OOP_PBHOO	0	-1	false	false	false
-3|3|OOP_HOOBP	0	-1	false	false	false
-3|3|OOP_HOOPB	0	-1	false	false	false
-3|3|OOP_HOBOP	0	-1	false	false	false
-3|3|OOP_HOPOB	0	-1	false	false	false
-3|3|OOP_HBOOP	0	-1	false	false	false
-3|3|OOP_HBOPO	0	-1	false	false	false
-3|3|OOP_HPOBO	0	-1	false	false	false
-3|3|OOHOOB_PP	0	-1	false	false	false
-3|3|OOHOOP_PB	0	-1	false	false	false
-3|3|OOHOBO_PP	0	-1	false	false	false
-3|3|OOHOBP_PO	0	-1	false	false	false
-3|3|OOHOPO_BP	0	-1	false	false	false
-3|3|OOHOPO_PB	0	-1	false	false	false
-3|3|OOHOPB_OP	0	-1	false	false	false
-3|3|OOHOPB_PO	0	-1	false	false	false
-3|3|OOHOPP_OB	0	-1	false	false	false
-3|3|OOHOPP_BO	0	-1	false	false	false
-3|3|OOHBOOPP_	0	-1	false	false	false
-3|3|OOHBOOP_P	0	-1	false	false	false
-3|3|OOHBOO_PP	0	-1	false	false	false
-3|3|OOHBOPOP_	0	-1	false	false	false
-3|3|OOHBOPO_P	0	-1	false	false	false
-3|3|OOHBOPPO_	0	-1	false	false	false
-3|3|OOHBOPP_O	0	-1	false	false	false
-3|3|OOHBOP_OP	0	-1	false	false	false
-3|3|OOHBOP_PO	0	-1	false	false	false
-3|3|OOHBO_OPP	0	-1	false	false	false
-3|3|OOHBO_POP	0	-1	false	false	false
-3|3|OOHBO_PPO	0	-1	false	false	false
-3|3|OOHBPOOP_	0	-1	false	false	false
-3|3|OOHBPOO_P	0	-1	false	false	false
-3|3|OOHBPOPO_	0	-1	false	false	false
-3|3|OOHBPOP_O	0	-1	false	false	false
-3|3|OOHBPO_OP	0	-1	false	false	false
-3|3|OOHBPO_PO	0	-1	false	false	false
-3|3|OOHBPPOO_	0	-1	false	false	false
-3|3|OOHBPPO_O	0	-1	false	false	false
-3|3|OOHBPP_OO	0	-1	false	false	false
-3|3|OOHBP_OPO	0	-1	false	false	false
-3|3|OOHB_OOPP	0	-1	false	false	false
-3|3|OOHB_OPOP	0	-1	false	false	false
-3|3|OOHB_OPPO	0	-1	false	false	false
-3|3|OOHB_POPO	0	-1	false	false	false
-3|3|OOHPOOBP_	0	-1	false	false	false
-3|3|OOHPOOB_P	0	-1	false	false	false
-3|3|OOHPOOPB_	0	-1	false	false	false
-3|3|OOHPOOP_B	0	-1	false	false	false
-3|3|OOHPOO_BP	0	-1	false	false	false
-3|3|OOHPOO_PB	0	-1	false	false	false
-3|3|OOHPOBOP_	0	-1	false	false	false
-3|3|OOHPOBO_P	0	-1	false	false	false
-3|3|OOHPOBPO_	0	-1	false	false	false
-3|3|OOHPOBP_O	0	-1	false	false	false
-3|3|OOHPOB_OP	0	-1	false	false	false
-3|3|OOHPOB_PO	0	-1	false	false	false
-3|3|OOHPOPOB_	0	-1	false	false	false
-3|3|OOHPOPO_B	0	-1	false	false	false
-3|3|OOHPOPBO_	0	-1	false	false	false
-3|3|OOHPOPB_O	0	-1	false	false	false
-3|3|OOHPOP_OB	0	-1	false	false	false
-3|3|OOHPOP_BO	0	-1	false	false	false
-3|3|OOHPO_OBP	0	-1	false	false	false
-3|3|OOHPO_OPB	0	-1	false	false	false
-3|3|OOHPO_BOP	0	-1	false	false	false
-3|3|OOHPO_BPO	0	-1	false	false	false
-3|3|OOHPO_POB	0	-1	false	false	false
-3|3|OOHPO_PBO	0	-1	false	false	false
-3|3|OOHPBOOP_	0	-1	false	false	false
-3|3|OOHPBOO_P	0	-1	false	false	false
-3|3|OOHPBOPO_	0	-1	false	false	false
-3|3|OOHPBOP_O	0	-1	false	false	false
-3|3|OOHPBO_OP	0	-1	false	false	false
-3|3|OOHPBO_PO	0	-1	false	false	false
-3|3|OOHPBPOO_	0	-1	false	false	false
-3|3|OOHPBPO_O	0	-1	false	false	false
-3|3|OOHPBP_OO	0	-1	false	false	false
-3|3|OOHPB_OPO	0	-1	false	false	false
-3|3|OOHPPOOB_	0	-1	false	false	false
-3|3|OOHPPOO_B	0	-1	false	false	false
-3|3|OOHPPOBO_	0	-1	false	false	false
-3|3|OOHPPOB_O	0	-1	false	false	false
-3|3|OOHPPO_OB	0	-1	false	false	false
-3|3|OOHPPBOO_	0	-1	false	false	false
-3|3|OOHPPBO_O	0	-1	false	false	false
-3|3|OOHPPB_OO	0	-1	false	false	false
-3|3|OOHPP_OBO	0	-1	false	false	false
-3|3|OOHP_OOBP	0	-1	false	false	false
-3|3|OOHP_OOPB	0	-1	false	false	false
-3|3|OOHP_OBOP	0	-1	false	false	false
-3|3|OOHP_OBPO	0	-1	false	false	false
-3|3|OOHP_OPOB	0	-1	false	false	false
-3|3|OOHP_BOPO	0	-1	false	false	false
-3|3|OOHP_POBO	0	-1	false	false	false
-3|3|OOH_OOBPP	0	-1	false	false	false
-3|3|OOH_OOPBP	0	-1	false	false	false
-3|3|OOH_OOPPB	0	-1	false	false	false
-3|3|OOH_OBOPP	0	-1	false	false	false
-3|3|OOH_OBPOP	0	-1	false	false	false
-3|3|OOH_OBPPO	0	-1	false	false	false
-3|3|OOH_OPOPB	0	-1	false	false	false
-3|3|OOH_OPBOP	0	-1	false	false	false
-3|3|OOH_OPBPO	0	-1	false	false	false
-3|3|OOH_OPPOB	0	-1	false	false	false
-3|3|OOH_OPPBO	0	-1	false	false	false
-3|3|OOH_BOOPP	0	-1	false	false	false
-3|3|OOH_BOPOP	0	-1	false	false	false
-3|3|OOH_BPOPO	0	-1	false	false	false
-3|3|OOH_POOBP	0	-1	false	false	false
-3|3|OOH_POOPB	0	-1	false	false	false
-3|3|OOH_POBOP	0	-1	false	false	false
-3|3|OOH_POPOB	0	-1	false	false	false
-3|3|OOH_PBOPO	0	-1	false	false	false
-3|3|OOH_PPOBO	0	-1	false	false	false
-3|3|OO_BOPPOH	0	-1	false	false	false
-3|3|OO_BOPPHO	0	-1	false	false	false
-3|3|OO_BOPHOP	0	-1	false	false	false
-3|3|OO_BOPHPO	0	-1	false	false	false
-3|3|OO_BOHOPP	0	-1	false	false	false
-3|3|OO_BOHPOP	0	-1	false	false	false
-3|3|OO_BOHPPO	0	-1	false	false	false
-3|3|OO_BPOOPH	0	-1	false	false	false
-3|3|OO_BPOPOH	0	-1	false	false	false
-3|3|OO_BPOPHO	0	-1	false	false	false
-3|3|OO_BPOHOP	0	-1	false	false	false
-3|3|OO_BPOHPO	0	-1	false	false	false
-3|3|OO_BPPOHO	0	-1	false	false	false
-3|3|OO_BPHOPO	0	-1	false	false	false
-3|3|OO_BHOOPP	0	-1	false	false	false
-3|3|OO_BHOPOP	0	-1	false	false	false
-3|3|OO_BHOPPO	0	-1	false	false	false
-3|3|OO_BHPOPO	0	-1	false	false	false
-3|3|OO_POOBPH	0	-1	false	false	false
-3|3|OO_POOBHP	0	-1	false	false	false
-3|3|OO_POOPBH	0	-1	false	false	false
-3|3|OO_POOPHB	0	-1	false	false	false
-3|3|OO_POOHBP	0	-1	false	false	false
-3|3|OO_POOHPB	0	-1	false	false	false
-3|3|OO_POBOPH	0	-1	false	false	false
-3|3|OO_POBOHP	0	-1	false	false	false
-3|3|OO_POBPOH	0	-1	false	false	false
-3|3|OO_POBHOP	0	-1	false	false	false
-3|3|OO_POPOBH	0	-1	false	false	false
-3|3|OO_POPOHB	0	-1	false	false	false
-3|3|OO_POPBOH	0	-1	false	false	false
-3|3|OO_POPBHO	0	-1	false	false	false
-3|3|OO_POPHOB	0	-1	false	false	false
-3|3|OO_POPHBO	0	-1	false	false	false
-3|3|OO_POHOPB	0	-1	false	false	false
-3|3|OO_POHBOP	0	-1	false	false	false
-3|3|OO_POHBPO	0	-1	false	false	false
-3|3|OO_POHPOB	0	-1	false	false	false
-3|3|OO_POHPBO	0	-1	false	false	false
-3|3|OO_PBOOPH	0	-1	false	false	false
-3|3|OO_PBOOHP	0	-1	false	false	false
-3|3|OO_PBOPOH	0	-1	false	false	false
-3|3|OO_PBOPHO	0	-1	false	false	false
-3|3|OO_PBPOHO	0	-1	false	false	false
-3|3|OO_PBHOPO	0	-1	false	false	false
-3|3|OO_PPOOBH	0	-1	false	false	false
-3|3|OO_PPOOHB	0	-1	false	false	false
-3|3|OO_PPOBOH	0	-1	false	false	false
-3|3|OO_PPOBHO	0	-1	false	false	false
-3|3|OO_PPOHOB	0	-1	false	false	false
-3|3|OO_PPBOHO	0	-1	false	false	false
-3|3|OO_PHOOBP	0	-1	false	false	false
-3|3|OO_PHOOPB	0	-1	false	false	false
-3|3|OO_PHOBOP	0	-1	false	false	false
-3|3|OO_PHOBPO	0	-1	false	false	false
-3|3|OO_PHOPOB	0	-1	false	false	false
-3|3|OO_PHBOPO	0	-1	false	false	false
-3|3|OO_PHPOBO	0	-1	false	false	false
-3|3|OO_HOOBPP	0	-1	false	false	false
-3|3|OO_HOOPBP	0	-1	false	false	false
-3|3|OO_HOOPPB	0	-1	false	false	false
-3|3|OO_HOBOPP	0	-1	false	false	false
-3|3|OO_HOBPOP	0	-1	false	false	false
-3|3|OO_HOBPPO	0	-1	false	false	false
-3|3|OO_HOPOBP	0	-1	false	false	false
-3|3|OO_HOPOPB	0	-1	false	false	false
-3|3|OO_HOPBOP	0	-1	false	false	false
-3|3|OO_HOPBPO	0	-1	false	false	false
-3|3|OO_HOPPOB	0	-1	false	false	false
-3|3|OO_HOPPBO	0	-1	false	false	false
-3|3|OO_HBOOPP	0	-1	false	false	false
-3|3|OO_HBOPOP	0	-1	false	false	false
-3|3|OO_HBPOPO	0	-1	false	false	false
-3|3|OO_HPOOBP	0	-1	false	false	false
-3|3|OO_HPOOPB	0	-1	false	false	false
-3|3|OO_HPOBOP	0	-1	false	false	false
-3|3|OO_HPOPOB	0	-1	false	false	false
-3|3|OO_HPBOPO	0	-1	false	false	false
-3|3|OO_HPPOBO	0	-1	false	false	false
-3|3|OBOPOPOH_	0	-1	false	false	false
-3|3|OBOPOPO_H	0	-1	false	false	false
-3|3|OBOPOPHO_	0	-1	false	false	false
-3|3|OBOPOH_PO	0	-1	false	false	false
-3|3|OBOPO_OPH	0	-1	false	false	false
-3|3|OBOPO_OHP	0	-1	false	false	false
-3|3|OBOPO_POH	0	-1	false	false	false
-3|3|OBOPO_PHO	0	-1	false	false	false
-3|3|OBOPP_OHO	0	-1	false	false	false
-3|3|OBOPHPO_O	0	-1	false	false	false
-3|3|OBOPH_OPO	0	-1	false	false	false
-3|3|OBOP_POHO	0	-1	false	false	false
-3|3|OBPPOOOH_	0	-1	false	false	false
-3|3|OBPPOOO_H	0	-1	false	false	false
-3|3|OBPPOOHO_	0	-1	false	false	false
-3|3|OBPPOO_OH	0	-1	false	false	false
-3|3|OBPPO_OHO	0	-1	false	false	false
-3|3|OBPHOOOP_	0	-1	false	false	false
-3|3|OBPHOOO_P	0	-1	false	false	false
-3|3|OBPHOOPO_	0	-1	false	false	false
-3|3|OBPHOO_OP	0	-1	false	false	false
-3|3|OBPHOPO_O	0	-1	false	false	false
-3|3|OBPHO_OPO	0	-1	false	false	false
-3|3|OBP_OOOPH	0	-1	false	false	false
-3|3|OBP_OOOHP	0	-1	false	false	false
-3|3|OBP_OOPOH	0	-1	false	false	false
-3|3|OBP_OOHOP	0	-1	false	false	false
-3|3|OBP_OPOHO	0	-1	false	false	false
-3|3|OBHPOOOP_	0	-1	false	false	false
-3|3|OBHPOOO_P	0	-1	false	false	false
-3|3|OBHPOOPO_	0	-1	false	false	false
-3|3|OBHPOO_OP	0	-1	false	false	false
-3|3|OBHPOPO_O	0	-1	false	false	false
-3|3|OBHPO_OPO	0	-1	false	false	false
-3|3|OBH_OOOPP	0	-1	false	false	false
-3|3|OBH_OOPOP	0	-1	false	false	false
-3|3|OBH_OPOPO	0	-1	false	false	false
-3|3|OB_POOOPH	0	-1	false	false	false
-3|3|OB_POOOHP	0	-1	false	false	false
-3|3|OB_POOPOH	0	-1	false	false	false
-3|3|OB_POPOHO	0	-1	false	false	false
-3|3|OB_HOOOPP	0	-1	false	false	false
-3|3|OB_HOPOPO	0	-1	false	false	false
-3|3|OPOPOHO_B	0	-1	false	false	false
-3|3|OPOPOHBO_	0	-1	false	false	false
-3|3|OPOPOHB_O	0	-1	false	false	false
-3|3|OPOPOH_OB	0	-1	false	false	false
-3|3|OPOPO_BOH	0	-1	false	false	false
-3|3|OPOPO_BHO	0	-1	false	false	false
-3|3|OPOPO_HOB	0	-1	false	false	false
-3|3|OPOPBHO_O	0	-1	false	false	false
-3|3|OPOHO_OPB	0	-1	false	false	false
-3|3|OPOHO_BOP	0	-1	false	false	false
-3|3|OPOHO_BPO	0	-1	false	false	false
-3|3|OPOHO_POB	0	-1	false	false	false
-3|3|OPOHB_OPO	0	-1	false	false	false
-3|3|OPBPOOHO_	0	-1	false	false	false
-3|3|OPBPOO_OH	0	-1	false	false	false
-3|3|OPBHOOOP_	0	-1	false	false	false
-3|3|OPBHOOO_P	0	-1	false	false	false
-3|3|OPBHOOPO_	0	-1	false	false	false
-3|3|OPBHOO_OP	0	-1	false	false	false
-3|3|OPBHOPO_O	0	-1	false	false	false
-3|3|OPB_OOOPH	0	-1	false	false	false
-3|3|OPB_OOOHP	0	-1	false	false	false
-3|3|OPB_OOPOH	0	-1	false	false	false
-3|3|OPB_OOHOP	0	-1	false	false	false
-3|3|OPPHOOO_B	0	-1	false	false	false
-3|3|OPPHOOBO_	0	-1	false	false	false
-3|3|OPPHOO_OB	0	-1	false	false	false
-3|3|OPP_OOOHB	0	-1	false	false	false
-3|3|OPP_OOBOH	0	-1	false	false	false
-3|3|OPP_OOHOB	0	-1	false	false	false
-3|3|OPHPOO_OB	0	-1	false	false	false
-3|3|OPH_OOBOP	0	-1	false	false	false
-3|3|OPH_OOPOB	0	-1	false	false	false
-3|3|OP_HOOBOP	0	-1	false	false	false
-3|3|OP_HOOPOB	0	-1	false	false	false
-3|3|OHB_OOPOP	0	-1	false	false	false
-3|3|OHP_OOBOP	0	-1	false	false	false
-3|3|OHP_OOPOB	0	-1	false	false	false
-3|3|BOPOOOPH_	0	-1	false	false	false
-3|3|BOPOOOP_H	0	-1	false	false	false
-3|3|BOPOOOHP_	0	-1	false	false	false
-3|3|BOPOOOH_P	0	-1	false	false	false
-3|3|BOPOOO_PH	0	-1	false	false	false
-3|3|BOPOOO_HP	0	-1	false	false	false
-3|3|BOPOOPHO_	0	-1	false	false	false
-3|3|BOPOOP_OH	0	-1	false	false	false
-3|3|BOPOOH_OP	0	-1	false	false	false
-3|3|BOPOO_HOP	0	-1	false	false	false
-3|3|BOPOPOHO_	0	-1	false	false	false
-3|3|BOPOPO_OH	0	-1	false	false	false
-3|3|BOPOHOPO_	0	-1	false	false	false
-3|3|BOPOHO_OP	0	-1	false	false	false
-3|3|BOPO_OPOH	0	-1	false	false	false
-3|3|BOPO_OHOP	0	-1	false	false	false
-3|3|BOPPOOHO_	0	-1	false	false	false
-3|3|BOPPOO_OH	0	-1	false	false	false
-3|3|BOPHOOPO_	0	-1	false	false	false
-3|3|BOPHOO_OP	0	-1	false	false	false
-3|3|BOP_OOPOH	0	-1	false	false	false
-3|3|BOP_OOHOP	0	-1	false	false	false
-3|3|BOHOOO_PP	0	-1	false	false	false
-3|3|BOHOOP_OP	0	-1	false	false	false
-3|3|BOHOPO_OP	0	-1	false	false	false
-3|3|BOHPOOPO_	0	-1	false	false	false
-3|3|BOHPOO_OP	0	-1	false	false	false
-3|3|BOH_OOPOP	0	-1	false	false	false
-3|3|BO_POOPOH	0	-1	false	false	false
-3|3|BO_POOHOP	0	-1	false	false	false
-3|3|BO_HOOPOP	0	-1	false	false	false
-3|3|POPOOOHB_	0	-1	false	false	false
-3|3|POPOOBHO_	0	-1	false	false	false
-3|3|POPOOB_OH	0	-1	false	false	false
-3|3|POPOBOHO_	0	-1	false	false	false
-3|3|POHOOO_BP	0	-1	false	false	false
-3|3|POHOOB_OP	0	-1	false	false	false
-3|3|POHBOOPO_	0	-1	false	false	false
+3|3|OOOB_POPH	8	739
+3|3|OBOPO_HPO	7	615
+3|3|OOOB_POHP	9	593
+3|3|OOPB_OOHP	8	543
+3|3|OOOPB_HPO	9	473
+3|3|OOPB_OOPH	7	471
+3|3|OOP_BHOOP	8	455
+3|3|OOBP_OHPO	6	453
+3|3|OOOO_BPHP	8	435
+3|3|OOOB_PPHO	11	421
+3|3|OOPBO_OHP	8	421
+3|3|OBOHO_PPO	8	421
+3|3|OOPB_POHO	10	405
+3|3|OOOOB_PHP	8	400
+3|3|OOOBP_OHP	8	379
+3|3|OOPP_HOBO	7	379
+3|3|OBOP_HOPO	10	371
+3|3|OOOBO_PHP	8	364
+3|3|OOP_BOOPH	8	342
+3|3|OOOO_BPPH	8	330
+3|3|OBOHO_POP	7	330
+3|3|OOPB_OPHO	9	325
+3|3|OOOPB_HOP	8	325
+3|3|OBOPOHO_P	7	325
+3|3|OOP_PHOBO	7	321
+3|3|OOPO_BPHO	9	315
+3|3|OOBP_OPHO	7	315
+3|3|OOP_OHOBP	7	313
+3|3|OOPBO_OPH	7	302
+3|3|OBOHP_OPO	10	294
+3|3|OBP_OHOPO	10	291
+3|3|OOP_BPOOH	8	291
+3|3|OOPBP_OHO	9	290
+3|3|OOOBO_HPP	8	283
+3|3|OOOBP_PHO	10	282
+3|3|OOPBO_PHO	9	277
+3|3|OO_BOPOPH	7	276
+3|3|OOBHPOP_O	6	268
+3|3|OOOOB_HPP	8	265
+3|3|OBOPO_HOP	6	263
+3|3|OOP_OBPHO	9	258
+3|3|OBOHO_OPP	9	257
+3|3|OOOBOP_PH	8	254
+3|3|OOOBOP_HP	9	247
+3|3|OOOO_BHPP	8	247
+3|3|OOOP_HOBP	9	246
+3|3|OOOOB_PPH	8	243
+3|3|OOOOBPP_H	8	242
+3|3|OOPH_POBO	8	242
+3|3|OBOPPHO_O	9	234
+3|3|OBPPOHO_O	9	234
+3|3|OOBPHOP_O	7	232
+3|3|OOP_BOPOH	7	232
+3|3|OOP_OPOBH	7	229
+3|3|OO_POBHPO	8	227
+3|3|OOP_OHPBO	8	226
+3|3|OBOPOHP_O	8	224
+3|3|OOPBOO_HP	8	222
+3|3|OOOHP_PBO	9	201
+3|3|OOPHP_OBO	8	197
+3|3|OOOBO_PPH	8	194
+3|3|OOPHO_PBO	8	194
+3|3|OOPOBH_OP	7	185
+3|3|OOOOPBPH_	8	183
+3|3|OOH_OPOBP	7	179
+3|3|OOOOBP_PH	8	178
+3|3|OO_BOPOHP	8	177
+3|3|OOOBPPOH_	10	176
+3|3|OOOBOPPH_	10	173
+3|3|OOPOBOP_H	7	172
+3|3|OOOBPP_HO	11	171
+3|3|OOPBOP_HO	10	164
+3|3|OO_POBPHO	9	160
+3|3|OOPPOHOB_	7	159
+3|3|OO_PBOHPO	8	158
+3|3|OOPBOPOH_	9	157
+3|3|OB_POHOPO	10	150
+3|3|OBOPOHOP_	9	147
+3|3|OB_HOOPOP	9	147
+3|3|OOPBOO_PH	7	147
+3|3|OOOOPB_HP	9	140
+3|3|OO_BOOPHP	7	137
+3|3|OO_BPOOHP	7	137
+3|3|OOPBPO_HO	9	132
+3|3|OOPOOH_BP	8	130
+3|3|OOPOPH_BO	8	130
+3|3|OOPOBO_PH	7	130
+3|3|OOPOBP_OH	7	130
+3|3|OOPOOBPH_	9	127
+3|3|OOPBPOOH_	8	124
+3|3|OOPBOOPH_	8	121
+3|3|OB_POOHOP	7	119
+3|3|OOHOBP_OP	7	114
+3|3|OO_PBOHOP	7	114
+3|3|OO_POHOBP	8	108
+3|3|OO_PPHOBO	8	108
+3|3|OOOPPHOB_	9	100
+3|3|OOPHOP_BO	8	97
+3|3|OBOPOH_OP	6	97
+3|3|OO_BOOPPH	7	93
+3|3|OO_BOOHPP	7	93
+3|3|OOBPPO_HO	7	92
+3|3|OBOPOHPO_	7	92
+3|3|OOPOOP_BH	8	91
+3|3|OOPPOH_BO	7	91
+3|3|OOBPHO_PO	6	82
+3|3|POHOBO_OP	6	82
+3|3|OOHOOP_BP	8	75

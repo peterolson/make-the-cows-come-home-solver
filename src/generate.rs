@@ -87,7 +87,7 @@ pub fn generate_files(width: u8, height: u8) {
 
     sort_rows(&mut rows);
     let lines = rows.iter().map(|row| {
-        format!("{}\t{}\t{}\t{}\t{}\t{}", row.0, row.1, row.2, row.3, row.4, row.5)
+        format!("{}\t{}\t{}", row.0, row.1, row.2)
     }).collect::<Vec<String>>();
 
     let data = lines.join("\n");
@@ -125,9 +125,14 @@ pub fn generate_file(width: u8, height: u8, cow_count : u8, barn_count: u8, pers
 
     sort_rows(&mut rows);
 
-    let lines = rows.iter().map(|row| {
-        format!("{}\t{}\t{}\t{}\t{}\t{}", row.0, row.1, row.2, row.3, row.4, row.5)
-    }).collect::<Vec<String>>();
+    let lines = rows.iter()
+    .filter(|x| {x.3})
+    .map(|row| {
+        format!("{}\t{}\t{}", row.0, row.1, row.2)
+    }) .collect::<Vec<String>>();
+    if lines.len() == 0 {
+        return rows;
+    }
 
     let data = lines.join("\n");
     let mut f = File::create(format!("rect/{}_{}/{}", width, height, file_name)).expect("Unable to create file");
@@ -209,9 +214,14 @@ pub fn generate_empty_variations(width: u8, height: u8, cow_count : u8, barn_cou
         return rows_with_empty;
     }
 
-    let lines = rows_with_empty.iter().map(|row| {
-        format!("{}\t{}\t{}\t{}\t{}\t{}", row.0, row.1, row.2, row.3, row.4, row.5)
+    let lines = rows_with_empty.iter()
+    .filter(|x| {x.3})
+    .map(|row| {
+        format!("{}\t{}\t{}", row.0, row.1, row.2)
     }).collect::<Vec<String>>();
+    if lines.len() == 0 {
+        return rows_with_empty;
+    }
 
     let data = lines.join("\n");
     let mut f = File::create(format!("rect/{}_{}/{}", width, height, file_name)).expect("Unable to create file");

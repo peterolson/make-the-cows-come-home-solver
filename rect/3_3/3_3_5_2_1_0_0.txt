@@ -1,198 +1,33 @@
-3|3|OOB_BOOOP	6	337	true	true	true
-3|3|OOOO_BPOB	7	309	true	true	true
-3|3|OOPBBOO_O	6	284	true	true	true
-3|3|OOOB_BOPO	6	274	true	true	true
-3|3|OOOB_BOOP	8	268	true	true	true
-3|3|OOOBB_OOP	6	259	true	true	true
-3|3|OOOB_POOB	7	251	true	true	true
-3|3|OOOBO_BOP	7	247	true	true	true
-3|3|OOOO_BBPO	6	217	true	true	true
-3|3|OOOBOBO_P	7	213	true	true	true
-3|3|OOBBOPO_O	6	211	true	true	true
-3|3|OOOBB_POO	7	203	true	true	true
-3|3|OOP_OOOBB	6	201	true	true	true
-3|3|OOOOBBO_P	7	193	true	true	true
-3|3|OOPBOBO_O	9	192	true	true	true
-3|3|OOOBO_OBP	6	166	true	true	true
-3|3|OOPOBO_OB	6	161	true	true	true
-3|3|OOPOBO_BO	6	120	true	true	true
-3|3|OO_BOBOPO	6	116	true	true	true
-3|3|OOOOOBB_P	7	114	true	true	true
-3|3|OOOBOBOP_	6	113	true	true	true
-3|3|OOPBOB_OO	8	106	true	true	true
-3|3|OOOBO_OPB	6	102	true	true	true
-3|3|OOPOOO_BB	7	94	true	true	true
-3|3|OOOOOBP_B	8	93	true	true	true
-3|3|OOOBOP_OB	7	93	true	true	true
-3|3|OOPOBB_OO	6	90	true	true	true
-3|3|OOOOOBBP_	6	80	true	true	true
-3|3|OOPOOB_OB	8	77	true	true	true
-3|3|OOBBOP_OO	7	66	true	true	true
-3|3|OOBOOP_BO	6	65	true	true	true
-3|3|OOPOOB_BO	6	55	true	true	true
-3|3|OOOOOBPB_	6	50	true	true	true
-3|3|OOBB_OOOP	6	389	false	false	true
-3|3|OOOOB_BOP	6	305	false	false	true
-3|3|OOBO_BPOO	6	296	false	false	true
-3|3|OOBBOOO_P	5	273	false	false	true
-3|3|OBOBOPO_O	6	270	false	false	true
-3|3|OOOO_BBOP	6	260	false	false	true
-3|3|OOBO_OBOP	5	256	false	false	true
-3|3|OOOOBBP_O	6	247	false	false	true
-3|3|OOOB_POBO	6	235	false	false	true
-3|3|OOB_OBPOO	6	234	false	false	true
-3|3|OOBO_OPBO	6	231	false	false	true
-3|3|OOBBO_OOP	6	218	false	false	true
-3|3|OOBOBOP_O	5	210	false	false	true
-3|3|OOPBO_OBO	5	210	false	false	true
-3|3|OOOOBOB_P	6	202	false	false	true
-3|3|OOOOB_PBO	7	200	false	false	true
-3|3|OOB_OOOBP	5	199	false	false	true
-3|3|OOOO_OBBP	7	198	false	false	true
-3|3|OOBB_OOPO	5	195	false	false	true
-3|3|OOOB_PBOO	8	193	false	false	true
-3|3|OOOO_PBBO	6	191	false	false	true
-3|3|OBOPO_OBO	5	190	false	false	true
-3|3|OOBBOOP_O	5	185	false	false	true
-3|3|OOPB_OOBO	5	183	false	false	true
-3|3|OOB_OPOBO	5	172	false	false	true
-3|3|OOB_OBOPO	6	171	false	false	true
-3|3|OOB_OBOOP	7	168	false	false	true
-3|3|OOBP_OOOB	5	167	false	false	true
-3|3|OOBPOBO_O	7	161	false	false	true
-3|3|OOOOB_POB	6	156	false	false	true
-3|3|OOOO_BOPB	9	153	false	false	true
-3|3|OOP_OBOBO	6	148	false	false	true
-3|3|OOPBOO_OB	6	147	false	false	true
-3|3|OOBO_OBPO	5	145	false	false	true
-3|3|OOOO_BPBO	6	144	false	false	true
-3|3|OOOBO_BPO	9	138	false	false	true
-3|3|OOOOB_BPO	7	137	false	false	true
-3|3|OOOPB_BOO	7	135	false	false	true
-3|3|OOOBB_OPO	7	134	false	false	true
-3|3|OOOBBPO_O	7	132	false	false	true
-3|3|OOOPB_OBO	7	130	false	false	true
-3|3|OOBOB_POO	5	129	false	false	true
-3|3|OOBBO_OPO	5	127	false	false	true
-3|3|OOBBOO_OP	6	123	false	false	true
-3|3|OOBBOOOP_	5	122	false	false	true
-3|3|OOBBPOO_O	5	120	false	false	true
-3|3|OOBOBOPO_	5	119	false	false	true
-3|3|OOOOO_BBP	6	117	false	false	true
-3|3|OOOBO_POB	6	115	false	false	true
-3|3|OO_BOOPOB	6	114	false	false	true
-3|3|OOBBO_POO	6	112	false	false	true
-3|3|OOBOOBP_O	5	110	false	false	true
-3|3|OOPBBOOO_	5	107	false	false	true
-3|3|OOPBOBOO_	8	106	false	false	true
-3|3|OOBBOPOO_	6	106	false	false	true
-3|3|OOOOBBPO_	6	105	false	false	true
-3|3|OOB_POOOB	5	104	false	false	true
-3|3|OOOPO_BBO	8	101	false	false	true
-3|3|OOBPBOO_O	6	101	false	false	true
-3|3|OO_BOOOPB	6	101	false	false	true
-3|3|OO_BOPOBO	5	100	false	false	true
-3|3|OOOBO_PBO	6	97	false	false	true
-3|3|OOOBOPBO_	8	93	false	false	true
-3|3|OOBOBO_OP	5	90	false	false	true
-3|3|OOPBOOBO_	6	88	false	false	true
-3|3|OOOOBOPB_	7	87	false	false	true
-3|3|OO_BOOBOP	6	87	false	false	true
-3|3|OOBPOOOB_	5	87	false	false	true
-3|3|OOBOOOPB_	6	86	false	false	true
-3|3|OOOBOP_BO	6	85	false	false	true
-3|3|OOBBOOPO_	6	84	false	false	true
-3|3|OOOOBPBO_	6	80	false	false	true
-3|3|OOOBOPOB_	6	80	false	false	true
-3|3|OOBBOO_PO	5	80	false	false	true
-3|3|OOOO_BOBP	6	78	false	false	true
-3|3|OOBOOBPO_	6	78	false	false	true
-3|3|OOBOOO_BP	6	73	false	false	true
-3|3|OOOOBB_OP	6	70	false	false	true
-3|3|OOOOBB_PO	6	70	false	false	true
-3|3|OOOBBPOO_	6	70	false	false	true
-3|3|OOBOPOB_O	5	70	false	false	true
-3|3|OOOOBOBP_	6	67	false	false	true
-3|3|OOOOBPB_O	6	67	false	false	true
-3|3|OOOOOB_PB	8	65	false	false	true
-3|3|OOBPO_OBO	5	65	false	false	true
-3|3|OOBOPOBO_	5	64	false	false	true
-3|3|OOOOBBOP_	7	63	false	false	true
-3|3|OOOOBPO_B	7	63	false	false	true
-3|3|OOPBOO_BO	5	63	false	false	true
-3|3|OOBPOB_OO	6	62	false	false	true
-3|3|OOPBOOOB_	5	62	false	false	true
-3|3|OOOOOPBB_	6	55	false	false	true
-3|3|OOOPB_OOB	6	53	false	false	true
-3|3|OO_BOOOBP	5	51	false	false	true
-3|3|OOBOOB_PO	5	50	false	false	true
-3|3|OOBOBO_PO	5	44	false	false	true
-3|3|OO_BOOPBO	5	42	false	false	true
-3|3|OOOPO_OBB	6	35	false	false	true
-3|3|OOBOOB_OP	6	35	false	false	true
-3|3|OOOOOB_BP	6	32	false	false	true
-3|3|OOOOOPB_B	0	-1	false	false	false
-3|3|OOOOOP_BB	0	-1	false	false	false
-3|3|OOOOO_BPB	0	-1	false	false	false
-3|3|OOOOO_PBB	0	-1	false	false	false
-3|3|OOOOBP_OB	0	-1	false	false	false
-3|3|OOOOBP_BO	0	-1	false	false	false
-3|3|OOOOPOBB_	0	-1	false	false	false
-3|3|OOOOPOB_B	0	-1	false	false	false
-3|3|OOOOPBOB_	0	-1	false	false	false
-3|3|OOOOPBO_B	0	-1	false	false	false
-3|3|OOOOPBBO_	0	-1	false	false	false
-3|3|OOOOPBB_O	0	-1	false	false	false
-3|3|OOOOPB_OB	0	-1	false	false	false
-3|3|OOOOPB_BO	0	-1	false	false	false
-3|3|OOOOP_BOB	0	-1	false	false	false
-3|3|OOOOP_BBO	0	-1	false	false	false
-3|3|OOOO_OBPB	0	-1	false	false	false
-3|3|OOOO_PBOB	0	-1	false	false	false
-3|3|OOOBOBPO_	0	-1	false	false	false
-3|3|OOOBOPO_B	0	-1	false	false	false
-3|3|OOOBOPB_O	0	-1	false	false	false
-3|3|OOOBBP_OO	0	-1	false	false	false
-3|3|OOOBPBOO_	0	-1	false	false	false
-3|3|OOOBPBO_O	0	-1	false	false	false
-3|3|OOOBP_OOB	0	-1	false	false	false
-3|3|OOOBP_OBO	0	-1	false	false	false
-3|3|OOOBP_BOO	0	-1	false	false	false
-3|3|OOOPO_BOB	0	-1	false	false	false
-3|3|OOBOOOBP_	0	-1	false	false	false
-3|3|OOBOOOB_P	0	-1	false	false	false
-3|3|OOBOOOP_B	0	-1	false	false	false
-3|3|OOBOOO_PB	0	-1	false	false	false
-3|3|OOBOOPB_O	0	-1	false	false	false
-3|3|OOBOOP_OB	0	-1	false	false	false
-3|3|OOBOO_POB	0	-1	false	false	false
-3|3|OOBOO_PBO	0	-1	false	false	false
-3|3|OOBOBP_OO	0	-1	false	false	false
-3|3|OOBOPO_OB	0	-1	false	false	false
-3|3|OOBOPO_BO	0	-1	false	false	false
-3|3|OOBOPB_OO	0	-1	false	false	false
-3|3|OOBO_OPOB	0	-1	false	false	false
-3|3|OOBBPOOO_	0	-1	false	false	false
-3|3|OOBPOOO_B	0	-1	false	false	false
-3|3|OOBPOOBO_	0	-1	false	false	false
-3|3|OOBPOOB_O	0	-1	false	false	false
-3|3|OOBPOO_OB	0	-1	false	false	false
-3|3|OOBPOBOO_	0	-1	false	false	false
-3|3|OOBPO_OOB	0	-1	false	false	false
-3|3|OOBPO_BOO	0	-1	false	false	false
-3|3|OOBPBOOO_	0	-1	false	false	false
-3|3|OOB_OOOPB	0	-1	false	false	false
-3|3|OOB_OOBOP	0	-1	false	false	false
-3|3|OOB_OOPOB	0	-1	false	false	false
-3|3|OOB_OPOOB	0	-1	false	false	false
-3|3|OOPBOOO_B	0	-1	false	false	false
-3|3|OOPBOOB_O	0	-1	false	false	false
-3|3|OOP_OOBOB	0	-1	false	false	false
-3|3|OO_BOOBPO	0	-1	false	false	false
-3|3|OO_BBOOPO	0	-1	false	false	false
-3|3|OO_BPOOBO	0	-1	false	false	false
-3|3|OO_POOOBB	0	-1	false	false	false
-3|3|OO_POOBOB	0	-1	false	false	false
-3|3|OO_POBOBO	0	-1	false	false	false
-3|3|BOBOOOPO_	0	-1	false	false	false
-3|3|BOPOOO_OB	0	-1	false	false	false
+3|3|OOB_BOOOP	6	337
+3|3|OOOO_BPOB	7	309
+3|3|OOPBBOO_O	6	284
+3|3|OOOB_BOPO	6	274
+3|3|OOOB_BOOP	8	268
+3|3|OOOBB_OOP	6	259
+3|3|OOOB_POOB	7	251
+3|3|OOOBO_BOP	7	247
+3|3|OOOO_BBPO	6	217
+3|3|OOOBOBO_P	7	213
+3|3|OOBBOPO_O	6	211
+3|3|OOOBB_POO	7	203
+3|3|OOP_OOOBB	6	201
+3|3|OOOOBBO_P	7	193
+3|3|OOPBOBO_O	9	192
+3|3|OOOBO_OBP	6	166
+3|3|OOPOBO_OB	6	161
+3|3|OOPOBO_BO	6	120
+3|3|OO_BOBOPO	6	116
+3|3|OOOOOBB_P	7	114
+3|3|OOOBOBOP_	6	113
+3|3|OOPBOB_OO	8	106
+3|3|OOOBO_OPB	6	102
+3|3|OOPOOO_BB	7	94
+3|3|OOOOOBP_B	8	93
+3|3|OOOBOP_OB	7	93
+3|3|OOPOBB_OO	6	90
+3|3|OOOOOBBP_	6	80
+3|3|OOPOOB_OB	8	77
+3|3|OOBBOP_OO	7	66
+3|3|OOBOOP_BO	6	65
+3|3|OOPOOB_BO	6	55
+3|3|OOOOOBPB_	6	50

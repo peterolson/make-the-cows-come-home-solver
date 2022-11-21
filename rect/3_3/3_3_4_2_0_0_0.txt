@@ -1,174 +1,93 @@
-3|3|OBO_B_O_O	6	224	true	true	true
-3|3|OOB__BO_O	5	163	true	true	true
-3|3|OBOB__O_O	5	146	true	true	true
-3|3|OOB_B_O_O	5	138	true	true	true
-3|3|OB__OBO_O	5	116	true	true	true
-3|3|OO__BBO_O	6	106	true	true	true
-3|3|OOB__OOB_	4	95	true	true	true
-3|3|OO___OOBB	6	88	true	true	true
-3|3|OBB_O_O_O	5	88	true	true	true
-3|3|OOB__OO_B	4	87	true	true	true
-3|3|OOBB__O_O	4	86	true	true	true
-3|3|OOB__BOO_	6	79	true	true	true
-3|3|OOOB___OB	5	74	true	true	true
-3|3|OOBB_O_O_	5	72	true	true	true
-3|3|BO_O_O_OB	4	72	true	true	true
-3|3|OO__BOO_B	5	71	true	true	true
-3|3|OO___BOBO	5	71	true	true	true
-3|3|OOB_BOO__	5	66	true	true	true
-3|3|OBOBO___O	5	66	true	true	true
-3|3|OBO_O_OB_	4	66	true	true	true
-3|3|OBO_O_O_B	4	66	true	true	true
-3|3|OOBB__OO_	5	65	true	true	true
-3|3|OOBB___OO	5	65	true	true	true
-3|3|OO_B_O_OB	5	65	true	true	true
-3|3|OOOB___BO	5	64	true	true	true
-3|3|OOO_B_O_B	5	64	true	true	true
-3|3|OOOB__BO_	7	60	true	true	true
-3|3|OOB__OBO_	4	60	true	true	true
-3|3|OO_BB_O_O	5	58	true	true	true
-3|3|OO__BOOB_	5	58	true	true	true
-3|3|OO__B_OBO	5	58	true	true	true
-3|3|OB__OOO_B	4	58	true	true	true
-3|3|OOB_B_OO_	5	55	true	true	true
-3|3|OOOBB___O	6	53	true	true	true
-3|3|OBB_OOO__	6	53	true	true	true
-3|3|OO_B_OBO_	5	52	true	true	true
-3|3|OOO_B_OB_	6	51	true	true	true
-3|3|OOB_O_OB_	4	49	true	true	true
-3|3|OOBO_OB__	4	45	true	true	true
-3|3|OOB__O_OB	4	44	true	true	true
-3|3|OBOBO_O__	4	44	true	true	true
-3|3|BO_OBO_O_	4	44	true	true	true
-3|3|OOBO_O_B_	5	41	true	true	true
-3|3|OOBB_OO__	4	40	true	true	true
-3|3|OBO_O_BO_	4	40	true	true	true
-3|3|OOB__B_OO	5	38	true	true	true
-3|3|OO_B_OOB_	4	37	true	true	true
-3|3|OO_B__OBO	4	37	true	true	true
-3|3|OO__BOBO_	4	37	true	true	true
-3|3|OO__OBOB_	5	36	true	true	true
-3|3|OOB__OB_O	4	36	true	true	true
-3|3|OOOB__OB_	5	34	true	true	true
-3|3|OOO_B_BO_	5	34	true	true	true
-3|3|OOB_OBO__	5	34	true	true	true
-3|3|OOBO_B_O_	5	33	true	true	true
-3|3|OOBBO_O__	4	33	true	true	true
-3|3|OOBBO___O	4	33	true	true	true
-3|3|OB__OO_OB	4	33	true	true	true
-3|3|OOBBO__O_	5	30	true	true	true
-3|3|BO_OOO_B_	5	30	true	true	true
-3|3|OOBO__B_O	4	30	true	true	true
-3|3|OO_BBOO__	4	30	true	true	true
-3|3|OO_BBO_O_	4	30	true	true	true
-3|3|OO_B_O_BO	4	30	true	true	true
-3|3|OO__BOB_O	4	30	true	true	true
-3|3|OOB_BO_O_	4	28	true	true	true
-3|3|OBOBO__O_	4	28	true	true	true
-3|3|OOOOB_B__	5	27	true	true	true
-3|3|OOOOB___B	5	27	true	true	true
-3|3|OOOO_B_B_	5	27	true	true	true
-3|3|OOOBB_O__	5	27	true	true	true
-3|3|OOOBB__O_	5	27	true	true	true
-3|3|OO_BO__OB	5	27	true	true	true
-3|3|OO__OBBO_	5	27	true	true	true
-3|3|OOB_O__BO	4	26	true	true	true
-3|3|OOBB_O__O	4	25	true	true	true
-3|3|OOBOB__O_	4	23	true	true	true
-3|3|OOBOB___O	4	23	true	true	true
-3|3|OOB_B__OO	4	23	true	true	true
-3|3|OO_BO__BO	4	23	true	true	true
-3|3|OOOO__BB_	5	21	true	true	true
-3|3|BO_BOO_O_	5	21	true	true	true
-3|3|OOB_OO_B_	4	21	true	true	true
-3|3|OB_BOO_O_	4	20	true	true	true
-3|3|OOBO_B__O	4	19	true	true	true
-3|3|OOB_OB__O	4	19	true	true	true
-3|3|OO__O_BBO	4	19	true	true	true
-3|3|OBB_OO_O_	4	19	true	true	true
-3|3|OOB_BO__O	4	18	true	true	true
-3|3|OOB_OB_O_	5	16	true	true	true
-3|3|OO_BOO_B_	4	16	true	true	true
-3|3|OOOBO__B_	5	15	true	true	true
-3|3|OOO_O_BB_	5	13	true	true	true
-3|3|OBO___OBO	4	106	false	true	false
-3|3|OOB___BOO	4	66	false	true	false
-3|3|OOB___OBO	4	65	false	true	false
-3|3|OOB___OOB	4	60	false	true	false
-3|3|OOO___OBB	5	53	false	true	false
-3|3|OOBBOO___	4	36	false	true	false
-3|3|OO_BB_OO_	4	30	false	true	false
-3|3|OOBOBO___	4	28	false	true	false
-3|3|OO_BO_OB_	4	28	false	true	false
-3|3|OOOOBB___	5	27	false	true	false
-3|3|OO_BO_BO_	5	27	false	true	false
-3|3|OOBOOB___	4	12	false	true	false
-3|3|OOOOB__B_	0	-1	false	false	false
-3|3|OOOO_BB__	0	-1	false	false	false
-3|3|OOOO_B__B	0	-1	false	false	false
-3|3|OOOO__B_B	0	-1	false	false	false
-3|3|OOOO___BB	0	-1	false	false	false
-3|3|OOOBOB___	0	-1	false	false	false
-3|3|OOOBO_B__	0	-1	false	false	false
-3|3|OOOBO___B	0	-1	false	false	false
-3|3|OOOB_BO__	0	-1	false	false	false
-3|3|OOOB_B_O_	0	-1	false	false	false
-3|3|OOOB__O_B	0	-1	false	false	false
-3|3|OOOB__B_O	0	-1	false	false	false
-3|3|OOO_O_B_B	0	-1	false	false	false
-3|3|OOO___BOB	0	-1	false	false	false
-3|3|OOBOO_B__	0	-1	false	false	false
-3|3|OOBOO__B_	0	-1	false	false	false
-3|3|OOBOO___B	0	-1	false	false	false
-3|3|OOBO_O__B	0	-1	false	false	false
-3|3|OOBO___OB	0	-1	false	false	false
-3|3|OOBO___BO	0	-1	false	false	false
-3|3|OOB_OOB__	0	-1	false	false	false
-3|3|OOB_OO__B	0	-1	false	false	false
-3|3|OOB_O_O_B	0	-1	false	false	false
-3|3|OOB_O_BO_	0	-1	false	false	false
-3|3|OOB_O_B_O	0	-1	false	false	false
-3|3|OOB_O__OB	0	-1	false	false	false
-3|3|OO_OOB_B_	0	-1	false	false	false
-3|3|OO_OOB__B	0	-1	false	false	false
-3|3|OO_OBO_B_	0	-1	false	false	false
-3|3|OO_OBO__B	0	-1	false	false	false
-3|3|OO_OBB__O	0	-1	false	false	false
-3|3|OO_O_O_BB	0	-1	false	false	false
-3|3|OO_O_B_BO	0	-1	false	false	false
-3|3|OO_BOOB__	0	-1	false	false	false
-3|3|OO_BOO__B	0	-1	false	false	false
-3|3|OO_BOBO__	0	-1	false	false	false
-3|3|OO_BOB_O_	0	-1	false	false	false
-3|3|OO_BOB__O	0	-1	false	false	false
-3|3|OO_BO_O_B	0	-1	false	false	false
-3|3|OO_BO_B_O	0	-1	false	false	false
-3|3|OO_BBO__O	0	-1	false	false	false
-3|3|OO_BB__OO	0	-1	false	false	false
-3|3|OO_B_OO_B	0	-1	false	false	false
-3|3|OO_B_OB_O	0	-1	false	false	false
-3|3|OO_B_BOO_	0	-1	false	false	false
-3|3|OO_B_BO_O	0	-1	false	false	false
-3|3|OO_B_B_OO	0	-1	false	false	false
-3|3|OO__OOBB_	0	-1	false	false	false
-3|3|OO__OOB_B	0	-1	false	false	false
-3|3|OO__OO_BB	0	-1	false	false	false
-3|3|OO__OBO_B	0	-1	false	false	false
-3|3|OO__OBB_O	0	-1	false	false	false
-3|3|OO__OB_OB	0	-1	false	false	false
-3|3|OO__OB_BO	0	-1	false	false	false
-3|3|OO__O_OBB	0	-1	false	false	false
-3|3|OO__O_BOB	0	-1	false	false	false
-3|3|OO__BO_OB	0	-1	false	false	false
-3|3|OO__BBOO_	0	-1	false	false	false
-3|3|OO___OBOB	0	-1	false	false	false
-3|3|OB__OOOB_	0	-1	false	false	false
-3|3|OB__OOBO_	0	-1	false	false	false
-3|3|O_O_O_BOB	0	-1	false	false	false
-3|3|O_B_OOBO_	0	-1	false	false	false
-3|3|O_B_OO_OB	0	-1	false	false	false
-3|3|BOBOOO___	0	-1	false	false	false
-3|3|BOBOO__O_	0	-1	false	false	false
-3|3|BOBO_O_O_	0	-1	false	false	false
-3|3|BO_OOO__B	0	-1	false	false	false
-3|3|BO__OOBO_	0	-1	false	false	false
+3|3|OBO_B_O_O	6	224
+3|3|OOB__BO_O	5	163
+3|3|OBOB__O_O	5	146
+3|3|OOB_B_O_O	5	138
+3|3|OB__OBO_O	5	116
+3|3|OO__BBO_O	6	106
+3|3|OOB__OOB_	4	95
+3|3|OO___OOBB	6	88
+3|3|OBB_O_O_O	5	88
+3|3|OOB__OO_B	4	87
+3|3|OOBB__O_O	4	86
+3|3|OOB__BOO_	6	79
+3|3|OOOB___OB	5	74
+3|3|OOBB_O_O_	5	72
+3|3|BO_O_O_OB	4	72
+3|3|OO__BOO_B	5	71
+3|3|OO___BOBO	5	71
+3|3|OOB_BOO__	5	66
+3|3|OBOBO___O	5	66
+3|3|OBO_O_OB_	4	66
+3|3|OBO_O_O_B	4	66
+3|3|OOBB__OO_	5	65
+3|3|OOBB___OO	5	65
+3|3|OO_B_O_OB	5	65
+3|3|OOOB___BO	5	64
+3|3|OOO_B_O_B	5	64
+3|3|OOOB__BO_	7	60
+3|3|OOB__OBO_	4	60
+3|3|OO_BB_O_O	5	58
+3|3|OO__BOOB_	5	58
+3|3|OO__B_OBO	5	58
+3|3|OB__OOO_B	4	58
+3|3|OOB_B_OO_	5	55
+3|3|OOOBB___O	6	53
+3|3|OBB_OOO__	6	53
+3|3|OO_B_OBO_	5	52
+3|3|OOO_B_OB_	6	51
+3|3|OOB_O_OB_	4	49
+3|3|OOBO_OB__	4	45
+3|3|OOB__O_OB	4	44
+3|3|OBOBO_O__	4	44
+3|3|BO_OBO_O_	4	44
+3|3|OOBO_O_B_	5	41
+3|3|OOBB_OO__	4	40
+3|3|OBO_O_BO_	4	40
+3|3|OOB__B_OO	5	38
+3|3|OO_B_OOB_	4	37
+3|3|OO_B__OBO	4	37
+3|3|OO__BOBO_	4	37
+3|3|OO__OBOB_	5	36
+3|3|OOB__OB_O	4	36
+3|3|OOOB__OB_	5	34
+3|3|OOO_B_BO_	5	34
+3|3|OOB_OBO__	5	34
+3|3|OOBO_B_O_	5	33
+3|3|OOBBO_O__	4	33
+3|3|OOBBO___O	4	33
+3|3|OB__OO_OB	4	33
+3|3|OOBBO__O_	5	30
+3|3|BO_OOO_B_	5	30
+3|3|OOBO__B_O	4	30
+3|3|OO_BBOO__	4	30
+3|3|OO_BBO_O_	4	30
+3|3|OO_B_O_BO	4	30
+3|3|OO__BOB_O	4	30
+3|3|OOB_BO_O_	4	28
+3|3|OBOBO__O_	4	28
+3|3|OOOOB_B__	5	27
+3|3|OOOOB___B	5	27
+3|3|OOOO_B_B_	5	27
+3|3|OOOBB_O__	5	27
+3|3|OOOBB__O_	5	27
+3|3|OO_BO__OB	5	27
+3|3|OO__OBBO_	5	27
+3|3|OOB_O__BO	4	26
+3|3|OOBB_O__O	4	25
+3|3|OOBOB__O_	4	23
+3|3|OOBOB___O	4	23
+3|3|OOB_B__OO	4	23
+3|3|OO_BO__BO	4	23
+3|3|OOOO__BB_	5	21
+3|3|BO_BOO_O_	5	21
+3|3|OOB_OO_B_	4	21
+3|3|OB_BOO_O_	4	20
+3|3|OOBO_B__O	4	19
+3|3|OOB_OB__O	4	19
+3|3|OO__O_BBO	4	19
+3|3|OBB_OO_O_	4	19
+3|3|OOB_BO__O	4	18
+3|3|OOB_OB_O_	5	16
+3|3|OO_BOO_B_	4	16
+3|3|OOOBO__B_	5	15
+3|3|OOO_O_BB_	5	13
