@@ -31,7 +31,6 @@
 3|3|OPE_BOP_P	3	20	false	false	true
 3|3|OPP_BEO_P	4	19	false	false	true
 3|3|O_OEB_PPP	4	19	false	false	true
-3|3|O_O_BEPPP	4	19	false	false	true
 3|3|OPE_BPO_P	4	19	false	false	true
 3|3|POEB_OP_P	4	19	false	false	true
 3|3|OEP_OBP_P	3	19	false	false	true
@@ -109,7 +108,6 @@
 3|3|OPPEB_O_P	0	-1	false	false	false
 3|3|OPP_B_OEP	0	-1	false	false	false
 3|3|OPOEB_P_P	0	-1	false	false	false
-3|3|OPO_BEP_P	0	-1	false	false	false
 3|3|OPPE_BO_P	0	-1	false	false	false
 3|3|OPP_EBO_P	0	-1	false	false	false
 3|3|OPP__BOEP	0	-1	false	false	false
@@ -141,7 +139,6 @@
 3|3|POPBEP_O_	0	-1	false	false	false
 3|3|OOPPEB_P_	0	-1	false	false	false
 3|3|OP_EBPP_O	0	-1	false	false	false
-3|3|OP__BPPEO	0	-1	false	false	false
 3|3|OP_EBOP_P	0	-1	false	false	false
 3|3|OP_EBPO_P	0	-1	false	false	false
 3|3|OP__BPOEP	0	-1	false	false	false

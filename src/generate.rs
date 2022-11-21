@@ -1,7 +1,8 @@
 use std::collections::HashSet;
 use std::fs::{File, self};
 use std::io::Write;
-use std::cmp;
+use std::sync::{Mutex, Arc};
+use std::{cmp, thread};
 
 use crate::board::{Board};
 use crate::solve::solve;
@@ -9,30 +10,81 @@ use crate::solve::solve;
 pub fn generate_files(width: u8, height: u8) {
     fs::create_dir_all(format!("rect/{}_{}", width, height)).expect("Unable to create directory.");
     let length = width * height;
+    
+    let mut handles = vec![];
     let mut rows : Vec<(String, usize, isize, bool, bool, bool)> = Vec::new();
-    for barn_count in 1..2 {
+    let mut piece_configurations = Vec::new();
+    for barn_count in 1..3 {
         for house_count in 0..2 {
-            let max_cow_count = cmp::min(length - barn_count - house_count, 7);
+            let max_cow_count = cmp::min(length - barn_count - house_count, 6);
             for cow_count in 1..max_cow_count {
-                let max_person_count = cmp::min(length - barn_count - house_count - cow_count, 7);
+                let max_person_count = cmp::min(length - barn_count - house_count - cow_count, 6);
                 for person_count in 0..max_person_count {
-                    let mut generated_rows = generate_file(width, height, cow_count, barn_count, person_count, house_count);
-                    let mut seed_rows = generated_rows.clone();
-                    rows.append(&mut generated_rows);
-
-                    let max_empty_count = length - barn_count - house_count - cow_count - person_count;
-                    for empty_count in 1..max_empty_count {
-                        let mut empty_variations = generate_empty_variations(width, height, cow_count, barn_count, person_count, house_count, empty_count, seed_rows);
-                        seed_rows = empty_variations.clone();
-                        if empty_variations.len() == 0{
-                            break;
-                        }
-                        rows.append(&mut empty_variations);
-                    }
+                    piece_configurations.push((width, height, cow_count, barn_count, person_count, house_count));
                 }
             }
         }
     }
+
+    let total_configurations = piece_configurations.len();
+    let completed = Arc::new(Mutex::new(0));
+    let current_index = Arc::new(Mutex::new(0));
+    const MAX_CONCURRENT_THREADS : i8 = 8;
+
+    for thread_number in 0..MAX_CONCURRENT_THREADS {
+        let current_index = Arc::clone(&current_index);
+        let completed = Arc::clone(&completed);
+        let piece_configurations = piece_configurations.clone();
+        let handle = thread::spawn(move || {
+            println!("Thread {} started.", thread_number);
+            let mut rows : Vec<(String, usize, isize, bool, bool, bool)> = Vec::new();
+            loop {
+                let i ;
+                {
+                    let mut index = current_index.lock().unwrap();
+                    i = *index;
+                    if i >= total_configurations {
+                        break;
+                    }
+                    *index += 1;
+                }
+                let (width, height, cow_count, barn_count, person_count, house_count) = piece_configurations[i];
+                
+                let mut generated_rows = generate_file(width, height, cow_count, barn_count, person_count, house_count);
+                let mut seed_rows = generated_rows.clone();
+                rows.append(&mut generated_rows);
+    
+                let max_empty_count = length - barn_count - house_count - cow_count - person_count;
+                for empty_count in 1..max_empty_count {
+                    let mut empty_variations = generate_empty_variations(width, height, cow_count, barn_count, person_count, house_count, empty_count, seed_rows);
+                    seed_rows = empty_variations.clone();
+                    if empty_variations.len() == 0{
+                        break;
+                    }
+                    rows.append(&mut empty_variations);
+                }
+                {
+                    let mut completed = completed.lock().unwrap();
+                    *completed += 1;
+                    println!("Thread {}: Completed configuration #{}. Finished {} of {}.", thread_number, i, *completed, total_configurations);
+                }
+            }
+            
+            rows
+        });
+        handles.push(handle);
+    }
+
+    for handle in handles {
+        let result = handle.join().unwrap();
+        for row in result {
+            let is_elegant = row.3;
+            if is_elegant {
+                rows.push(row);
+            }
+        }
+    }
+
     sort_rows(&mut rows);
     let lines = rows.iter().map(|row| {
         format!("{}\t{}\t{}\t{}\t{}\t{}", row.0, row.1, row.2, row.3, row.4, row.5)
@@ -124,13 +176,23 @@ pub fn generate_empty_variations(width: u8, height: u8, cow_count : u8, barn_cou
     let file_name = format!("{}_{}_{}_{}_{}_{}_{}.txt", width, height, cow_count, barn_count, person_count, house_count, empty_count);
     println!("Generating {}", file_name);
     let mut elegant_count = 0;
+    let mut encountered_boards : HashSet<Board> = HashSet::new();
     for row in rows {
         let variations = get_empty_variations(row);
         for variation in variations {
+            let board = Board::from_string(&variation.0);
+            if encountered_boards.contains(&board) {
+                continue;
+            }
             if variation.3 {
                 elegant_count += 1;
             }
             rows_with_empty.push(variation);
+            let symmetric_variants = board.get_symmetric_variants();
+            encountered_boards.insert(board);
+            for symmetric_variant in symmetric_variants {
+                encountered_boards.insert(symmetric_variant);
+            }
         }
     }
 
