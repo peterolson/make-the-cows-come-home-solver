@@ -7,7 +7,7 @@ mod generate;
 fn main() {
     println!("Hello, world!");
 
-    generate_files(3, 3);
+    generate_files(5, 3);
 
     print!("Done");
 
