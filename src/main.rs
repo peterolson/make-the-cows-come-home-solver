@@ -1,15 +1,17 @@
-use crate::{generate::{generate_boards, generate_file, generate_files}, solve::solve};
+use crate::{
+    generate::{generate_boards, generate_file, generate_files},
+    solve::solve,
+};
 
 mod board;
-mod solve;
 mod generate;
+mod settings;
+mod solve;
 
 fn main() {
     println!("Hello, world!");
 
-    generate_files(5, 3);
+    generate_files(3, 3);
 
     print!("Done");
-
 }
-

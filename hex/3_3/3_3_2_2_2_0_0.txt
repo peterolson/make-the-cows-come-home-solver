@@ -1,0 +1,5 @@
+3|3|OPB___BOP	3	24
+3|3|B_P_OOPB_	5	12
+3|3|OO_P_B_BP	4	9
+3|3|OO_P_P_BB	3	8
+3|3|OPB_OB__P	3	6
