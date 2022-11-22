@@ -1,0 +1,4 @@
+4|3|OP_PE_B_B__P	5	26
+4|3|O_PPE_B_B__P	4	26
+4|3|OP_B__P_PE_B	5	24
+4|3|OP_B__P_P_EB	5	24

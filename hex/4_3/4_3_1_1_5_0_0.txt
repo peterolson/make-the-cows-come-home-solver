@@ -1,0 +1,5 @@
+4|3|PO_P__PB_P_P	5	185
+4|3|BPO__P_PP__P	4	41
+4|3|OPB__P_PP__P	4	38
+4|3|BPO__P_P_P_P	4	30
+4|3|PPO_BP_P__P_	4	9
