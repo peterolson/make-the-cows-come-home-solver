@@ -325,11 +325,9 @@ pub fn get_empty_variations(
             continue;
         }
         let new_serialized = format!("{}{}{}", &serialized[0..i], 'E', &serialized[i + 1..]);
-        //println!("Trying {} from {}", new_serialized, serialized);
         let new_board = Board::from_string(new_serialized.as_str());
         let (situation, new_iterations) = solve(new_board);
-        let is_elegant =
-            situation.is_elegant() && new_iterations > iterations && situation.moves.len() > moves;
+        let is_elegant = situation.is_elegant() && situation.moves.len() > moves;
         rows.push((
             new_serialized,
             situation.moves.len(),
