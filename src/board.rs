@@ -1,3 +1,5 @@
+use std::fmt;
+
 use crate::settings::HEXAGONAL_MODE;
 
 #[derive(Clone, Copy, PartialEq, Eq, Hash)]
@@ -97,7 +99,7 @@ impl Board {
             // up right
             new_x = x;
             new_y = y;
-            while new_x < self.width - 1 && new_y > 0 {
+            while new_x < self.width - (new_y % 2) && new_y > 0 {
                 new_y -= 1;
                 new_x += (new_y + 1) % 2;
                 if check_move(
@@ -133,7 +135,7 @@ impl Board {
             // down right
             new_x = x;
             new_y = y;
-            while new_x < self.width - 1 && new_y < self.height - 1 {
+            while new_x < self.width - (new_y % 2) && new_y < self.height - 1 {
                 new_y += 1;
                 new_x += (new_y + 1) % 2;
                 if check_move(
@@ -363,4 +365,24 @@ fn check_move(
         return true;
     }
     return false;
+}
+
+impl fmt::Display for Board {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        for y in 0..self.height {
+            for x in 0..self.width {
+                let c = match self.get(x, y) {
+                    Piece::Cow => 'O',
+                    Piece::Person => 'P',
+                    Piece::House => 'H',
+                    Piece::Barn => 'B',
+                    Piece::Empty => 'E',
+                    Piece::Blank => '_',
+                };
+                write!(f, "{}", c)?;
+            }
+            write!(f, "\n")?;
+        }
+        Ok(())
+    }
 }
