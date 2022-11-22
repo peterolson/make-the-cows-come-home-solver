@@ -16,7 +16,6 @@ pub fn generate_files(width: u8, height: u8) {
     let length = width * height;
 
     let mut handles = vec![];
-    let mut rows: Vec<(String, usize, isize, bool, bool, bool)> = Vec::new();
     let mut piece_configurations = Vec::new();
     for barn_count in 1..3 {
         for house_count in 0..2 {
@@ -24,6 +23,9 @@ pub fn generate_files(width: u8, height: u8) {
             for cow_count in 1..max_cow_count {
                 let max_person_count = cmp::min(length - barn_count - house_count - cow_count, 6);
                 for person_count in 0..max_person_count {
+                    if barn_count + house_count + cow_count + person_count > length / 2 {
+                        continue;
+                    }
                     piece_configurations.push((
                         width,
                         height,
@@ -48,7 +50,6 @@ pub fn generate_files(width: u8, height: u8) {
         let piece_configurations = piece_configurations.clone();
         let handle = thread::spawn(move || {
             println!("Thread {} started.", thread_number);
-            let mut rows: Vec<(String, usize, isize, bool, bool, bool)> = Vec::new();
             loop {
                 let i;
                 {
@@ -62,7 +63,7 @@ pub fn generate_files(width: u8, height: u8) {
                 let (width, height, cow_count, barn_count, person_count, house_count) =
                     piece_configurations[i];
 
-                let mut generated_rows = generate_file(
+                let generated_rows = generate_file(
                     width,
                     height,
                     cow_count,
@@ -71,11 +72,10 @@ pub fn generate_files(width: u8, height: u8) {
                     house_count,
                 );
                 let mut seed_rows = generated_rows.clone();
-                rows.append(&mut generated_rows);
 
-                let max_empty_count = length - barn_count - house_count - cow_count - person_count;
+                let max_empty_count = 0; // length - barn_count - house_count - cow_count - person_count;
                 for empty_count in 1..max_empty_count {
-                    let mut empty_variations = generate_empty_variations(
+                    let empty_variations = generate_empty_variations(
                         width,
                         height,
                         cow_count,
@@ -89,7 +89,6 @@ pub fn generate_files(width: u8, height: u8) {
                     if empty_variations.len() == 0 {
                         break;
                     }
-                    rows.append(&mut empty_variations);
                 }
                 {
                     let mut completed = completed.lock().unwrap();
@@ -100,35 +99,13 @@ pub fn generate_files(width: u8, height: u8) {
                     );
                 }
             }
-
-            rows
         });
         handles.push(handle);
     }
 
     for handle in handles {
-        let result = handle.join().unwrap();
-        for row in result {
-            let is_elegant = row.3;
-            if is_elegant {
-                rows.push(row);
-            }
-        }
+        handle.join().unwrap();
     }
-
-    sort_rows(&mut rows);
-    let lines = rows
-        .iter()
-        .map(|row| format!("{}\t{}\t{}", row.0, row.1, row.2))
-        .collect::<Vec<String>>();
-
-    let data = lines.join("\n");
-    let mut f = File::create(format!(
-        "{}/{}_{}/{}_{}.txt",
-        DIRECTORY, width, height, width, height
-    ))
-    .expect("Unable to create file");
-    f.write_all(data.as_bytes()).expect("Unable to write data");
 }
 
 pub fn generate_file(

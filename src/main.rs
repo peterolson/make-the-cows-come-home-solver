@@ -1,9 +1,11 @@
 use crate::{
+    combine::combine_puzzles,
     generate::{generate_boards, generate_file, generate_files},
     solve::solve,
 };
 
 mod board;
+mod combine;
 mod generate;
 mod settings;
 mod solve;
@@ -11,7 +13,8 @@ mod solve;
 fn main() {
     println!("Hello, world!");
 
-    generate_files(3, 3);
+    combine_puzzles();
+    //generate_files(4, 4);
 
     print!("Done");
 }
