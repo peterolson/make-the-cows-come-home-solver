@@ -1,6 +1,7 @@
 use std::collections::HashSet;
 use std::fs::{self, File};
 use std::io::Write;
+use std::path::Path;
 use std::sync::{Arc, Mutex};
 use std::{cmp, thread};
 
@@ -23,7 +24,7 @@ pub fn generate_files(width: u8, height: u8) {
             for cow_count in 1..max_cow_count {
                 let max_person_count = cmp::min(length - barn_count - house_count - cow_count, 6);
                 for person_count in 0..max_person_count {
-                    if barn_count + house_count + cow_count + person_count > length / 2 {
+                    if cow_count + person_count >= length / 2 {
                         continue;
                     }
                     piece_configurations.push((
@@ -60,8 +61,29 @@ pub fn generate_files(width: u8, height: u8) {
                     }
                     *index += 1;
                 }
+
                 let (width, height, cow_count, barn_count, person_count, house_count) =
                     piece_configurations[i];
+
+                // check if file already exists
+                let file_name = format!(
+                    "{}/{}_{}/{}_{}_{}_{}_{}_{}_0.txt",
+                    DIRECTORY,
+                    width,
+                    height,
+                    width,
+                    height,
+                    cow_count,
+                    barn_count,
+                    person_count,
+                    house_count
+                );
+                if Path::new(&file_name).exists() {
+                    println!("File {} already exists. Continuing...", file_name);
+                    let mut completed = completed.lock().unwrap();
+                    *completed += 1;
+                    continue;
+                }
 
                 let generated_rows = generate_file(
                     width,
