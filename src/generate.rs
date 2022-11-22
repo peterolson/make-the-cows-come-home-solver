@@ -93,25 +93,18 @@ pub fn generate_files(width: u8, height: u8) {
                     person_count,
                     house_count,
                 );
-                let mut seed_rows = generated_rows.clone();
 
-                let max_empty_count = 0; // length - barn_count - house_count - cow_count - person_count;
-                for empty_count in 1..max_empty_count {
-                    let empty_variations = generate_empty_variations(
-                        width,
-                        height,
-                        cow_count,
-                        barn_count,
-                        person_count,
-                        house_count,
-                        empty_count,
-                        seed_rows,
-                    );
-                    seed_rows = empty_variations.clone();
-                    if empty_variations.len() == 0 {
-                        break;
-                    }
-                }
+                generate_empty_variations(
+                    width,
+                    height,
+                    cow_count,
+                    barn_count,
+                    person_count,
+                    house_count,
+                    1,
+                    generated_rows.clone(),
+                );
+
                 {
                     let mut completed = completed.lock().unwrap();
                     *completed += 1;

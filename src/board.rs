@@ -82,7 +82,7 @@ impl Board {
             // up left
             let mut new_x = x;
             let mut new_y = y;
-            while new_x > 0 && new_y > 0 {
+            while new_x + (new_y % 2) > 0 && new_y > 0 {
                 new_y -= 1;
                 new_x -= new_y % 2;
                 if check_move(
@@ -117,7 +117,7 @@ impl Board {
             // down left
             new_x = x;
             new_y = y;
-            while new_x > 0 && new_y < self.height - 1 {
+            while new_x + (new_y % 2) > 0 && new_y < self.height - 1 {
                 new_y += 1;
                 new_x -= new_y % 2;
                 if check_move(
