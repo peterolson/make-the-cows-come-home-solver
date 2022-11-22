@@ -1,0 +1,17 @@
+4|2|O_H_BB_P	3	15
+4|2|O__HBP_B	3	14
+4|2|BO_HP__B	3	11
+4|2|BO_H_P_B	3	11
+4|2|OBH_B__P	3	9
+4|2|OP_BB_H_	3	9
+4|2|BOH_B__P	3	9
+4|2|BOH__B_P	3	9
+4|2|OBH_P__B	3	7
+4|2|OBH__B_P	3	7
+4|2|OB_HP__B	3	7
+4|2|OB_H_P_B	3	7
+4|2|O_BH_P_B	3	7
+4|2|BOH_P__B	3	7
+4|2|B_OH_P_B	3	7
+4|2|B__PHOB_	3	7
+4|2|B__PHBO_	3	7
