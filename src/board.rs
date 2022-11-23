@@ -2,9 +2,9 @@ use std::fmt;
 
 use crate::settings::HEXAGONAL_MODE;
 
-const MAX_BOARD_SIZE : usize = 36;
+const MAX_BOARD_SIZE: usize = 36;
 
-#[derive(Clone, Copy, PartialEq, Eq, Hash)]
+#[derive(Clone, Copy, PartialEq, Eq, Hash, Debug)]
 #[repr(u8)]
 pub enum Piece {
     Cow,
@@ -19,7 +19,7 @@ pub enum Piece {
 pub struct Board {
     pub width: u8,
     pub height: u8,
-    pub pieces: [Piece; MAX_BOARD_SIZE]
+    pub pieces: [Piece; MAX_BOARD_SIZE],
 }
 
 impl Board {
@@ -187,6 +187,283 @@ impl Board {
         moves
     }
 
+    pub fn get_reverse_moves(&self, index: u8) -> Vec<(u8, u8, u8, Piece)> {
+        // returns (from, to, puller, Piece)
+        let mut reverse_moves: Vec<(u8, u8, u8, Piece)> = Vec::new();
+        let x = index % self.width;
+        let y = index / self.width;
+        let this_piece = self.get(x, y);
+        if this_piece == Piece::Blank || this_piece == Piece::Empty {
+            return reverse_moves;
+        }
+
+        // left
+        if x > 0 {
+            let mut new_x = x - 1;
+            let new_y = y;
+            let adjacent_index = (new_y * self.width) + new_x;
+            let mut direction_indices: Vec<u8> = Vec::new();
+            if self.pieces[adjacent_index as usize] == Piece::Blank {
+                direction_indices.push(adjacent_index);
+            }
+            while new_x > 0 {
+                new_x -= 1;
+                if self.get(new_x, new_y) != Piece::Blank {
+                    break;
+                }
+                direction_indices.push((new_y * self.width) + new_x);
+            }
+
+            self.check_reverse_direction(
+                &mut reverse_moves,
+                this_piece,
+                index,
+                adjacent_index,
+                direction_indices,
+            );
+        }
+
+        // right
+        if x < self.width - 1 {
+            let mut new_x = x + 1;
+            let new_y = y;
+            let adjacent_index = (new_y * self.width) + new_x;
+            let mut direction_indices: Vec<u8> = Vec::new();
+            if self.pieces[adjacent_index as usize] == Piece::Blank {
+                direction_indices.push(adjacent_index);
+            }
+            while new_x < self.width - 1 {
+                new_x += 1;
+                if self.get(new_x, new_y) != Piece::Blank {
+                    break;
+                }
+                direction_indices.push((new_y * self.width) + new_x);
+            }
+
+            self.check_reverse_direction(
+                &mut reverse_moves,
+                this_piece,
+                index,
+                adjacent_index,
+                direction_indices,
+            );
+        }
+
+        if HEXAGONAL_MODE {
+            // up left
+            if x + (y % 2) > 0 && y > 0 {
+                let mut new_y = y - 1;
+                let mut new_x = x - (new_y % 2);
+                let adjacent_index = (new_y * self.width) + new_x;
+                let mut direction_indices: Vec<u8> = Vec::new();
+                if self.pieces[adjacent_index as usize] == Piece::Blank {
+                    direction_indices.push(adjacent_index);
+                }
+                while new_x + (new_y % 2) > 0 && new_y > 0 {
+                    new_y -= 1;
+                    new_x -= new_y % 2;
+                    if self.get(new_x, new_y) != Piece::Blank {
+                        break;
+                    }
+                    direction_indices.push((new_y * self.width) + new_x);
+                }
+
+                self.check_reverse_direction(
+                    &mut reverse_moves,
+                    this_piece,
+                    index,
+                    adjacent_index,
+                    direction_indices,
+                );
+            }
+
+            // up right
+            if x < self.width - (y % 2) && y > 0 {
+                let mut new_x = x + (y % 2);
+                let mut new_y = y - 1;
+                let adjacent_index = (new_y * self.width) + new_x;
+                let mut direction_indices: Vec<u8> = Vec::new();
+                if self.pieces[adjacent_index as usize] == Piece::Blank {
+                    direction_indices.push(adjacent_index);
+                }
+                while new_x < self.width - (new_y % 2) && new_y > 0 {
+                    new_x += new_y % 2;
+                    new_y -= 1;
+                    if self.get(new_x, new_y) != Piece::Blank {
+                        break;
+                    }
+                    direction_indices.push((new_y * self.width) + new_x);
+                }
+
+                self.check_reverse_direction(
+                    &mut reverse_moves,
+                    this_piece,
+                    index,
+                    adjacent_index,
+                    direction_indices,
+                );
+            }
+
+            // down left
+            if x + (y % 2) > 0 && y < self.height - 1 {
+                let mut new_y = y + 1;
+                let mut new_x = x - (new_y % 2);
+                let adjacent_index = (new_y * self.width) + new_x;
+                let mut direction_indices: Vec<u8> = Vec::new();
+                if self.pieces[adjacent_index as usize] == Piece::Blank {
+                    direction_indices.push(adjacent_index);
+                }
+                while new_x + (new_y % 2) > 0 && new_y < self.height - 1 {
+                    new_y += 1;
+                    new_x -= new_y % 2;
+                    if self.get(new_x, new_y) != Piece::Blank {
+                        break;
+                    }
+                    direction_indices.push((new_y * self.width) + new_x);
+                }
+
+                self.check_reverse_direction(
+                    &mut reverse_moves,
+                    this_piece,
+                    index,
+                    adjacent_index,
+                    direction_indices,
+                );
+            }
+
+            // down right
+            if x < self.width - (y % 2) && y < self.height - 1 {
+                let mut new_x = x + (y % 2);
+                let mut new_y = y + 1;
+                let adjacent_index = (new_y * self.width) + new_x;
+                let mut direction_indices: Vec<u8> = Vec::new();
+                if self.pieces[adjacent_index as usize] == Piece::Blank {
+                    direction_indices.push(adjacent_index);
+                }
+                while new_x < self.width - (new_y % 2) && new_y < self.height - 1 {
+                    new_x += new_y % 2;
+                    new_y += 1;
+                    if self.get(new_x, new_y) != Piece::Blank {
+                        break;
+                    }
+                    direction_indices.push((new_y * self.width) + new_x);
+                }
+
+                self.check_reverse_direction(
+                    &mut reverse_moves,
+                    this_piece,
+                    index,
+                    adjacent_index,
+                    direction_indices,
+                );
+            }
+        } else {
+            // up
+            if y > 0 {
+                let new_x = x;
+                let mut new_y = y - 1;
+                let adjacent_index = (new_y * self.width) + new_x;
+                let mut direction_indices: Vec<u8> = Vec::new();
+                if self.pieces[adjacent_index as usize] == Piece::Blank {
+                    direction_indices.push(adjacent_index);
+                }
+                while new_y > 0 {
+                    new_y -= 1;
+                    if self.get(new_x, new_y) != Piece::Blank {
+                        break;
+                    }
+                    direction_indices.push((new_y * self.width) + new_x);
+                }
+
+                self.check_reverse_direction(
+                    &mut reverse_moves,
+                    this_piece,
+                    index,
+                    adjacent_index,
+                    direction_indices,
+                );
+            }
+            // down
+            if y < self.height - 1 {
+                let new_x = x;
+                let mut new_y = y + 1;
+                let adjacent_index = (new_y * self.width) + new_x;
+                let mut direction_indices: Vec<u8> = Vec::new();
+                if self.pieces[adjacent_index as usize] == Piece::Blank {
+                    direction_indices.push(adjacent_index);
+                }
+                while new_y < self.height - 1 {
+                    new_y += 1;
+                    if self.get(new_x, new_y) != Piece::Blank {
+                        break;
+                    }
+                    direction_indices.push((new_y * self.width) + new_x);
+                }
+
+                self.check_reverse_direction(
+                    &mut reverse_moves,
+                    this_piece,
+                    index,
+                    adjacent_index,
+                    direction_indices,
+                );
+            }
+        }
+
+        reverse_moves
+    }
+
+    fn check_reverse_direction(
+        &self,
+        reverse_moves: &mut Vec<(u8, u8, u8, Piece)>,
+        this_piece: Piece,
+        this_index: u8,
+        adjacent_index: u8,
+        direction_indices: Vec<u8>,
+    ) {
+        let adjacent_piece = self.pieces[adjacent_index as usize];
+
+        // ignore unchangeable pieces
+        if adjacent_piece == Piece::Empty
+            || adjacent_piece == Piece::House
+            || adjacent_piece == Piece::Barn
+        {
+            return;
+        }
+        if adjacent_piece == Piece::Blank {
+            if this_piece == Piece::Cow || this_piece == Piece::Person {
+                return;
+            }
+            let piece_to_create = match this_piece {
+                Piece::House => Piece::Person,
+                _ => Piece::Cow,
+            };
+            for index in direction_indices {
+                reverse_moves.push((
+                    index as u8,
+                    this_index as u8,
+                    this_index as u8,
+                    piece_to_create,
+                ));
+            }
+            return;
+        }
+        if adjacent_piece == Piece::Cow && this_piece == Piece::Barn {
+            return;
+        }
+        if adjacent_piece == Piece::Person && this_piece == Piece::House {
+            return;
+        }
+        for index in direction_indices {
+            reverse_moves.push((
+                index as u8,
+                adjacent_index as u8,
+                this_index as u8,
+                adjacent_piece,
+            ));
+        }
+    }
+
     pub fn get_possible_moves(&self) -> Vec<(Board, u8, u8, u8)> {
         let mut moves: Vec<(Board, u8, u8, u8)> = Vec::new();
         for i in 0..self.pieces.len() {
@@ -206,6 +483,22 @@ impl Board {
             }
         }
         moves
+    }
+
+    pub fn get_possible_previous_boards(&self) -> Vec<(Board, u8, u8, u8)> {
+        let mut boards: Vec<(Board, u8, u8, u8)> = Vec::new();
+        for i in 0..self.pieces.len() {
+            let reverse_moves = self.get_reverse_moves(i as u8);
+            for (from, to, puller, piece) in reverse_moves {
+                let mut new_board = self.clone();
+                new_board.set_index(from as usize, piece);
+                if to != puller {
+                    new_board.set_index(to as usize, Piece::Blank);
+                }
+                boards.push((new_board, from, to, puller));
+            }
+        }
+        boards
     }
 
     pub fn is_solved(&self) -> bool {
