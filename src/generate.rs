@@ -1,13 +1,12 @@
-use std::collections::HashSet;
+use std::collections::{HashSet, HashMap};
 use std::fs::{self, File};
 use std::io::Write;
 use std::path::Path;
-use std::sync::{Arc, Mutex};
-use std::{cmp, thread};
+use std::{cmp};
 
 use crate::board::Board;
 use crate::settings::HEXAGONAL_MODE;
-use crate::solve::solve;
+use crate::solve::{solve, Solution};
 
 const DIRECTORY: &str = if HEXAGONAL_MODE { "hex" } else { "rect" };
 
@@ -16,7 +15,8 @@ pub fn generate_files(width: u8, height: u8) {
         .expect("Unable to create directory.");
     let length = width * height;
 
-    let mut handles = vec![];
+    let mut solution_map = &mut HashMap::new();
+
     let mut piece_configurations = Vec::new();
     for barn_count in 1..3 {
         for house_count in 0..2 {
@@ -40,87 +40,58 @@ pub fn generate_files(width: u8, height: u8) {
         }
     }
 
-    let total_configurations = piece_configurations.len();
-    let completed = Arc::new(Mutex::new(0));
-    let current_index = Arc::new(Mutex::new(0));
-    const MAX_CONCURRENT_THREADS: i8 = 8;
+    let mut completed = 0;
+    let total = piece_configurations.len();
+    for piece_configuration in piece_configurations {
+        let (width, height, cow_count, barn_count, person_count, house_count) = piece_configuration;
+        let file_name = format!(
+            "{}/{}_{}/{}_{}_{}_{}_{}_{}_0.txt",
+            DIRECTORY,
+            width,
+            height,
+            width,
+            height,
+            cow_count,
+            barn_count,
+            person_count,
+            house_count
+        );
+        if Path::new(&file_name).exists() {
+            println!("File {} already exists. Continuing...", file_name);
+            continue;
+        }
 
-    for thread_number in 0..MAX_CONCURRENT_THREADS {
-        let current_index = Arc::clone(&current_index);
-        let completed = Arc::clone(&completed);
-        let piece_configurations = piece_configurations.clone();
-        let handle = thread::spawn(move || {
-            println!("Thread {} started.", thread_number);
-            loop {
-                let i;
-                {
-                    let mut index = current_index.lock().unwrap();
-                    i = *index;
-                    if i >= total_configurations {
-                        break;
-                    }
-                    *index += 1;
-                }
+        let generated_rows = generate_file(
+            width,
+            height,
+            cow_count,
+            barn_count,
+            person_count,
+            house_count,
+            &mut solution_map,
+        );
 
-                let (width, height, cow_count, barn_count, person_count, house_count) =
-                    piece_configurations[i];
+        generate_empty_variations(
+            width,
+            height,
+            cow_count,
+            barn_count,
+            person_count,
+            house_count,
+            1,
+            generated_rows.clone(),
+            &mut solution_map
+        );
 
-                // check if file already exists
-                let file_name = format!(
-                    "{}/{}_{}/{}_{}_{}_{}_{}_{}_0.txt",
-                    DIRECTORY,
-                    width,
-                    height,
-                    width,
-                    height,
-                    cow_count,
-                    barn_count,
-                    person_count,
-                    house_count
-                );
-                if Path::new(&file_name).exists() {
-                    println!("File {} already exists. Continuing...", file_name);
-                    let mut completed = completed.lock().unwrap();
-                    *completed += 1;
-                    continue;
-                }
-
-                let generated_rows = generate_file(
-                    width,
-                    height,
-                    cow_count,
-                    barn_count,
-                    person_count,
-                    house_count,
-                );
-
-                generate_empty_variations(
-                    width,
-                    height,
-                    cow_count,
-                    barn_count,
-                    person_count,
-                    house_count,
-                    1,
-                    generated_rows.clone(),
-                );
-
-                {
-                    let mut completed = completed.lock().unwrap();
-                    *completed += 1;
-                    println!(
-                        "Thread {}: Completed configuration #{}. Finished {} of {}.",
-                        thread_number, i, *completed, total_configurations
-                    );
-                }
-            }
-        });
-        handles.push(handle);
+        completed += 1;
+        println!(
+            "Completed {}/{}: {}",
+            completed,
+            total,
+            file_name
+        );
     }
 
-    for handle in handles {
-        handle.join().unwrap();
-    }
 }
 
 pub fn generate_file(
@@ -130,13 +101,14 @@ pub fn generate_file(
     barn_count: u8,
     person_count: u8,
     house_count: u8,
-) -> Vec<(String, usize, isize, bool, bool, bool)> {
+    solution_map : &mut HashMap<Board, Solution>
+) -> Vec<(String, usize, usize, bool, bool, bool, bool)> {
     let file_name = format!(
         "{}_{}_{}_{}_{}_{}_0.txt",
         width, height, cow_count, barn_count, person_count, house_count
     );
     println!("Generating {}", file_name);
-    let mut rows: Vec<(String, usize, isize, bool, bool, bool)> = Vec::new();
+    let mut rows: Vec<(String, usize, usize, bool, bool, bool, bool)> = Vec::new();
     let boards = generate_boards(
         width,
         height,
@@ -154,20 +126,21 @@ pub fn generate_file(
 
     for board in boards {
         let serialized = board.to_string();
-        let (situation, iterations) = solve(board);
-        if iterations > 0 {
+        let solution = solve(board.clone(), solution_map,  &mut HashSet::new());
+        if solution.can_be_solved{
             solvable_total += 1;
         }
-        let is_elegant = situation.is_elegant();
+        let is_elegant = solution.is_elegant(&board);
         if is_elegant {
             elegant_total += 1;
         }
-        let uses_all_pieces = situation.uses_all_pieces();
-        let uses_all_rows_columns = situation.uses_all_rows_columns();
+        let uses_all_pieces = solution.uses_all_pieces(&board);
+        let uses_all_rows_columns = solution.uses_all_rows_columns(&board);
         rows.push((
             serialized,
-            situation.moves.len(),
-            iterations,
+            solution.moves.len(),
+            solution.tree_size,
+            solution.can_be_solved,
             is_elegant,
             uses_all_pieces,
             uses_all_rows_columns,
@@ -180,7 +153,7 @@ pub fn generate_file(
 
     let lines = rows
         .iter()
-        .filter(|x| x.3)
+        .filter(|x| x.4)
         .map(|row| format!("{}\t{}\t{}", row.0, row.1, row.2))
         .collect::<Vec<String>>();
     if lines.len() == 0 {
@@ -194,7 +167,7 @@ pub fn generate_file(
     rows
 }
 
-fn sort_rows(rows: &mut Vec<(String, usize, isize, bool, bool, bool)>) {
+fn sort_rows(rows: &mut Vec<(String, usize, usize, bool, bool, bool, bool)>) {
     rows.sort_by(|a, b| {
         if a.3 && !b.3 {
             return std::cmp::Ordering::Less;
@@ -212,6 +185,12 @@ fn sort_rows(rows: &mut Vec<(String, usize, isize, bool, bool, bool)>) {
             return std::cmp::Ordering::Less;
         }
         if !a.5 && b.5 {
+            return std::cmp::Ordering::Greater;
+        }
+        if a.6 && !b.6 {
+            return std::cmp::Ordering::Less;
+        }
+        if !a.6 && b.6 {
             return std::cmp::Ordering::Greater;
         }
         if a.2 < b.2 {
@@ -238,9 +217,10 @@ pub fn generate_empty_variations(
     person_count: u8,
     house_count: u8,
     empty_count: u8,
-    rows: Vec<(String, usize, isize, bool, bool, bool)>,
-) -> Vec<(String, usize, isize, bool, bool, bool)> {
-    let mut rows_with_empty: Vec<(String, usize, isize, bool, bool, bool)> = Vec::new();
+    rows: Vec<(String, usize, usize, bool, bool, bool, bool)>,
+    solution_map : &mut HashMap<Board, Solution>
+) -> Vec<(String, usize, usize, bool, bool, bool, bool)> {
+    let mut rows_with_empty: Vec<(String, usize, usize, bool, bool, bool, bool)> = Vec::new();
     let file_name = format!(
         "{}_{}_{}_{}_{}_{}_{}.txt",
         width, height, cow_count, barn_count, person_count, house_count, empty_count
@@ -249,13 +229,13 @@ pub fn generate_empty_variations(
     let mut elegant_count = 0;
     let mut encountered_boards: HashSet<Board> = HashSet::new();
     for row in rows {
-        let variations = get_empty_variations(row);
+        let variations = get_empty_variations(row, solution_map);
         for variation in variations {
             let board = Board::from_string(&variation.0);
             if encountered_boards.contains(&board) {
                 continue;
             }
-            if variation.3 {
+            if variation.4 {
                 elegant_count += 1;
             }
             rows_with_empty.push(variation);
@@ -286,7 +266,7 @@ pub fn generate_empty_variations(
 
     let lines = rows_with_empty
         .iter()
-        .filter(|x| x.3)
+        .filter(|x| x.4)
         .map(|row| format!("{}\t{}\t{}", row.0, row.1, row.2))
         .collect::<Vec<String>>();
     if lines.len() == 0 {
@@ -301,11 +281,12 @@ pub fn generate_empty_variations(
 }
 
 pub fn get_empty_variations(
-    row: (String, usize, isize, bool, bool, bool),
-) -> Vec<(String, usize, isize, bool, bool, bool)> {
-    let mut rows: Vec<(String, usize, isize, bool, bool, bool)> = Vec::new();
-    let (serialized, moves, iterations, _is_elegant, _uses_all_pieces, uses_all_rows_columns) = row;
-    if iterations < 0 {
+    row: (String, usize, usize, bool, bool, bool, bool),
+    solution_map : &mut HashMap<Board, Solution>
+) -> Vec<(String, usize, usize, bool, bool, bool, bool)> {
+    let mut rows: Vec<(String, usize, usize, bool, bool, bool, bool)> = Vec::new();
+    let (serialized, moves, _iterations, can_be_solved, _is_elegant, _uses_all_pieces, uses_all_rows_columns) = row;
+    if !can_be_solved {
         return rows;
     }
     if !uses_all_rows_columns {
@@ -318,15 +299,16 @@ pub fn get_empty_variations(
         }
         let new_serialized = format!("{}{}{}", &serialized[0..i], 'E', &serialized[i + 1..]);
         let new_board = Board::from_string(new_serialized.as_str());
-        let (situation, new_iterations) = solve(new_board);
-        let is_elegant = situation.is_elegant() && situation.moves.len() > moves;
+        let solution = solve(new_board.clone(), solution_map,  &mut HashSet::new());
+        let is_elegant = solution.is_elegant(&new_board) && solution.moves.len() > moves;
         rows.push((
             new_serialized,
-            situation.moves.len(),
-            new_iterations,
+            solution.moves.len(),
+            solution.tree_size,
+            solution.can_be_solved,
             is_elegant,
-            situation.uses_all_pieces(),
-            situation.uses_all_rows_columns(),
+            solution.uses_all_pieces(&new_board),
+            solution.uses_all_rows_columns(&new_board),
         ));
     }
     rows

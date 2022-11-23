@@ -1,72 +1,82 @@
-use std::collections::{HashSet, VecDeque};
+use std::collections::{HashSet, HashMap, VecDeque};
 
 use crate::board::{Board, Piece};
 
-#[derive(Clone)]
+#[derive(Clone, Debug)]
 pub struct Move {
     pub from: u8,
     pub to: u8,
     pub puller: u8
 }
 
-
-pub struct BoardSituation {
-    pub board: Board,
-    pub moves: Vec<Move>
+#[derive(Clone)]
+pub struct Solution {
+    pub moves: VecDeque<Move>,
+    pub tree_size: usize,
+    pub can_be_solved: bool
 }
 
-pub fn solve(board : Board) -> (BoardSituation, isize) {
-    let mut encountered_boards : HashSet<Board> = HashSet::new();
-    let mut iterations : isize = 0;
+pub fn solve(board : Board, solution_map : &mut HashMap<Board, Solution>, encountered_boards : &mut HashSet<Board>) -> Solution {
 
-    let mut search_queue : VecDeque<BoardSituation> = VecDeque::new();
-    search_queue.push_back(BoardSituation {
-        board: board.clone(),
-        moves: Vec::new()
-    });
+    if solution_map.contains_key(&board) {
+        return solution_map.get(&board).unwrap().clone();
+    }
+    if board.is_solved() {
+        let solution = Solution {
+            moves: VecDeque::new(),
+            tree_size: 1,
+            can_be_solved: true
+        };
+        solution_map.insert(board, solution.clone());
+        return solution;
+    }
+   
 
-    while !search_queue.is_empty() {
-        let situation = search_queue.pop_front().unwrap();
-        let board = situation.board.clone();
-        iterations += 1;
-        if iterations % 100000 == 0 {
-            println!("Iteration {}, {} moves, {} in queue", iterations, situation.moves.len(), search_queue.len());
-        }
-        if board.is_solved() {
-            return (situation, iterations);
-        }
-        if encountered_boards.contains(&board) {
+    encountered_boards.insert(board.clone());
+
+    let mut tree_size = 1;
+    let mut can_be_solved = false;
+    let mut best_moves : VecDeque<Move> = VecDeque::new();
+    let mut best_moves_length = 10000;
+
+    let possible_board_moves = board.get_possible_moves();
+    for (possible_board, from, to, puller) in possible_board_moves {
+        if encountered_boards.contains(&possible_board) {
             continue;
         }
-        let possible_boards = board.get_possible_moves();
-        for (possible_board, from, to, puller) in possible_boards {
-            let mut new_moves = situation.moves.clone();
-            new_moves.push(Move {
-                from: from,
-                to: to,
-                puller: puller
-            });
-            search_queue.push_back(BoardSituation { board: possible_board, moves: new_moves });
+        let solution = solve(possible_board.clone(), solution_map, encountered_boards);
+        tree_size += solution.tree_size;
+        if solution.can_be_solved {
+            can_be_solved = true;
+            if solution.moves.len() < best_moves_length {
+                best_moves_length = solution.moves.len();
+                best_moves = solution.moves.clone();
+                best_moves.push_front(Move {
+                    from: from,
+                    to: to,
+                    puller: puller
+                });
+            }
         }
-        encountered_boards.insert(board);
     }
 
-    (BoardSituation {
-        board: board.clone(),
-        moves: Vec::new()
-    }, -1)
+    encountered_boards.remove(&board);
+
+    let best_solution = Solution { moves: best_moves, tree_size: tree_size, can_be_solved: can_be_solved };
+    solution_map.insert(board, best_solution.clone());
+    return best_solution;
 }
 
-impl BoardSituation {
-    pub fn uses_all_pieces(&self) -> bool {
+impl Solution {
+    pub fn uses_all_pieces(&self, board: &Board) -> bool {
         let mut encountered_indices : HashSet<u8> = HashSet::new();
         for m in &self.moves {
             encountered_indices.insert(m.from);
             encountered_indices.insert(m.to);
             encountered_indices.insert(m.puller);
         }
-        for i in 0..self.board.pieces.len() {
-            let piece = self.board.pieces[i];
+        for i in 0..board.pieces.len() {
+            let piece = board.pieces[i];
             if piece == Piece::Empty || piece == Piece::Blank {
                 continue;
             }
@@ -77,23 +87,23 @@ impl BoardSituation {
         return true;
     }
 
-    pub fn uses_all_rows_columns(&self) -> bool {
+    pub fn uses_all_rows_columns(&self, board: &Board) -> bool {
         let mut encountered_rows : HashSet<u8> = HashSet::new();
         let mut encountered_columns : HashSet<u8> = HashSet::new();
         for m in &self.moves {
-            encountered_rows.insert(m.from / self.board.width);
-            encountered_rows.insert(m.to / self.board.width);
-            encountered_rows.insert(m.puller / self.board.width);
-            encountered_columns.insert(m.from % self.board.width);
-            encountered_columns.insert(m.to % self.board.width);
-            encountered_columns.insert(m.puller % self.board.width);
+            encountered_rows.insert(m.from / board.width);
+            encountered_rows.insert(m.to / board.width);
+            encountered_rows.insert(m.puller / board.width);
+            encountered_columns.insert(m.from % board.width);
+            encountered_columns.insert(m.to % board.width);
+            encountered_columns.insert(m.puller % board.width);
         }
-        for i in 0..self.board.height {
+        for i in 0..board.height {
             if !encountered_rows.contains(&i) {
                 return false;
             }
         }
-        for i in 0..self.board.width {
+        for i in 0..board.width {
             if !encountered_columns.contains(&i) {
                 return false;
             }
@@ -101,7 +111,7 @@ impl BoardSituation {
         return true;
     }
 
-    pub fn is_elegant(&self) -> bool {
-        self.uses_all_pieces() && self.uses_all_rows_columns()
+    pub fn is_elegant(&self, board: &Board) -> bool {
+        self.uses_all_pieces(&board) && self.uses_all_rows_columns(&board)
     }
 }
