@@ -630,6 +630,16 @@ impl Board {
         }
         variants
     }
+
+    pub fn count_piece(&self, piece: Piece) -> u8 {
+        let mut count = 0;
+        for i in 0..(self.width * self.height) {
+            if self.pieces[i as usize] == piece {
+                count += 1;
+            }
+        }
+        count
+    }
 }
 
 fn check_move(
@@ -666,6 +676,9 @@ impl fmt::Display for Board {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         for y in 0..self.height {
             for x in 0..self.width {
+                if HEXAGONAL_MODE && y % 2 == 1 {
+                    write!(f, " ")?;
+                }
                 let c = match self.get(x, y) {
                     Piece::Cow => 'O',
                     Piece::Person => 'P',
@@ -675,6 +688,9 @@ impl fmt::Display for Board {
                     Piece::Blank => '_',
                 };
                 write!(f, "{}", c)?;
+                if y % 2 == 0 || !HEXAGONAL_MODE {
+                    write!(f, " ")?;
+                }
             }
             write!(f, "\n")?;
         }
