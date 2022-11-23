@@ -10,12 +10,10 @@ use crate::solve::{solve, Solution};
 
 const DIRECTORY: &str = if HEXAGONAL_MODE { "hex" } else { "rect" };
 
-pub fn generate_files(width: u8, height: u8) {
+pub fn generate_files(width: u8, height: u8, solution_map : &mut HashMap<Board, Solution>) {
     fs::create_dir_all(format!("{}/{}_{}", DIRECTORY, width, height))
         .expect("Unable to create directory.");
     let length = width * height;
-
-    let mut solution_map = &mut HashMap::new();
 
     let mut piece_configurations = Vec::new();
     for barn_count in 1..3 {
@@ -39,6 +37,8 @@ pub fn generate_files(width: u8, height: u8) {
             }
         }
     }
+
+    piece_configurations = vec![(5,3,2,1,4,1)];
 
     let mut completed = 0;
     let total = piece_configurations.len();
@@ -68,7 +68,7 @@ pub fn generate_files(width: u8, height: u8) {
             barn_count,
             person_count,
             house_count,
-            &mut solution_map,
+            solution_map,
         );
 
         generate_empty_variations(
@@ -80,7 +80,7 @@ pub fn generate_files(width: u8, height: u8) {
             house_count,
             1,
             generated_rows.clone(),
-            &mut solution_map
+            solution_map
         );
 
         completed += 1;
@@ -123,10 +123,18 @@ pub fn generate_file(
 
     let mut elegant_total = 0;
     let mut solvable_total = 0;
+    let mut traversed_total = 0;
 
     for board in boards {
+        traversed_total += 1;
+        if traversed_total % 100000 == 0 {
+            println!(
+                "Traversed {} boards. {} elegant, {} solvable. {} cached solutions.",
+                traversed_total, elegant_total, solvable_total, solution_map.len()
+            );
+        }
         let serialized = board.to_string();
-        let solution = solve(board.clone(), solution_map,  &mut HashSet::new());
+        let solution = solve(board.clone(), solution_map);
         if solution.can_be_solved{
             solvable_total += 1;
         }
@@ -138,7 +146,7 @@ pub fn generate_file(
         let uses_all_rows_columns = solution.uses_all_rows_columns(&board);
         rows.push((
             serialized,
-            solution.moves.len(),
+            solution.move_count as usize,
             solution.tree_size,
             solution.can_be_solved,
             is_elegant,
@@ -227,8 +235,17 @@ pub fn generate_empty_variations(
     );
     println!("Generating {}", file_name);
     let mut elegant_count = 0;
+    let mut traversed_count = 0;
+    let rows_len = rows.len();
     let mut encountered_boards: HashSet<Board> = HashSet::new();
     for row in rows {
+        traversed_count += 1;
+        if traversed_count % 10000 == 0 {
+            println!(
+                "Traversed {} boards of {}. {} elegant. {} cached solutions.",
+                traversed_count, rows_len, elegant_count, solution_map.len()
+            );
+        }
         let variations = get_empty_variations(row, solution_map);
         for variation in variations {
             let board = Board::from_string(&variation.0);
@@ -299,11 +316,11 @@ pub fn get_empty_variations(
         }
         let new_serialized = format!("{}{}{}", &serialized[0..i], 'E', &serialized[i + 1..]);
         let new_board = Board::from_string(new_serialized.as_str());
-        let solution = solve(new_board.clone(), solution_map,  &mut HashSet::new());
-        let is_elegant = solution.is_elegant(&new_board) && solution.moves.len() > moves;
+        let solution = solve(new_board.clone(), solution_map);
+        let is_elegant = solution.is_elegant(&new_board) && (solution.move_count as usize) > moves;
         rows.push((
             new_serialized,
-            solution.moves.len(),
+            solution.move_count as usize,
             solution.tree_size,
             solution.can_be_solved,
             is_elegant,
@@ -324,6 +341,7 @@ pub fn generate_boards(
     empty_count: u8,
 ) -> Vec<Board> {
     let length = width * height;
+    println!("Generating boards for {}x{}", width, height);
     let strings = generate_with_prefix(
         length,
         "",
@@ -333,6 +351,7 @@ pub fn generate_boards(
         house_count,
         empty_count,
     );
+    println!("{} boards generated", strings.len());
     let mut boards: Vec<Board> = Vec::new();
     let mut encountered_variants: HashSet<Board> = HashSet::new();
     for string in strings {
@@ -347,6 +366,7 @@ pub fn generate_boards(
         }
         boards.push(board);
     }
+    println!("{} unique boards generated", boards.len());
     boards
 }
 

@@ -2,6 +2,8 @@ use std::fmt;
 
 use crate::settings::HEXAGONAL_MODE;
 
+const MAX_BOARD_SIZE : usize = 36;
+
 #[derive(Clone, Copy, PartialEq, Eq, Hash)]
 #[repr(u8)]
 pub enum Piece {
@@ -17,7 +19,7 @@ pub enum Piece {
 pub struct Board {
     pub width: u8,
     pub height: u8,
-    pub pieces: Vec<Piece>,
+    pub pieces: [Piece; MAX_BOARD_SIZE]
 }
 
 impl Board {
@@ -25,7 +27,7 @@ impl Board {
         Board {
             width: width,
             height: height,
-            pieces: vec![Piece::Blank; (width * height) as usize],
+            pieces: [Piece::Blank; MAX_BOARD_SIZE],
         }
     }
 
@@ -275,7 +277,7 @@ impl Board {
     }
 
     fn rotate(&mut self) {
-        let mut new_pieces = vec![Piece::Blank; (self.width * self.height) as usize];
+        let mut new_pieces = [Piece::Blank; MAX_BOARD_SIZE];
         for y in 0..self.height {
             for x in 0..self.width {
                 let piece = self.get(x, y);
@@ -289,7 +291,7 @@ impl Board {
     }
 
     fn flip_horizontal(&mut self) {
-        let mut new_pieces = vec![Piece::Blank; (self.width * self.height) as usize];
+        let mut new_pieces = [Piece::Blank; MAX_BOARD_SIZE];
         let width = self.width;
         for y in 0..self.height {
             for x in 0..self.width {

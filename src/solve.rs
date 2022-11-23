@@ -1,4 +1,4 @@
-use std::collections::{HashSet, HashMap, VecDeque};
+use std::collections::{HashSet, HashMap};
 
 use crate::board::{Board, Piece};
 
@@ -11,24 +11,32 @@ pub struct Move {
 
 #[derive(Clone)]
 pub struct Solution {
-    pub moves: VecDeque<Move>,
+    pub moves: Vec<Move>,
+    pub move_count: u8,
     pub tree_size: usize,
     pub can_be_solved: bool
 }
 
-pub fn solve(board : Board, solution_map : &mut HashMap<Board, Solution>, encountered_boards : &mut HashSet<Board>) -> Solution {
+pub fn solve(board : Board, solution_map : &mut HashMap<Board, Solution>) -> Solution {
+    let mut encountered_boards = HashSet::new();
+    solve_internal(board, solution_map, &mut encountered_boards)
+}
 
-    if solution_map.contains_key(&board) {
-        return solution_map.get(&board).unwrap().clone();
-    }
+fn solve_internal(board : Board, solution_map : &mut HashMap<Board, Solution>, encountered_boards : &mut HashSet<Board>) -> Solution {
+    
     if board.is_solved() {
         let solution = Solution {
-            moves: VecDeque::new(),
+            moves: Vec::new(),
+            move_count: 0,
             tree_size: 1,
             can_be_solved: true
         };
         solution_map.insert(board, solution.clone());
         return solution;
+    }
+
+    if solution_map.contains_key(&board) {
+        return solution_map.get(&board).unwrap().clone();
     }
    
 
@@ -36,33 +44,39 @@ pub fn solve(board : Board, solution_map : &mut HashMap<Board, Solution>, encoun
 
     let mut tree_size = 1;
     let mut can_be_solved = false;
-    let mut best_moves : VecDeque<Move> = VecDeque::new();
-    let mut best_moves_length = 10000;
+    let mut best_moves : Vec<Move> = Vec::new();
+    let mut best_moves_length : u8 = 120;
 
     let possible_board_moves = board.get_possible_moves();
     for (possible_board, from, to, puller) in possible_board_moves {
         if encountered_boards.contains(&possible_board) {
             continue;
         }
-        let solution = solve(possible_board.clone(), solution_map, encountered_boards);
+        let solution = solve_internal(possible_board.clone(), solution_map, encountered_boards);
+
         tree_size += solution.tree_size;
-        if solution.can_be_solved {
-            can_be_solved = true;
-            if solution.moves.len() < best_moves_length {
-                best_moves_length = solution.moves.len();
-                best_moves = solution.moves.clone();
-                best_moves.push_front(Move {
-                    from: from,
-                    to: to,
-                    puller: puller
-                });
-            }
+
+        if !solution.can_be_solved {
+            continue;
+        }      
+        
+        let solution_len = solution.moves.len() as u8;
+
+        can_be_solved = true;
+        if solution_len < best_moves_length {
+            best_moves_length = solution_len + 1;
+            best_moves = solution.moves.clone();
+            best_moves.insert(0, Move {
+                from: from,
+                to: to,
+                puller: puller
+            });
         }
     }
 
     encountered_boards.remove(&board);
 
-    let best_solution = Solution { moves: best_moves, tree_size: tree_size, can_be_solved: can_be_solved };
+    let best_solution = Solution { moves: best_moves, move_count: best_moves_length, tree_size: tree_size, can_be_solved: can_be_solved };
     solution_map.insert(board, best_solution.clone());
     return best_solution;
 }
