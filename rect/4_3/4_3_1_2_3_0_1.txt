@@ -1,5 +1,0 @@
-4|3|BP_P___OPEB_	6	100
-4|3|OPPB____PEB_	6	77
-4|3|OPPB_____BEP	5	56
-4|3|OP_B__P_PEB_	5	53
-4|3|O_PB_P___BEP	4	40

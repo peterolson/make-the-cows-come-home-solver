@@ -1,7 +1,0 @@
-4|3|OP_PE_B_P__B	4	26
-4|3|OPPBE___P__B	4	24
-4|3|OPPBE___B__P	5	23
-4|3|OPPB__E_P__B	5	23
-4|3|OEP_P___B_PB	5	21
-4|3|OE_PP___BPB_	4	7
-4|3|O_EPP___BPB_	4	7

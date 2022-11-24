@@ -1,2 +1,0 @@
-4|3|BEP____BPOPP	6	58
-4|3|OP_BEP_PP_B_	4	45

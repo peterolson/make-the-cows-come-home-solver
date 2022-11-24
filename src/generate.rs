@@ -4,332 +4,425 @@ use std::io::Write;
 use std::path::Path;
 use std::{cmp};
 
-use crate::board::Board;
+use crate::board::{Board, Piece};
+use crate::reverse_solver::reverse_solve;
 use crate::settings::HEXAGONAL_MODE;
 use crate::solve::{solve, Solution};
 
 const DIRECTORY: &str = if HEXAGONAL_MODE { "hex" } else { "rect" };
 
-pub fn generate_files(width: u8, height: u8, solution_map : &mut HashMap<Board, Solution>) {
-    fs::create_dir_all(format!("{}/{}_{}", DIRECTORY, width, height))
-        .expect("Unable to create directory.");
-    let length = width * height;
 
-    let mut piece_configurations = Vec::new();
+pub fn generate_puzzles(width: u8, height: u8) {
+    let mut initial_boards : Vec<Board> = Vec::new();
     for barn_count in 1..3 {
         for house_count in 0..2 {
-            let max_cow_count = cmp::min(length - barn_count - house_count, 6);
-            for cow_count in 1..max_cow_count {
-                let max_person_count = cmp::min(length - barn_count - house_count - cow_count, 6);
-                for person_count in 0..max_person_count {
-                    if cow_count + person_count >= length / 2 {
-                        continue;
-                    }
-                    piece_configurations.push((
-                        width,
-                        height,
-                        cow_count,
-                        barn_count,
-                        person_count,
-                        house_count,
-                    ));
+            let mut max_empty = 3;
+            if barn_count == 2 {
+                max_empty = 2;
+            }
+            for empty_count in 0..max_empty {
+                let mut boards = get_initial_boards(width, height, barn_count, house_count, empty_count);
+                println!("{} boards with {} barns, {} houses, {} empty", boards.len(), barn_count, house_count, empty_count);
+                initial_boards.append(&mut boards);
+            }
+        }
+    }
+    println!("Initial boards: {}", initial_boards.len());
+
+    let length = width * height;
+
+    let mut piece_combinations : Vec<(Board, u8, u8)> = Vec::new();
+    for board in initial_boards {
+        let max_cow_count : u8 = 5;
+        let mut max_person_count : u8 = 5;
+        let houses = board.count_piece(Piece::House);
+        let barns = board.count_piece(Piece::Barn);
+        let empty = board.count_piece(Piece::Empty);
+        if houses == 0 {
+            max_person_count = 3;
+        }
+        
+        for cows in 1..(max_cow_count + 1) {
+            for people in 1..(max_person_count + 1) {
+                if(cows + people + barns + houses + empty) > length - 2 
+                {
+                    // must have at least 2 empty spaces
+                    continue;
                 }
+                if cows + people > length / 2 {
+                    // moving pieces can't fill more than half the board
+                    continue;
+                }
+                piece_combinations.push((board.clone(), cows, people));
             }
         }
     }
 
-    piece_configurations = vec![(5,3,2,1,4,1)];
+    let mut output_rows : Vec<(Board, String, u8, usize)> = Vec::new();
 
     let mut completed = 0;
-    let total = piece_configurations.len();
-    for piece_configuration in piece_configurations {
-        let (width, height, cow_count, barn_count, person_count, house_count) = piece_configuration;
-        let file_name = format!(
-            "{}/{}_{}/{}_{}_{}_{}_{}_{}_0.txt",
-            DIRECTORY,
-            width,
-            height,
-            width,
-            height,
-            cow_count,
-            barn_count,
-            person_count,
-            house_count
-        );
-        if Path::new(&file_name).exists() {
-            println!("File {} already exists. Continuing...", file_name);
-            continue;
-        }
-
-        let generated_rows = generate_file(
-            width,
-            height,
-            cow_count,
-            barn_count,
-            person_count,
-            house_count,
-            solution_map,
-        );
-
-        generate_empty_variations(
-            width,
-            height,
-            cow_count,
-            barn_count,
-            person_count,
-            house_count,
-            1,
-            generated_rows.clone(),
-            solution_map
-        );
-
-        completed += 1;
-        println!(
-            "Completed {}/{}: {}",
-            completed,
-            total,
-            file_name
-        );
-    }
-
-}
-
-pub fn generate_file(
-    width: u8,
-    height: u8,
-    cow_count: u8,
-    barn_count: u8,
-    person_count: u8,
-    house_count: u8,
-    solution_map : &mut HashMap<Board, Solution>
-) -> Vec<(String, usize, usize, bool, bool, bool, bool)> {
-    let file_name = format!(
-        "{}_{}_{}_{}_{}_{}_0.txt",
-        width, height, cow_count, barn_count, person_count, house_count
-    );
-    println!("Generating {}", file_name);
-    let mut rows: Vec<(String, usize, usize, bool, bool, bool, bool)> = Vec::new();
-    let boards = generate_boards(
-        width,
-        height,
-        cow_count,
-        barn_count,
-        person_count,
-        house_count,
-        0,
-    );
-
-    println!("{} boards found", boards.len());
-
-    let mut elegant_total = 0;
-    let mut solvable_total = 0;
-    let mut traversed_total = 0;
-
-    for board in boards {
-        traversed_total += 1;
-        if traversed_total % 100000 == 0 {
-            println!(
-                "Traversed {} boards. {} elegant, {} solvable. {} cached solutions.",
-                traversed_total, elegant_total, solvable_total, solution_map.len()
-            );
-        }
-        let serialized = board.to_string();
-        let solution = solve(board.clone(), solution_map);
-        if solution.can_be_solved{
-            solvable_total += 1;
-        }
-        let is_elegant = solution.is_elegant(&board);
+    let total = piece_combinations.len();
+    for (board, cows, people) in piece_combinations {
+        let percent = (completed as f32 / total as f32) * 100.0;
+        let houses = board.count_piece(Piece::House);
+        let barns = board.count_piece(Piece::Barn);
+        let empty = board.count_piece(Piece::Empty);
+        let description_string = format!("{}_{}_{}_{}_{}", cows, people, houses, barns, empty);
+        println!("{}\t{} / {} = {}%", description_string, completed, total, percent);
+        let (puzzle_board, reverse_solution, iterations) = reverse_solve(board.clone(), cows, people);
+        let solution = Solution {
+            moves: reverse_solution.moves.into_iter().rev().collect(),
+            move_count: reverse_solution.move_count,
+            tree_size: iterations,
+            can_be_solved: true,
+        };
+        let is_elegant = solution.is_elegant(&puzzle_board);
+        println!("Board: {} Elegant? {}  {} moves, {} iterations", puzzle_board.to_string(), is_elegant, reverse_solution.move_count, iterations);
         if is_elegant {
-            elegant_total += 1;
+            output_rows.push((puzzle_board, description_string, reverse_solution.move_count, iterations));
         }
-        let uses_all_pieces = solution.uses_all_pieces(&board);
-        let uses_all_rows_columns = solution.uses_all_rows_columns(&board);
-        rows.push((
-            serialized,
-            solution.move_count as usize,
-            solution.tree_size,
-            solution.can_be_solved,
-            is_elegant,
-            uses_all_pieces,
-            uses_all_rows_columns,
-        ));
+        completed += 1;
     }
 
-    println!("{} solvable, {} elegant", solvable_total, elegant_total);
-
-    sort_rows(&mut rows);
-
-    let lines = rows
+    // write to file
+    let lines = output_rows
         .iter()
-        .filter(|x| x.4)
-        .map(|row| format!("{}\t{}\t{}", row.0, row.1, row.2))
+        .map(|row| format!("{}\t{}\t{}\t{}", row.0.to_string(), row.1, row.2, row.3))
         .collect::<Vec<String>>();
-    if lines.len() == 0 {
-        return rows;
-    }
 
+    let file_name = format!("{}_{}.txt", width, height);
     let data = lines.join("\n");
-    let mut f = File::create(format!("{}/{}_{}/{}", DIRECTORY, width, height, file_name))
+    let mut f = File::create(format!("{}/{}", DIRECTORY, file_name))
         .expect("Unable to create file");
     f.write_all(data.as_bytes()).expect("Unable to write data");
-    rows
+
 }
 
-fn sort_rows(rows: &mut Vec<(String, usize, usize, bool, bool, bool, bool)>) {
-    rows.sort_by(|a, b| {
-        if a.3 && !b.3 {
-            return std::cmp::Ordering::Less;
-        }
-        if !a.3 && b.3 {
-            return std::cmp::Ordering::Greater;
-        }
-        if a.4 && !b.4 {
-            return std::cmp::Ordering::Less;
-        }
-        if !a.4 && b.4 {
-            return std::cmp::Ordering::Greater;
-        }
-        if a.5 && !b.5 {
-            return std::cmp::Ordering::Less;
-        }
-        if !a.5 && b.5 {
-            return std::cmp::Ordering::Greater;
-        }
-        if a.6 && !b.6 {
-            return std::cmp::Ordering::Less;
-        }
-        if !a.6 && b.6 {
-            return std::cmp::Ordering::Greater;
-        }
-        if a.2 < b.2 {
-            return std::cmp::Ordering::Greater;
-        }
-        if a.2 > b.2 {
-            return std::cmp::Ordering::Less;
-        }
-        if a.1 < b.1 {
-            return std::cmp::Ordering::Greater;
-        }
-        if a.1 > b.1 {
-            return std::cmp::Ordering::Less;
-        }
-        std::cmp::Ordering::Equal
-    });
+fn get_initial_boards(width: u8, height: u8, barn_count : u8, house_count: u8, empty_count: u8) -> Vec<Board> {
+    return  generate_boards(width, height, 0, barn_count, 0, house_count, empty_count);
 }
 
-pub fn generate_empty_variations(
-    width: u8,
-    height: u8,
-    cow_count: u8,
-    barn_count: u8,
-    person_count: u8,
-    house_count: u8,
-    empty_count: u8,
-    rows: Vec<(String, usize, usize, bool, bool, bool, bool)>,
-    solution_map : &mut HashMap<Board, Solution>
-) -> Vec<(String, usize, usize, bool, bool, bool, bool)> {
-    let mut rows_with_empty: Vec<(String, usize, usize, bool, bool, bool, bool)> = Vec::new();
-    let file_name = format!(
-        "{}_{}_{}_{}_{}_{}_{}.txt",
-        width, height, cow_count, barn_count, person_count, house_count, empty_count
-    );
-    println!("Generating {}", file_name);
-    let mut elegant_count = 0;
-    let mut traversed_count = 0;
-    let rows_len = rows.len();
-    let mut encountered_boards: HashSet<Board> = HashSet::new();
-    for row in rows {
-        traversed_count += 1;
-        if traversed_count % 10000 == 0 {
-            println!(
-                "Traversed {} boards of {}. {} elegant. {} cached solutions.",
-                traversed_count, rows_len, elegant_count, solution_map.len()
-            );
-        }
-        let variations = get_empty_variations(row, solution_map);
-        for variation in variations {
-            let board = Board::from_string(&variation.0);
-            if encountered_boards.contains(&board) {
-                continue;
-            }
-            if variation.4 {
-                elegant_count += 1;
-            }
-            rows_with_empty.push(variation);
-            let symmetric_variants = board.get_symmetric_variants();
-            encountered_boards.insert(board);
-            for symmetric_variant in symmetric_variants {
-                encountered_boards.insert(symmetric_variant);
-            }
-        }
-    }
 
-    if elegant_count == 0 {
-        println!("No elegant solutions with empty space.");
-        return Vec::new();
-    }
+// pub fn generate_files(width: u8, height: u8, solution_map : &mut HashMap<Board, Solution>) {
+//     fs::create_dir_all(format!("{}/{}_{}", DIRECTORY, width, height))
+//         .expect("Unable to create directory.");
+//     let length = width * height;
 
-    println!(
-        "{} rows found, {} elegant",
-        rows_with_empty.len(),
-        elegant_count
-    );
+//     let mut piece_configurations = Vec::new();
+//     for barn_count in 1..3 {
+//         for house_count in 0..2 {
+//             let max_cow_count = cmp::min(length - barn_count - house_count, 6);
+//             for cow_count in 1..max_cow_count {
+//                 let max_person_count = cmp::min(length - barn_count - house_count - cow_count, 6);
+//                 for person_count in 0..max_person_count {
+//                     if cow_count + person_count >= length / 2 {
+//                         continue;
+//                     }
+//                     piece_configurations.push((
+//                         width,
+//                         height,
+//                         cow_count,
+//                         barn_count,
+//                         person_count,
+//                         house_count,
+//                     ));
+//                 }
+//             }
+//         }
+//     }
 
-    sort_rows(&mut rows_with_empty);
+//     piece_configurations = vec![(5,3,2,1,4,1)];
 
-    if rows_with_empty.len() == 0 {
-        return rows_with_empty;
-    }
+//     let mut completed = 0;
+//     let total = piece_configurations.len();
+//     for piece_configuration in piece_configurations {
+//         let (width, height, cow_count, barn_count, person_count, house_count) = piece_configuration;
+//         let file_name = format!(
+//             "{}/{}_{}/{}_{}_{}_{}_{}_{}_0.txt",
+//             DIRECTORY,
+//             width,
+//             height,
+//             width,
+//             height,
+//             cow_count,
+//             barn_count,
+//             person_count,
+//             house_count
+//         );
+//         if Path::new(&file_name).exists() {
+//             println!("File {} already exists. Continuing...", file_name);
+//             continue;
+//         }
 
-    let lines = rows_with_empty
-        .iter()
-        .filter(|x| x.4)
-        .map(|row| format!("{}\t{}\t{}", row.0, row.1, row.2))
-        .collect::<Vec<String>>();
-    if lines.len() == 0 {
-        return rows_with_empty;
-    }
+//         let generated_rows = generate_file(
+//             width,
+//             height,
+//             cow_count,
+//             barn_count,
+//             person_count,
+//             house_count,
+//             solution_map,
+//         );
 
-    let data = lines.join("\n");
-    let mut f = File::create(format!("{}/{}_{}/{}", DIRECTORY, width, height, file_name))
-        .expect("Unable to create file");
-    f.write_all(data.as_bytes()).expect("Unable to write data");
-    return rows_with_empty;
-}
+//         generate_empty_variations(
+//             width,
+//             height,
+//             cow_count,
+//             barn_count,
+//             person_count,
+//             house_count,
+//             1,
+//             generated_rows.clone(),
+//             solution_map
+//         );
 
-pub fn get_empty_variations(
-    row: (String, usize, usize, bool, bool, bool, bool),
-    solution_map : &mut HashMap<Board, Solution>
-) -> Vec<(String, usize, usize, bool, bool, bool, bool)> {
-    let mut rows: Vec<(String, usize, usize, bool, bool, bool, bool)> = Vec::new();
-    let (serialized, moves, _iterations, can_be_solved, _is_elegant, _uses_all_pieces, uses_all_rows_columns) = row;
-    if !can_be_solved {
-        return rows;
-    }
-    if !uses_all_rows_columns {
-        return rows;
-    }
-    for i in 0..serialized.len() {
-        let ch = serialized.chars().nth(i).unwrap();
-        if ch != '_' {
-            continue;
-        }
-        let new_serialized = format!("{}{}{}", &serialized[0..i], 'E', &serialized[i + 1..]);
-        let new_board = Board::from_string(new_serialized.as_str());
-        let solution = solve(new_board.clone(), solution_map);
-        let is_elegant = solution.is_elegant(&new_board) && (solution.move_count as usize) > moves;
-        rows.push((
-            new_serialized,
-            solution.move_count as usize,
-            solution.tree_size,
-            solution.can_be_solved,
-            is_elegant,
-            solution.uses_all_pieces(&new_board),
-            solution.uses_all_rows_columns(&new_board),
-        ));
-    }
-    rows
-}
+//         completed += 1;
+//         println!(
+//             "Completed {}/{}: {}",
+//             completed,
+//             total,
+//             file_name
+//         );
+//     }
+
+// }
+
+// pub fn generate_file(
+//     width: u8,
+//     height: u8,
+//     cow_count: u8,
+//     barn_count: u8,
+//     person_count: u8,
+//     house_count: u8,
+//     solution_map : &mut HashMap<Board, Solution>
+// ) -> Vec<(String, usize, usize, bool, bool, bool, bool)> {
+//     let file_name = format!(
+//         "{}_{}_{}_{}_{}_{}_0.txt",
+//         width, height, cow_count, barn_count, person_count, house_count
+//     );
+//     println!("Generating {}", file_name);
+//     let mut rows: Vec<(String, usize, usize, bool, bool, bool, bool)> = Vec::new();
+//     let boards = generate_boards(
+//         width,
+//         height,
+//         cow_count,
+//         barn_count,
+//         person_count,
+//         house_count,
+//         0,
+//     );
+
+//     println!("{} boards found", boards.len());
+
+//     let mut elegant_total = 0;
+//     let mut solvable_total = 0;
+//     let mut traversed_total = 0;
+
+//     for board in boards {
+//         traversed_total += 1;
+//         if traversed_total % 100000 == 0 {
+//             println!(
+//                 "Traversed {} boards. {} elegant, {} solvable. {} cached solutions.",
+//                 traversed_total, elegant_total, solvable_total, solution_map.len()
+//             );
+//         }
+//         let serialized = board.to_string();
+//         let solution = solve(board.clone(), solution_map);
+//         if solution.can_be_solved{
+//             solvable_total += 1;
+//         }
+//         let is_elegant = solution.is_elegant(&board);
+//         if is_elegant {
+//             elegant_total += 1;
+//         }
+//         let uses_all_pieces = solution.uses_all_pieces(&board);
+//         let uses_all_rows_columns = solution.uses_all_rows_columns(&board);
+//         rows.push((
+//             serialized,
+//             solution.move_count as usize,
+//             solution.tree_size,
+//             solution.can_be_solved,
+//             is_elegant,
+//             uses_all_pieces,
+//             uses_all_rows_columns,
+//         ));
+//     }
+
+//     println!("{} solvable, {} elegant", solvable_total, elegant_total);
+
+//     sort_rows(&mut rows);
+
+//     let lines = rows
+//         .iter()
+//         .filter(|x| x.4)
+//         .map(|row| format!("{}\t{}\t{}", row.0, row.1, row.2))
+//         .collect::<Vec<String>>();
+//     if lines.len() == 0 {
+//         return rows;
+//     }
+
+//     let data = lines.join("\n");
+//     let mut f = File::create(format!("{}/{}_{}/{}", DIRECTORY, width, height, file_name))
+//         .expect("Unable to create file");
+//     f.write_all(data.as_bytes()).expect("Unable to write data");
+//     rows
+// }
+
+// fn sort_rows(rows: &mut Vec<(String, usize, usize, bool, bool, bool, bool)>) {
+//     rows.sort_by(|a, b| {
+//         if a.3 && !b.3 {
+//             return std::cmp::Ordering::Less;
+//         }
+//         if !a.3 && b.3 {
+//             return std::cmp::Ordering::Greater;
+//         }
+//         if a.4 && !b.4 {
+//             return std::cmp::Ordering::Less;
+//         }
+//         if !a.4 && b.4 {
+//             return std::cmp::Ordering::Greater;
+//         }
+//         if a.5 && !b.5 {
+//             return std::cmp::Ordering::Less;
+//         }
+//         if !a.5 && b.5 {
+//             return std::cmp::Ordering::Greater;
+//         }
+//         if a.6 && !b.6 {
+//             return std::cmp::Ordering::Less;
+//         }
+//         if !a.6 && b.6 {
+//             return std::cmp::Ordering::Greater;
+//         }
+//         if a.2 < b.2 {
+//             return std::cmp::Ordering::Greater;
+//         }
+//         if a.2 > b.2 {
+//             return std::cmp::Ordering::Less;
+//         }
+//         if a.1 < b.1 {
+//             return std::cmp::Ordering::Greater;
+//         }
+//         if a.1 > b.1 {
+//             return std::cmp::Ordering::Less;
+//         }
+//         std::cmp::Ordering::Equal
+//     });
+// }
+
+// pub fn generate_empty_variations(
+//     width: u8,
+//     height: u8,
+//     cow_count: u8,
+//     barn_count: u8,
+//     person_count: u8,
+//     house_count: u8,
+//     empty_count: u8,
+//     rows: Vec<(String, usize, usize, bool, bool, bool, bool)>,
+//     solution_map : &mut HashMap<Board, Solution>
+// ) -> Vec<(String, usize, usize, bool, bool, bool, bool)> {
+//     let mut rows_with_empty: Vec<(String, usize, usize, bool, bool, bool, bool)> = Vec::new();
+//     let file_name = format!(
+//         "{}_{}_{}_{}_{}_{}_{}.txt",
+//         width, height, cow_count, barn_count, person_count, house_count, empty_count
+//     );
+//     println!("Generating {}", file_name);
+//     let mut elegant_count = 0;
+//     let mut traversed_count = 0;
+//     let rows_len = rows.len();
+//     let mut encountered_boards: HashSet<Board> = HashSet::new();
+//     for row in rows {
+//         traversed_count += 1;
+//         if traversed_count % 10000 == 0 {
+//             println!(
+//                 "Traversed {} boards of {}. {} elegant. {} cached solutions.",
+//                 traversed_count, rows_len, elegant_count, solution_map.len()
+//             );
+//         }
+//         let variations = get_empty_variations(row, solution_map);
+//         for variation in variations {
+//             let board = Board::from_string(&variation.0);
+//             if encountered_boards.contains(&board) {
+//                 continue;
+//             }
+//             if variation.4 {
+//                 elegant_count += 1;
+//             }
+//             rows_with_empty.push(variation);
+//             let symmetric_variants = board.get_symmetric_variants();
+//             encountered_boards.insert(board);
+//             for symmetric_variant in symmetric_variants {
+//                 encountered_boards.insert(symmetric_variant);
+//             }
+//         }
+//     }
+
+//     if elegant_count == 0 {
+//         println!("No elegant solutions with empty space.");
+//         return Vec::new();
+//     }
+
+//     println!(
+//         "{} rows found, {} elegant",
+//         rows_with_empty.len(),
+//         elegant_count
+//     );
+
+//     sort_rows(&mut rows_with_empty);
+
+//     if rows_with_empty.len() == 0 {
+//         return rows_with_empty;
+//     }
+
+//     let lines = rows_with_empty
+//         .iter()
+//         .filter(|x| x.4)
+//         .map(|row| format!("{}\t{}\t{}", row.0, row.1, row.2))
+//         .collect::<Vec<String>>();
+//     if lines.len() == 0 {
+//         return rows_with_empty;
+//     }
+
+//     let data = lines.join("\n");
+//     let mut f = File::create(format!("{}/{}_{}/{}", DIRECTORY, width, height, file_name))
+//         .expect("Unable to create file");
+//     f.write_all(data.as_bytes()).expect("Unable to write data");
+//     return rows_with_empty;
+// }
+
+// pub fn get_empty_variations(
+//     row: (String, usize, usize, bool, bool, bool, bool),
+//     solution_map : &mut HashMap<Board, Solution>
+// ) -> Vec<(String, usize, usize, bool, bool, bool, bool)> {
+//     let mut rows: Vec<(String, usize, usize, bool, bool, bool, bool)> = Vec::new();
+//     let (serialized, moves, _iterations, can_be_solved, _is_elegant, _uses_all_pieces, uses_all_rows_columns) = row;
+//     if !can_be_solved {
+//         return rows;
+//     }
+//     if !uses_all_rows_columns {
+//         return rows;
+//     }
+//     for i in 0..serialized.len() {
+//         let ch = serialized.chars().nth(i).unwrap();
+//         if ch != '_' {
+//             continue;
+//         }
+//         let new_serialized = format!("{}{}{}", &serialized[0..i], 'E', &serialized[i + 1..]);
+//         let new_board = Board::from_string(new_serialized.as_str());
+//         let solution = solve(new_board.clone(), solution_map);
+//         let is_elegant = solution.is_elegant(&new_board) && (solution.move_count as usize) > moves;
+//         rows.push((
+//             new_serialized,
+//             solution.move_count as usize,
+//             solution.tree_size,
+//             solution.can_be_solved,
+//             is_elegant,
+//             solution.uses_all_pieces(&new_board),
+//             solution.uses_all_rows_columns(&new_board),
+//         ));
+//     }
+//     rows
+// }
 
 pub fn generate_boards(
     width: u8,
@@ -341,7 +434,6 @@ pub fn generate_boards(
     empty_count: u8,
 ) -> Vec<Board> {
     let length = width * height;
-    println!("Generating boards for {}x{}", width, height);
     let strings = generate_with_prefix(
         length,
         "",
@@ -351,7 +443,6 @@ pub fn generate_boards(
         house_count,
         empty_count,
     );
-    println!("{} boards generated", strings.len());
     let mut boards: Vec<Board> = Vec::new();
     let mut encountered_variants: HashSet<Board> = HashSet::new();
     for string in strings {
@@ -366,7 +457,6 @@ pub fn generate_boards(
         }
         boards.push(board);
     }
-    println!("{} unique boards generated", boards.len());
     boards
 }
 

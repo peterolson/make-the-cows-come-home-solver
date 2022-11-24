@@ -1,6 +1,0 @@
-4|3|PP_P___OPEB_	6	246
-4|3|OPPB____PEP_	6	112
-4|3|OPPB_____PEP	6	82
-4|3|OP_B__P_PEP_	5	69
-4|3|O_PB_P___PEP	5	54
-4|3|OP_BP__P__PE	4	13
