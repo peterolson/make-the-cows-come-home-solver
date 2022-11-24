@@ -8,7 +8,16 @@ mod solve;
 fn main() {
     println!("Hello, world!");
 
+    generate::generate_puzzles(3,2);
+    generate::generate_puzzles(4,2);
     generate::generate_puzzles(3,3);
+    generate::generate_puzzles(4,3);
+    generate::generate_puzzles(5,3);
+    generate::generate_puzzles(6,3);
+    generate::generate_puzzles(4,4);
+    generate::generate_puzzles(5,4);
+    generate::generate_puzzles(6,4);
+    generate::generate_puzzles(5,5);
 
     // let board = board::Board::from_string("6|4|_BE______E__H___");
 
