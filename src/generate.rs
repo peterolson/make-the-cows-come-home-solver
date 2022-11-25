@@ -3,6 +3,8 @@ use std::fs::{ File};
 use std::io::Write;
 
 
+use rand::Rng;
+
 use crate::board::{Board, Piece};
 use crate::reverse_solver::reverse_solve;
 use crate::settings::HEXAGONAL_MODE;
@@ -20,9 +22,10 @@ pub fn generate_puzzles(width: u8, height: u8) {
                 max_empty = 2;
             }
             for empty_count in 0..max_empty {
-                let mut boards = get_initial_boards(width, height, barn_count, house_count, empty_count);
+                let boards = get_initial_boards(width, height, barn_count, house_count, empty_count);
                 println!("{} boards with {} barns, {} houses, {} empty", boards.len(), barn_count, house_count, empty_count);
-                initial_boards.append(&mut boards);
+                let mut sample = random_sample(boards, 128);
+                initial_boards.append(&mut sample);
             }
         }
     }
@@ -56,6 +59,8 @@ pub fn generate_puzzles(width: u8, height: u8) {
             }
         }
     }
+
+    piece_combinations = random_sample(piece_combinations, 8192);
 
     let mut output_rows : Vec<(Board, String, u8, usize)> = Vec::new();
 
@@ -232,4 +237,19 @@ fn generate_with_prefix(
         empty_count,
     ));
     boards
+}
+
+fn random_sample<T>(v: Vec<T>, n: usize) -> Vec<T> {
+    if v.len() <= n {
+        return v;
+    }
+    let mut sample : Vec<T> = Vec::new();
+    let mut rng = rand::thread_rng();
+    let mut v = v;
+    for _ in 0..n {
+        let index = rng.gen_range(0, v.len());
+        sample.push(v.remove(index));
+    }
+
+    sample
 }

@@ -54,11 +54,11 @@ fn solve_internal(board : Board, solution_map : &mut HashMap<Board, Solution>, e
         }
         let solution = solve_internal(possible_board.clone(), solution_map, encountered_boards);
 
-        tree_size += solution.tree_size;
-
         if !solution.can_be_solved {
             continue;
         }      
+
+        tree_size += solution.tree_size;
         
         let solution_len = solution.moves.len() as u8;
 

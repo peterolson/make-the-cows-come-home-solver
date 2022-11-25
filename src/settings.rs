@@ -1,1 +1,1 @@
-pub const HEXAGONAL_MODE: bool = false;
+pub const HEXAGONAL_MODE: bool = true;
