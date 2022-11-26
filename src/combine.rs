@@ -65,10 +65,10 @@ pub fn combine_puzzles() {
     println!("Min difficulty: {}", min_difficulty);
     let difficulty_span = max_difficulty - min_difficulty;
 
-    let easy_bucket : Vec<(String, u8, u32, f32)> = rows.iter().filter(|x| x.3 - min_difficulty < difficulty_span *0.15).map(|x| x.clone()).collect();
-    let moderate_bucket : Vec<(String, u8, u32, f32)> = rows.iter().filter(|x| x.3 - min_difficulty >= difficulty_span * 0.20 && x.3 - min_difficulty  < difficulty_span * 0.35).map(|x| x.clone()).collect();
-    let hard_bucket : Vec<(String, u8, u32, f32)> = rows.iter().filter(|x| x.3 - min_difficulty >= difficulty_span * 0.40 && x.3 - min_difficulty  < difficulty_span * 0.6).map(|x| x.clone()).collect();
-    let insane_bucket : Vec<(String, u8, u32, f32)> = rows.iter().filter(|x| x.3 - min_difficulty >= difficulty_span * 0.65).map(|x| x.clone()).collect();
+    let easy_bucket : Vec<(String, u8, u32, f32)> = rows.iter().filter(|x| x.3  < 22.5).map(|x| x.clone()).collect();
+    let moderate_bucket : Vec<(String, u8, u32, f32)> = rows.iter().filter(|x| x.3 >= 27.5 && x.3 < 40.0).map(|x| x.clone()).collect();
+    let hard_bucket : Vec<(String, u8, u32, f32)> = rows.iter().filter(|x| x.3 >= 50.0 && x.3 - min_difficulty < 65.0).map(|x| x.clone()).collect();
+    let insane_bucket : Vec<(String, u8, u32, f32)> = rows.iter().filter(|x| x.3 >= 75.0).map(|x| x.clone()).collect();
 
 
     println!("Easy: {}", easy_bucket.len());

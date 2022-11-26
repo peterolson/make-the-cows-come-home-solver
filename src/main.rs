@@ -23,11 +23,12 @@ fn main() {
 
     // generate::generate_puzzles(6,3);
     // generate::generate_puzzles(4,4);
-    // generate::generate_puzzles(5,4);
-    // generate::generate_puzzles(6,4);
-    // generate::generate_puzzles(5,5);
-    // generate::generate_puzzles(6,5);
-    // generate::generate_puzzles(6,6);
+
+    //  generate::generate_puzzles(5,4);
+    //  generate::generate_puzzles(6,4);
+    //  generate::generate_puzzles(5,5);
+    //  generate::generate_puzzles(6,5);
+    //  generate::generate_puzzles(6,6);
 
     // let board = board::Board::from_string("4|4|BH_O_POOEPOOP___");
     // let mut hashmap = HashMap::new();
